@@ -36,9 +36,8 @@ proust_books <- function(){
                 "Le temps retrouve - Premiere partie" = letempretrouve1,
                 "Le temps retrouve - Deuxieme partie" = letempretrouve2
         )
-       ret <- data.frame(text = unlist(books, use.names = FALSE), stringsAsFactors = FALSE)
-       ret$book <- factor(rep(names(books), sapply(books, length)))
-       ret$book <- factor(ret$book, levels = unique(ret$book))
-       ret <- tidyr::separate(ret, book, into = c("book","volume"), sep = "-")
-       structure(ret, class = c("tbl_df", "tbl", "data.frame"))
+       proust <- data.frame(text = unlist(books, use.names = FALSE), stringsAsFactors = FALSE)
+       proust$book <- factor(rep(names(books), sapply(books, length)))
+       proust <- tidyr::separate(proust, book, into = c("book","volume"), sep = "-")
+       return(structure(proust, class = c("tbl_df", "tbl", "data.frame")))
 }
