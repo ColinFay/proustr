@@ -4,7 +4,7 @@
 
 This package gives you access to all the books from Marcel Proust "À la recherche du temps perdu" collection. This collection is divided in books, which are divided in volumes. 
 
-Inspired by the package {janeaustenr} by Julia Silge. 
+Inspired by the package [janeaustenr](https://github.com/juliasilge/janeaustenr) by Julia Silge. 
 
 Here is a list of all the books contained in this pacakage : 
 
