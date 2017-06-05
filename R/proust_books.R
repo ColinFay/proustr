@@ -4,18 +4,15 @@
 #' perdu. The data frame contains one column with the text, one with the book, and one with the 
 #' volume.
 #' 
-#' @return A data frame with three columns: \code{text}, \code{book}, and \code{volume}.
+#' @return A tibble with three columns: \code{text}, \code{book}, and \code{volume}.
 #' 
 #' @name proust_books
 #' 
 #' @examples 
 #' 
-#' library(dplyr)
-#' library(magrittr)
+#' #Creates the tibble 
+#' proust <- proust_books()
 #'  
-#' proust_books() %>% 
-#'     group_by(book) %>%
-#'     summarise(total_lines = n())
 #'
 #' @export
 proust_books <- function(){

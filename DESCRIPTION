@@ -10,9 +10,6 @@ BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 Imports: 
   tidyr
-Suggests: 
-  dplyr, 
-  magrittr
 License: GPL-3 
 LazyData: true
 RoxygenNote: 6.0.1
