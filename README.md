@@ -14,7 +14,7 @@ Here is a list of all the books contained in this pacakage :
 + Sodome et Gomorrhe I et II (1921-1922) : 2 volumes `sodomeetgomorrhe1` and `sodomeetgomorrhe2`.
 + La Prisonnière (1923) : 2 volumes `laprisonniere1` and `laprisonniere2`.
 + Albertine disparue (1925, also know as : La Fugitive) : `albertinedisparue`.
-Le Temps retrouvé (1927) : 2 volumes `letempretrouve1` and `letempretrouve2`.
++ Le Temps retrouvé (1927) : 2 volumes `letempretrouve1` and `letempretrouve2`.
 
 
 ## Install proustr

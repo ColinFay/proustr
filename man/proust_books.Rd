@@ -7,7 +7,7 @@
 proust_books()
 }
 \value{
-A data frame with three columns: \code{text}, \code{book}, and \code{volume}.
+A tibble with three columns: \code{text}, \code{book}, and \code{volume}.
 }
 \description{
 Returns a tidy data frame of Marcel Proust's 7 novels from À la recherche du temps
@@ -16,11 +16,8 @@ volume.
 }
 \examples{
 
-library(dplyr)
-library(magrittr)
+#Creates the tibble 
+proust <- proust_books()
  
-proust_books() \%>\% 
-    group_by(book) \%>\%
-    summarise(total_lines = n())
 
 }
