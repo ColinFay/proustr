@@ -12,6 +12,7 @@ BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 Imports: 
   tidyr
+
 License: MIT + file LICENSE 
 LazyData: true
 RoxygenNote: 6.0.1
