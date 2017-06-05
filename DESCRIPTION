@@ -1,0 +1,19 @@
+Package: proustr
+Title: Marcel Proust's Books From A La Recherche Du Temps Perdu
+Version: 0.1.0
+Date: 2017-06-05
+Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
+Description: Texts from Marcel Proust's "A La Recherche Du Temps Perdu",
+  inspired by the janeaustenr package.
+URL: https://github.com/ColinFay/proustr
+BugReports: https://github.com/ColinFay/proustr/issues
+Depends: R (>= 2.10)
+Imports: 
+  tidyr
+Suggests: 
+  dplyr, 
+  magrittr
+License: GPL-3 
+LazyData: true
+RoxygenNote: 6.0.1
+Encoding: UTF-8
