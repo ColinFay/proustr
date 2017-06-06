@@ -1,5 +1,5 @@
 Package: proustr
-Title: Marcel Proust's Text From 'A La Recherche Du Temps Perdu'
+Title: Marcel Proust's Text from 'A La Recherche Du Temps Perdu'
 Version: 0.1.0
 Date: 2017-06-05
 Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
