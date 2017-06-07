@@ -17,21 +17,21 @@
 #' @export
 proust_books <- function(){
         books <- list(
-                "Du cote de chez Swann - Premiere partie" = ducotedechezswann1,
-                "Du cote de chez Swann - Deuxieme partie" = ducotedechezswann2,
-                "A l'ombre des jeunes filles en fleurs - Premiere partie" = alombredesjeunesfillesenfleurs1,
-                "A l'ombre des jeunes filles en fleurs - Deuxieme partie" = alombredesjeunesfillesenfleurs2,
-                "A l'ombre des jeunes filles en fleurs - Troisieme partie " = alombredesjeunesfillesenfleurs3,
-                "Le Cote de Guermantes - Premiere partie " = lecotedeguermantes1,
-                "Le Cote de Guermantes - Deuxieme partie" = lecotedeguermantes2,
-                "Le Cote de Guermantes - Troisieme partie" = lecotedeguermantes3,
-                "Sodome et Gomorrhe - Premiere partie" = sodomeetgomorrhe1,
-                "Sodome et Gomorrhe - Deuxieme partie" = sodomeetgomorrhe2,
-                "La Prisonniere - Premiere partie" = laprisonniere1,
-                "La Prisonniere - Deuxieme partie" = laprisonniere2,
-                "Albertine disparue - Tome Unique" = albertinedisparue,
-                "Le temps retrouve - Premiere partie" = letempretrouve1,
-                "Le temps retrouve - Deuxieme partie" = letempretrouve2
+                "Du cote de chez Swann - Premiere partie" = proustr::ducotedechezswann1,
+                "Du cote de chez Swann - Deuxieme partie" = proustr::ducotedechezswann2,
+                "A l'ombre des jeunes filles en fleurs - Premiere partie" = proustr::alombredesjeunesfillesenfleurs1,
+                "A l'ombre des jeunes filles en fleurs - Deuxieme partie" = proustr::alombredesjeunesfillesenfleurs2,
+                "A l'ombre des jeunes filles en fleurs - Troisieme partie " = proustr::alombredesjeunesfillesenfleurs3,
+                "Le Cote de Guermantes - Premiere partie " = proustr::lecotedeguermantes1,
+                "Le Cote de Guermantes - Deuxieme partie" = proustr::lecotedeguermantes2,
+                "Le Cote de Guermantes - Troisieme partie" = proustr::lecotedeguermantes3,
+                "Sodome et Gomorrhe - Premiere partie" = proustr::sodomeetgomorrhe1,
+                "Sodome et Gomorrhe - Deuxieme partie" = proustr::sodomeetgomorrhe2,
+                "La Prisonniere - Premiere partie" = proustr::laprisonniere1,
+                "La Prisonniere - Deuxieme partie" = proustr::laprisonniere2,
+                "Albertine disparue - Tome Unique" = proustr::albertinedisparue,
+                "Le temps retrouve - Premiere partie" = proustr::letempretrouve1,
+                "Le temps retrouve - Deuxieme partie" = proustr::letempretrouve2
         )
        proust <- data.frame(text = unlist(books, use.names = FALSE), stringsAsFactors = FALSE)
        proust$book <- factor(rep(names(books), sapply(books, length)))
