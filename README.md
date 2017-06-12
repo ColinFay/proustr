@@ -4,6 +4,8 @@
 
 ## An R Package for Marcel Proust's A La Recherche Du Temps Perdu
 
+<p align = "center"><img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250"></p>
+
 This package gives you access to all the books from Marcel Proust "À la recherche du temps perdu" collection. This collection is divided in books, which are divided in volumes. 
 
 Inspired by the package [janeaustenr](https://github.com/juliasilge/janeaustenr) by Julia Silge. 
