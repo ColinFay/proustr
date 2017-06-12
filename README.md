@@ -23,6 +23,9 @@ Here is a list of all the books contained in this pacakage :
 
 Install this package directly in R : 
 
+```{r}
+install.packages("proustr")
+```
 
 From Github :
 
