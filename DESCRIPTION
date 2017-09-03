@@ -1,18 +1,25 @@
 Package: proustr
-Title: Marcel Proust's Text from 'A La Recherche Du Temps Perdu'
-Version: 0.1.0
-Date: 2017-06-05
+Title: Tools for Natural Language Processing Proust's Novels
+Version: 0.2.0
+Date: 2017-08-31
 Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
-Description: Texts from Marcel Proust's collection "A La Recherche Du Temps Perdu". 
-  The novels contained in this collection are "Du côté de chez Swann ", "A l'ombre des jeunes filles en fleurs",
-  "Le Côté de Guermantes", "Sodome et Gomorrhe I et II", "La Prisonnière", "Albertine disparue", 
-  and "Le Temps retrouvé". Inspired by the 'janeaustenr' package.
+Description: Texts from Marcel Proust's collection "A La Recherche Du Temps Perdu", and other tools for 
+  natural language processing in French. The novels contained in this collection are "Du cote de chez Swann ", 
+  "A l'ombre des jeunes filles en fleurs","Le Cote de Guermantes", "Sodome et Gomorrhe I et II", 
+  "La Prisonniere", "Albertine disparue", and "Le Temps retrouve".
 URL: https://github.com/ColinFay/proustr
 BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
-Imports: 
-  tidyr
+Imports:
+    tidytext,
+    dplyr,
+    magrittr
 LazyData: true
-RoxygenNote: 6.0.1
+RoxygenNote: 6.0.1.9000
 Encoding: UTF-8
+Suggests: testthat,
+    knitr,
+    rmarkdown
+VignetteBuilder: knitr
+BytesCompile: TRUE
