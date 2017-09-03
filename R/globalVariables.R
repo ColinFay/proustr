@@ -1,4 +1,4 @@
-globalVariables(c("ducotedechezswann1","ducotedechezswann2", "alombredesjeunesfillesenfleurs1", "alombredesjeunesfillesenfleurs2", 
-                  "alombredesjeunesfillesenfleurs3", "lecotedeguermantes1", "lecotedeguermantes2", "lecotedeguermantes3",
-                  "sodomeetgomorrhe1","sodomeetgomorrhe2", "laprisonniere1", "laprisonniere2", "albertinedisparue", 
-                  "letempretrouve1","letempretrouve2", "book"))
+globalVariables(c("ducotedechezswann","alombredesjeunesfillesenfleurs", 
+                  "lecotedeguermantes", "sodomeetgomorrhe", "laprisonniere", 
+                  "albertinedisparue", "letempretrouve", "proust_char", "books", 
+                  "sentence", "sentiments_polarity", "sentiment_score", "stop_words"))
