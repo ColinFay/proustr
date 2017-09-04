@@ -4,7 +4,7 @@
 
 `proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html). 
 
-## Tools for Natural Language Processing Proust's Novels
+## Tools for Doing Natural Language Processing with Proust's Novels
 
 <p align = "center"><img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250"></p>
 
