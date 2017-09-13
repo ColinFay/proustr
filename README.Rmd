@@ -1,75 +1,69 @@
+---
+output: github_document
+---
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr)
 
-`proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html).
+```{r, echo = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>",
+  fig.path = "README-"
+)
+```
 
-Tools for Doing Natural Language Processing with Proust's Novels
-----------------------------------------------------------------
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr)
 
-<p align="center">
-<img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
-</p>
-This package gives you access to tools designed to do NLP on the books from Marcel Proust "À la recherche du temps perdu" collection. Of course, these tools can be expanded to almost all french texts.
+`proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html). 
 
-Here is a list of all the books contained in this pacakage :
+## Tools for Doing Natural Language Processing with Proust's Novels
 
--   Du côté de chez Swann (1913): `ducotedechezswann`.
--   À l'ombre des jeunes filles en fleurs (1919): `alombredesjeunesfillesenfleurs`.
--   Le Côté de Guermantes (1921): `lecotedeguermantes`.
--   Sodome et Gomorrhe (1922) : `sodomeetgomorrhe`.
--   La Prisonnière (1923) :`laprisonniere`.
--   Albertine disparue (1925, also know as : La Fugitive) : `albertinedisparue`.
--   Le Temps retrouvé (1927) : `letempretrouve`.
+<p align = "center"><img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250"></p>
 
-Find your way into {proustr}
-----------------------------
+This package gives you access to tools designed to do NLP on the books from Marcel Proust "À la recherche du temps perdu" collection. Of course, these tools can be expanded to almost all french texts. 
 
-{proustr} is divided into two type of functions :
+Here is a list of all the books contained in this pacakage : 
 
--   `proust_*()` functions return data objects (books, characters, stop words...)
++ Du côté de chez Swann (1913): `ducotedechezswann`. 
++ À l'ombre des jeunes filles en fleurs (1919): `alombredesjeunesfillesenfleurs`.
++ Le Côté de Guermantes (1921): `lecotedeguermantes`.
++ Sodome et Gomorrhe (1922) : `sodomeetgomorrhe`.
++ La Prisonnière (1923) :`laprisonniere`.
++ Albertine disparue (1925, also know as : La Fugitive) : `albertinedisparue`.
++ Le Temps retrouvé (1927) : `letempretrouve`.
 
--   `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), (natural )p(rocess for f(r)ench, or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
+## Find your way into {proustr}
 
-`proust_*()` functions
-----------------------
+{proustr} is divided into two type of functions : 
 
-### Books
++ `proust_*()` functions return data objects (books, characters, stop words...)
 
-``` r
++ `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), (natural )p(rocess for f(r)ench, or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
+
+## `proust_*()` functions
+
+### Books 
+
+```{r}
 library(proustr)
 books <- proust_books()
 ```
 
-### A tibble of characters
 
-`proust_char` gives a tibble with each characters and how many time they appeared in each book.
+### A tibble of characters 
 
-``` r
+`proust_char` gives a tibble with each characters and how many time they appeared in each book. 
+
+```{r}
 characters <- proust_characters()
 characters
-#> # A tibble: 461 x 1
-#>              perso
-#>  *           <chr>
-#>  1            A.J.
-#>  2    Académicien 
-#>  3        Adolphe 
-#>  4      Agrigente 
-#>  5      Agrigente 
-#>  6            Aimé
-#>  7 Albaret Céleste
-#>  8          Albert
-#>  9       Albertine
-#> 10           Albon
-#> # ... with 451 more rows
 ```
 
-Get random sentences
---------------------
+## Get random sentences 
 
-Create your own Proust text with the proust\_random() function :
+Create your own Proust text with the proust_random() function : 
 
-``` r
+```{r eval = FALSE}
 proust_random()
 [1] "Cette voix était restée la même, inutilement chaude, prenante, avec un rien d’accent anglais."
 
@@ -91,48 +85,33 @@ purrr::map(1:5, proust_random)
 [1] "Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !"
 ```
 
-### NLP data tools
+### NLP data tools 
 
-You can get a tibble of stopwords with:
+You can get a tibble of stopwords with: 
 
-``` r
+```{r eval = FALSE}
 proust_stopwords()
 ```
 
-Sentiments lexicon is launched with :
+Sentiments lexicon is launched with : 
 
-``` r
+```{r}
 proust_sentiments()
-#> # A tibble: 14,127 x 2
-#>               word polarity
-#>              <chr>    <chr>
-#>  1 à ce endroit là positive
-#>  2       à le hâte negative
-#>  3          à part negative
-#>  4           à pic negative
-#>  5      à rallonge negative
-#>  6      abasourdir negative
-#>  7        ablation negative
-#>  8      abominable negative
-#>  9          abrupt negative
-#> 10          absent negative
-#> # ... with 14,117 more rows
 ```
 
 You can chose between polarity (positive or negative — default behavior, or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
 
-Install proustr
----------------
+## Install proustr
 
-Install this package directly in R :
+Install this package directly in R : 
 
-``` r
+```{r eval = FALSE}
 install.packages("proustr")
 ```
 
 From Github :
 
-``` r
+```{r eval = FALSE}
 devtools::install_github("ColinFay/proustr")
 ```
 

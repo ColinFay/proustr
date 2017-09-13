@@ -85,24 +85,15 @@ letempretrouve <- rbind(get_book_wikisource("https://fr.wikisource.org/wiki/Le_T
 letempretrouve$volume <- "Tome Unique"
 
 # Get characters
-proust_char <-  read_html("http://proust-personnages.fr/?page_id=10254") %>% 
-  html_node("table") %>% 
-  html_table(header = TRUE) %>%
-  as.tibble()
-
-# Make it tidy
-proust_char <- proust_perso %>%
-  select(-Total) %>% 
-  rename(ducotedechezswann = Swann, 
-         alombredesjeunesfillesenfleurs = JF, 
-         lecotedeguermantes = Guer, 
-         sodomeetgomorrhe = SG, 
-         laprisonniere = Pris, 
-         albertinedisparue = Fug, 
-         letempretrouve = TR) %>% 
-  gather(key = "book", value = "frequency", 2:8) %>%
-  filter(!is.na(frequency)) %>% 
-  filter(frequency != 0)
+url <- read_html("http://proust-personnages.fr/")
+proust_char <-   url %>% 
+  html_nodes(".page_item_has_children") %>% 
+  html_nodes("a") %>% 
+  html_text() %>% 
+  as.tibble() %>%
+  slice(62:522) %>%
+  mutate(value = str_replace_all(value, pattern = "\\(.*\\)", replacement =  "")) %>%
+  rename(perso = value)
 
 # Get stopwords 
 
