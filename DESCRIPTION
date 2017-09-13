@@ -14,7 +14,9 @@ License: MIT + file LICENSE
 Imports:
     tidytext,
     dplyr,
-    magrittr
+    magrittr,
+    stringr,
+    rlang
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Encoding: UTF-8

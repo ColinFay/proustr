@@ -7,6 +7,8 @@
 #'
 #' @noRd
 #' @export
+#' @importFrom rlang quo_name enquo
+#' @importFrom purrr map_chr
 #' 
 #' @return a normalized text
 #'
