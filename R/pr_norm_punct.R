@@ -1,13 +1,18 @@
 #' Normalize punctuation
 #'
+#' Still under development
+#'
 #' @param df a dataframe
 #' @param col the column containing the text
 #'
+#' @noRd
+#' @export
+#' 
 #' @return a normalized text
 #'
 #' @examples
-#' a <- proustr::albertinedisparue[275:277,]
-#' pr_normalize_punc(a,text)
+#' a <- proustr::albertinedisparue[1:20,]
+#' pr_normalize_punc(a, text)
 
 pr_normalize_punc <- function(df, col){
   col <- rlang::quo_name(rlang::enquo(col))
