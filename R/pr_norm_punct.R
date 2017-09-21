@@ -1,11 +1,10 @@
 #' Normalize punctuation
 #'
-#' Still under development
+#' Normalize a text with usual french punctuation
 #'
 #' @param df a dataframe
 #' @param col the column containing the text
 #'
-#' @noRd
 #' @export
 #' @importFrom rlang quo_name enquo
 #' @importFrom purrr map_chr
@@ -28,7 +27,7 @@ pr_normalize_punc <- function(df, col){
 clean_punc <- function(vec){
   vec %>%
     # Quotation mark 
-    stringr::str_replace_all(pattern = '″|‶|«|»|“|”|`|´|„|“', replacement = '"') %>%
+    stringr::str_replace_all(pattern = '″|‶|« | »|“|”|`|´|„|“', replacement = '"') %>%
     # Apostrophe
     stringr::str_replace_all(pattern = "՚|︐|’", replacement ="'") %>%
     # dot dot dot 
