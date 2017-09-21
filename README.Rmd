@@ -22,6 +22,8 @@ knitr::opts_chunk$set(
 
 This package gives you access to tools designed to do NLP on the books from Marcel Proust "À la recherche du temps perdu" collection. Of course, these tools can be expanded to almost all french texts. 
 
+All the functions froms this package are consistent with the tidyverse philosophy. 
+
 Here is a list of all the books contained in this pacakage : 
 
 + Du côté de chez Swann (1913): `ducotedechezswann`. 
@@ -100,6 +102,21 @@ proust_sentiments()
 ```
 
 You can chose between polarity (positive or negative — default behavior, or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
+
+## `pr_*()` functions
+
+### `pr_normalize_punc()`
+
+French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. Even weirder, french people use apostrophe. This function removes most of the punctuation idiosyncracy from french. 
+
+Note: books from {proustr} have already been normalized.
+
+```{r}
+a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")
+pr_normalize_punc(a, text)
+```
+
+Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a behavior which can lead to some error when tokenizing a text.  
 
 ## Install proustr
 
