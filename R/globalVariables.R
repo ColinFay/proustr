@@ -1,4 +1,4 @@
 globalVariables(c("ducotedechezswann","alombredesjeunesfillesenfleurs", 
                   "lecotedeguermantes", "sodomeetgomorrhe", "laprisonniere", 
                   "albertinedisparue", "letempretrouve", "proust_char", "books", 
-                  "sentence", "sentiments_polarity", "sentiment_score", "stop_words"))
+                  "sentence", "sentiments_polarity", "sentiment_score", "stop_words_fr"))
