@@ -4,6 +4,8 @@
 
 `proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html).
 
+\[Note: this package is a work in progress. Every undocumented function should be considered as still under development.\]
+
 Tools for Doing Natural Language Processing with Proust's Novels
 ----------------------------------------------------------------
 
@@ -126,6 +128,46 @@ You can chose between polarity (positive or negative — default behavior, or a 
 `pr_*()` functions
 ------------------
 
+### `pr_detect_days()`
+
+Detects the days from a tibble-text.
+
+``` r
+a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
+pr_detect_days(a, text)
+#>                                text         days n_days
+#> 1 C'était lundi 1er mars et mardi 2 lundi, mardi      2
+#> 2                     Et mercredi 3     mercredi      1
+#> 3              Il est revenu jeudi.        jeudi      1
+```
+
+### `pr_detect_days()`
+
+Detects the months from a tibble-text.
+
+``` r
+pr_detect_days(a, text)
+#>                                text         days n_days
+#> 1 C'était lundi 1er mars et mardi 2 lundi, mardi      2
+#> 2                     Et mercredi 3     mercredi      1
+#> 3              Il est revenu jeudi.        jeudi      1
+```
+
+### `pr_detect_pro()`
+
+Detects the pronouns from a tibble-text.
+
+``` r
+a <- proust_books()[1,]
+pr_detect_pro(a, text)
+#> # A tibble: 1 x 10
+#>                                                                          text
+#>                                                                         <chr>
+#> 1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
+#> # ... with 9 more variables: book <int>, volume <int>, year <int>,
+#> #   pps <int>, dps <int>, tps <int>, ppp <int>, dpp <int>, tpp <int>
+```
+
 ### `pr_normalize_punc()`
 
 French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. Even weirder, french people use apostrophe. This function removes most of the punctuation idiosyncracy from french.
@@ -158,4 +200,6 @@ devtools::install_github("ColinFay/proustr")
 
 ### Contact
 
-Questions and feedbacks [welcome](mailto:contact@colinfay.me) !
+Questions and feedbacks [welcome](mailto:contact@colinfay.me)!
+
+You want to contribute, open a [PR](https://github.com/ColinFay/proustr/pulls). If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).
