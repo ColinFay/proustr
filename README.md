@@ -141,16 +141,16 @@ pr_detect_days(a, text)
 #> 3              Il est revenu jeudi.        jeudi      1
 ```
 
-### `pr_detect_days()`
+### `pr_detect_months()`
 
 Detects the months from a tibble-text.
 
 ``` r
-pr_detect_days(a, text)
-#>                                text         days n_days
-#> 1 C'était lundi 1er mars et mardi 2 lundi, mardi      2
-#> 2                     Et mercredi 3     mercredi      1
-#> 3              Il est revenu jeudi.        jeudi      1
+pr_detect_months(a, text)
+#>                                text months n_months
+#> 1 C'était lundi 1er mars et mardi 2   mars        1
+#> 2                     Et mercredi 3               0
+#> 3              Il est revenu jeudi.               0
 ```
 
 ### `pr_detect_pro()`

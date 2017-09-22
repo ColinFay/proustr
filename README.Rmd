@@ -116,12 +116,12 @@ a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", 
 pr_detect_days(a, text)
 ```
 
-### `pr_detect_days()`
+### `pr_detect_months()`
 
 Detects the months from a tibble-text. 
 
 ```{r}
-pr_detect_days(a, text)
+pr_detect_months(a, text)
 ```
 
 ### `pr_detect_pro()`
