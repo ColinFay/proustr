@@ -21,8 +21,14 @@ pr_normalize_punc <- function(df, col){
   return(df)
 }
 
+#' clean punctuation 
+#' 
+#' @param vec a vector to clean
+#' 
 #' @noRd
 #' @export
+#' @example 
+#' clean_punc(vec = "Il faut « nettoyer » ça")
 
 clean_punc <- function(vec){
   vec %>%

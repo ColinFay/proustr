@@ -4,7 +4,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "ducotedechezswann"
 
@@ -14,7 +14,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/%C3%80_l%E2%80%99ombre_des_jeunes_filles_en_fleurs}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "alombredesjeunesfillesenfleurs"
 
@@ -24,7 +24,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/Le_C%C3%B4t%C3%A9_de_Guermantes}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "lecotedeguermantes"
 
@@ -34,7 +34,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/Sodome_et_Gomorrhe}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "sodomeetgomorrhe"
 
@@ -44,7 +44,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/La_Prisonni%C3%A8re}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "laprisonniere"
 
@@ -54,7 +54,7 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/Albertine_disparue}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year
 "albertinedisparue"
 
@@ -64,6 +64,6 @@
 #' This text has been downloaded on WikiSource.
 #'
 #' @source \url{https://fr.wikisource.org/wiki/Le_Temps_retrouv%C3%A9}
-#' @noRd
+#'
 #' @format A tibble with text, book, volume, and year.
 "letempretrouve"

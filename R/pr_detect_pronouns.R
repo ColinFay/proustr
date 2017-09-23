@@ -16,7 +16,7 @@ pronom_regex_tpp <- "\\b[Ii]ls\\b|\\b[Ee]lles\\b|\\b[Ee]ux\\b|\\b[Ll]eurs*\\b"
 #' @param df a dataframe
 #' @param col the column containing the text
 #' @param verbose wether or not to return the list of pronouns. Defaults is FALSE. 
-#' @noRd
+#' 
 #' @export
 #' @importFrom rlang quo_name enquo
 #' @importFrom magrittr %>% %<>%
