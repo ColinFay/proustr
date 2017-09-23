@@ -13,5 +13,5 @@ a tibble with stopwords
 Stop Words
 }
 \examples{
-proust_stop_words()
+proust_stopwords()
 }
