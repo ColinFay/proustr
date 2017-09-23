@@ -1,9 +1,9 @@
 Package: proustr
-Title: Tools for Natural Language Processing Proust's Novels
+Title: Tools for Natural Language Processing in French
 Version: 0.2.0
 Date: 2017-08-31
 Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
-Description: Texts from Marcel Proust's collection "A La Recherche Du Temps Perdu", and other tools for 
+Description: Tools for NLP in French, based on texts from Marcel Proust's collection "A La Recherche Du Temps Perdu", and other tools for 
   natural language processing in French. The novels contained in this collection are "Du cote de chez Swann ", 
   "A l'ombre des jeunes filles en fleurs","Le Cote de Guermantes", "Sodome et Gomorrhe I et II", 
   "La Prisonniere", "Albertine disparue", and "Le Temps retrouve".
@@ -17,7 +17,8 @@ Imports:
     magrittr,
     stringr,
     rlang,
-    purrr
+    purrr,
+    tidyr
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Encoding: UTF-8
