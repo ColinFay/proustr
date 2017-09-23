@@ -16,7 +16,8 @@ Imports:
     dplyr,
     magrittr,
     stringr,
-    rlang
+    rlang,
+    purrr
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Encoding: UTF-8
