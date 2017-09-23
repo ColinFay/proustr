@@ -165,4 +165,4 @@ devtools::install_github("ColinFay/proustr")
 
 Questions and feedbacks [welcome](mailto:contact@colinfay.me)!
 
-You want to contribute, open a [PR](https://github.com/ColinFay/proustr/pulls). If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).
+You want to contribute ? Open a [PR](https://github.com/ColinFay/proustr/pulls) :) If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).
