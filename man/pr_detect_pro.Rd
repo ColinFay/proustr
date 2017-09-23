@@ -17,12 +17,11 @@ pr_detect_pro(df, col, verbose = FALSE)
 a dataframe
 }
 \description{
-Detect the pronouns. The detected Pronouns are : je, moi, me, mon, ma, mes, mien,
-miens,mienne,miennes, tu, toi, te, ton, ta, tes, tiens, tienne, tiennes, il, elle, son, sa, ses, soi, sien,
-siens, siennes, nous, nôtre, nos, vous, vos, votre, vôtre, ils, elles, eux, leurs.
+Detect the pronouns from a text.
 }
 \examples{
 library(proustr)
-a <- proust_books()[1,]
-b <- pr_detect_pro(a, text)
+a <- proust_books()[1,] 
+pr_detect_pro(a, text, verbose = TRUE)
+pr_detect_pro(a, text)
 }

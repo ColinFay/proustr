@@ -9,15 +9,15 @@ pr_normalize_punc(df, col)
 \arguments{
 \item{df}{a dataframe}
 
-\item{col}{the column containing the text}
+\item{col}{the column to normalize}
 }
 \value{
 a normalized text
 }
 \description{
-Normalize a text with usual french punctuation
+Normalize a text writtne with usual french punctuation
 }
 \examples{
 a <- proustr::albertinedisparue[1:20,]
-pr_normalize_punc(a, text)
+pr_normalize_punc(albertinedisparue, text)
 }

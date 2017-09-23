@@ -16,7 +16,7 @@ days_regex <- "\\b[Ll]undi\\b|\\b[Mm]ardi\\b|\\b[Mm]ercredi\\b|\\b[Jj]eudi\\b|\\
 #' @return a tibble with the number of days detected by the algo
 #'
 #' @examples
-#' a <- data.frame(jours = c("C'était lundi 1er mars et mardi 2", 
+#' a <- data.frame(jours = c("C'est lundi 1er mars et mardi 2", 
 #' "Et mercredi 3", "Il est revenu jeudi."))
 #' pr_detect_days(a, jours)
 
@@ -27,7 +27,7 @@ pr_detect_days <- function(df, col){
   return(df)
 }
 
-month_regex <- "\\b[Jj]anvier\\b|\\b[Ff][ée]vrier\\b|\\b[Mm]ars\\b|\\b[Aa]vril\\b|\\b[Mm]ai\\b|\\b[Jj]uin\\b|\\b[Jj]uillet\\b|\\b[Aa]o[uû]t\\b|\\b[Ss]eptembre\\b|\\b[Oo]ctobre\\b|\\b[Nn]ovembre\\b|\\b[Dd][ée]cembre\\b"     
+month_regex <- paste0("\\b[Jj]anvier\\b|\\b[Ff][",intToUtf8(233),"e]vrier\\b|\\b[Mm]ars\\b|\\b[Aa]vril\\b|\\b[Mm]ai\\b|\\b[Jj]uin\\b|\\b[Jj]uillet\\b|\\b[Aa]o[u",intToUtf8(251),"]t\\b|\\b[Ss]eptembre\\b|\\b[Oo]ctobre\\b|\\b[Nn]ovembre\\b|\\b[Dd][",intToUtf8(233),"e]cembre\\b")     
 
 #' Detect months
 #'
@@ -43,7 +43,7 @@ month_regex <- "\\b[Jj]anvier\\b|\\b[Ff][ée]vrier\\b|\\b[Mm]ars\\b|\\b[Aa]vril\
 #' @return a tibble with the number of days detected by the algo
 #'
 #' @examples
-#' a <- data.frame(jours = c("C'était lundi 1er mars et mardi 2", 
+#' a <- data.frame(jours = c("C'est lundi 1er mars et mardi 2", 
 #' "Et mercredi 3", "Il est revenu en juin."))
 #' pr_detect_months(a, jours)
 

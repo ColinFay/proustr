@@ -127,6 +127,8 @@ stopwords5 <- readLines("https://sites.google.com/site/kevinbouge/stopwords-list
 stop_words_fr <- c(stopwords$value, stopwords2$c..alors....au....aucuns....aussi....autre....avant....avec..., stopwords4$c..à....à.demi....à.peine....à.peu.près....absolument..., stopwords5$value) %>%
   unique()
 
+stop_words <- lapply(stop_words_fr, utf8ToInt)
+
 # Sentiments 
 
 sentiments <- read_csv2("http://www.lirmm.fr/~abdaoui/FEEL.csv")
@@ -148,6 +150,6 @@ devtools::use_data(laprisonniere, overwrite = TRUE)
 devtools::use_data(albertinedisparue, overwrite = TRUE)
 devtools::use_data(letempretrouve, overwrite = TRUE)
 devtools::use_data(proust_char, overwrite = TRUE)
-devtools::use_data(stop_words_fr, overwrite = TRUE)
+devtools::use_data(stop_words, overwrite = TRUE, internal = TRUE)
 devtools::use_data(sentiments_polarity, overwrite = TRUE)
 devtools::use_data(sentiments_score, overwrite = TRUE)

@@ -18,7 +18,7 @@ a tibble with the number of days detected by the algo
 Detect the name of the days
 }
 \examples{
-a <- data.frame(jours = c("C'était lundi 1er mars et mardi 2", 
+a <- data.frame(jours = c("C'est lundi 1er mars et mardi 2", 
 "Et mercredi 3", "Il est revenu jeudi."))
 pr_detect_days(a, jours)
 }
