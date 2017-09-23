@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr)
 
 `proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html).
 
@@ -164,7 +164,7 @@ pr_detect_pro(a, text)
 #>                                                                          text
 #>                                                                         <chr>
 #> 1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-#> # ... with 9 more variables: book <int>, volume <int>, year <int>,
+#> # ... with 9 more variables: book <chr>, volume <chr>, year <dbl>,
 #> #   pps <int>, dps <int>, tps <int>, ppp <int>, dpp <int>, tpp <int>
 ```
 

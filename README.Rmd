@@ -12,7 +12,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr)
+[![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr)
 
 `proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html). 
 
