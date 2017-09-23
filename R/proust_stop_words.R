@@ -4,7 +4,7 @@
 #' @export
 #'
 #' @examples
-#' proust_stop_words()
+#' proust_stopwords()
 
 proust_stopwords <- function() {
   df <- data.frame(word = proustr::stop_words_fr)
