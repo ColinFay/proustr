@@ -12,13 +12,13 @@ pr_detect_months(df, col)
 \item{col}{the column containing the text}
 }
 \value{
-a tibble with the number of days detected by the algo
+a dataframe with the number of days detected by the algo
 }
 \description{
 Detect the name of the montth
 }
 \examples{
-a <- data.frame(jours = c("C'est lundi 1er mars et mardi 2", 
+a <- data.frame(month = c("C'est lundi 1er mars et mardi 2", 
 "Et mercredi 3", "Il est revenu en juin."))
-pr_detect_months(a, jours)
+pr_detect_months(a, month)
 }

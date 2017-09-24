@@ -42,11 +42,11 @@ pr_detect_pro <- function(df, col, verbose = FALSE){
   if(verbose){
     df <- tidyr::gather(df, key = "pronoun", value = "full_list", pos:length(df))
     df <- dplyr::filter(df, full_list != "character(0)")
-    return(df)
+    structure(df, class = c("tbl_df", "tbl", "data.frame"))
   } else {
     df[,pos:length(df)] <- purrr::map_df(df[,pos:length(df)], length_list)
-    df <- tidyr::gather(df, key = "pronoun", value = "vol", pos:length(df))
-    df <- dplyr::filter(df, vol != 0)
-    return(df)
+    df <- tidyr::gather(df, key = "pronoun", value = "count", pos:length(df))
+    df <- dplyr::filter(df, count != 0)
+    structure(df, class = c("tbl_df", "tbl", "data.frame"))
   }
 }

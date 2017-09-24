@@ -15,7 +15,7 @@ pr_normalize_punc(df, col)
 a normalized text
 }
 \description{
-Normalize a text writtne with usual french punctuation
+Normalize a text written with usual french punctuation
 }
 \examples{
 a <- proustr::albertinedisparue[1:20,]

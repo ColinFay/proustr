@@ -1,6 +1,6 @@
 #' Normalize punctuation
 #'
-#' Normalize a text writtne with usual french punctuation
+#' Normalize a text written with usual french punctuation
 #'
 #' @param df a dataframe
 #' @param col the column to normalize
@@ -18,7 +18,7 @@
 pr_normalize_punc <- function(df, col){
   col <- rlang::quo_name(rlang::enquo(col))
   df[[col]] <- purrr::map_chr(.x = df[[col]], .f = clean_punc)
-  return(df)
+  structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
 
 pattern_quote <- paste0(intToUtf8(8243),"|",intToUtf8(8246),"|",intToUtf8(171)," | ",intToUtf8(187),"|",
