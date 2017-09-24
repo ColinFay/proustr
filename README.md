@@ -135,10 +135,12 @@ Detects the days from a tibble-text.
 ``` r
 a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
 pr_detect_days(a, text)
-#>                                text         days n_days
-#> 1 C'était lundi 1er mars et mardi 2 lundi, mardi      2
-#> 2                     Et mercredi 3     mercredi      1
-#> 3              Il est revenu jeudi.        jeudi      1
+#> # A tibble: 3 x 3
+#>                                text      days n_days
+#> *                            <fctr>    <list>  <int>
+#> 1 C'était lundi 1er mars et mardi 2 <chr [2]>      2
+#> 2                     Et mercredi 3 <chr [1]>      1
+#> 3              Il est revenu jeudi. <chr [1]>      1
 ```
 
 ### `pr_detect_months()`
@@ -147,10 +149,12 @@ Detects the months from a tibble-text.
 
 ``` r
 pr_detect_months(a, text)
-#>                                text months n_months
-#> 1 C'était lundi 1er mars et mardi 2   mars        1
-#> 2                     Et mercredi 3               0
-#> 3              Il est revenu jeudi.               0
+#> # A tibble: 3 x 3
+#>                                text    months n_months
+#> *                            <fctr>    <list>    <int>
+#> 1 C'était lundi 1er mars et mardi 2 <chr [1]>        1
+#> 2                     Et mercredi 3 <chr [0]>        0
+#> 3              Il est revenu jeudi. <chr [0]>        0
 ```
 
 ### `pr_detect_pro()`
@@ -160,12 +164,13 @@ Detects the pronouns from a tibble-text.
 ``` r
 a <- proust_books()[1,]
 pr_detect_pro(a, text)
-#> # A tibble: 1 x 10
+#> # A tibble: 2 x 6
 #>                                                                          text
-#>                                                                         <chr>
+#> *                                                                       <chr>
 #> 1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-#> # ... with 9 more variables: book <chr>, volume <chr>, year <dbl>,
-#> #   pps <int>, dps <int>, tps <int>, ppp <int>, dpp <int>, tpp <int>
+#> 2 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
+#> # ... with 5 more variables: book <chr>, volume <chr>, year <dbl>,
+#> #   pronoun <chr>, count <int>
 ```
 
 ### `pr_normalize_punc()`
@@ -177,11 +182,55 @@ Note: books from {proustr} have already been normalized.
 ``` r
 a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")
 pr_normalize_punc(a, text)
-#>                                         text
-#> 1 Il l'a dit : "La ponctuation est chelou" !
+#> # A tibble: 1 x 1
+#>                                             text
+#> *                                          <chr>
+#> 1 "Il l'a dit : \"La ponctuation est chelou\" !"
 ```
 
 Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a behavior which can lead to some error when tokenizing a text.
+
+### `pr_stem()`
+
+Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capitals letters are also removed by this function.
+
+You can stem a data.frame with a sentence column with `pr_stem_sentences` :
+
+``` r
+a <- proustr::laprisonniere[1:10,]
+pr_stem_sentences(a, text)
+#> # A tibble: 10 x 4
+#>                                                                           text
+#>  *                                                                       <chr>
+#>  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus 
+#>  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit 
+#>  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau enc
+#>  4                  le douleur sont de foll et qui le écout est encor plus fou
+#>  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanso
+#>  6                                    une chanson d'adieu sort de sourc troubl
+#>  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisail
+#>  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout parei
+#>  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ord
+#> 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas
+#> # ... with 3 more variables: book <chr>, volume <chr>, year <dbl>
+```
+
+Or a column with words with `pr_stem_words` :
+
+``` r
+a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
+pr_stem_words(a, words)
+#> # A tibble: 7 x 1
+#>    words
+#> *  <chr>
+#> 1  matin
+#> 2   heur
+#> 3 fatigu
+#> 4    son
+#> 5   lois
+#> 6   test
+#> 7 fusion
+```
 
 Install proustr
 ---------------

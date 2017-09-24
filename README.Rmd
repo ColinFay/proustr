@@ -147,6 +147,25 @@ pr_normalize_punc(a, text)
 
 Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a behavior which can lead to some error when tokenizing a text.  
 
+### `pr_stem()`
+
+Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capitals letters are also removed by this function.
+
+You can stem a data.frame with a sentence column with `pr_stem_sentences` : 
+
+```{r}
+a <- proustr::laprisonniere[1:10,]
+pr_stem_sentences(a, text)
+```
+
+Or a column with words with `pr_stem_words` : 
+
+```{r}
+a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
+pr_stem_words(a, words)
+```
+
+
 ## Install proustr
 
 Install this package directly in R : 
