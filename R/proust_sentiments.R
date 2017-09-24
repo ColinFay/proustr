@@ -1,4 +1,6 @@
 #' Sentiment Lexicon
+#' 
+#' A sentiment lexicon with eitheir polarity or score.
 #'
 #' @param type polarity (positive or negative) or score on six sentiments (joy, fear, sadness, anger, surprise, disgust)
 #' 

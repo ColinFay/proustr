@@ -10,6 +10,6 @@ laprisonniere
 }
 \description{
 A dataset containing Marcel Proust's "La prisonnière". 
-This text has been downloaded on WikiSource.
+This text has been downloaded from WikiSource.
 }
 \keyword{datasets}

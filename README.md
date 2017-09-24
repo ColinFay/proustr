@@ -192,7 +192,7 @@ Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a be
 
 ### `pr_stem()`
 
-Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capitals letters are also removed by this function.
+Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capital letters are removed by this function.
 
 You can stem a data.frame with a sentence column with `pr_stem_sentences` :
 

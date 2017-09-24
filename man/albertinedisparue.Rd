@@ -13,6 +13,6 @@ albertinedisparue
 }
 \description{
 A dataset containing Marcel Proust's "Albertine disparue". 
-This text has been downloaded on WikiSource.
+This text has been downloaded from WikiSource.
 }
 \keyword{datasets}

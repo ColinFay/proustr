@@ -16,7 +16,7 @@ proust_sentiments(type = "polarity")
 a tibble
 }
 \description{
-Sentiment Lexicon
+A sentiment lexicon with eitheir polarity or score.
 }
 \examples{
 proust_sentiments(type = "score")

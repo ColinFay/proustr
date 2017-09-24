@@ -1,7 +1,7 @@
 #' Stem a dataframe column with sentences
 #' 
-#' Implementation of the {SnowballC} stemmer. Note that punctuation and capitals letters 
-#' are also removed.
+#' Implementation of the {SnowballC} stemmer. Note that punctuation and capital letters 
+#' are removed when processing.
 #'
 #' @param df the data.frame containing the text
 #' @param col the column with the text

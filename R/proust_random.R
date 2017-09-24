@@ -1,8 +1,8 @@
 #' Create a Random Proust extract
 #' 
-#' Create your own flavor of Proust
+#' Create your own flavor of Proust with this random extractor.
 #'
-#' @param vol the number of line you want to randomly extract and paste. 
+#' @param count the number of line you want to randomly extract and paste. 
 #' @param collapse if FALSE, the output will be a tibble. Default is TRUE, a character vector. 
 #' 
 #' @importFrom tidytext unnest_tokens
@@ -15,11 +15,11 @@
 #' @examples
 #' proust_random(3)
 
-proust_random <- function(vol = 1, collapse = TRUE){
+proust_random <- function(count = 1, collapse = TRUE){
   temps <- proust_books() %>% 
     unnest_tokens(output = "sentence", input = "text", token = "sentences", to_lower = FALSE) %>% 
     select(sentence) %>% 
-    sample_n(vol) 
+    sample_n(count) 
   if(collapse){
     return(paste(temps$sentence, sep = " ", collapse = " "))
   } else {

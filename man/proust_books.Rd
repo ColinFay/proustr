@@ -7,16 +7,15 @@
 proust_books()
 }
 \value{
-A tibble with three columns: \code{text}, \code{book}, and \code{volume}.
+A tibble with four columns: \code{text}, \code{book}, \code{volume} and \code{year}.
 }
 \description{
-Returns a tidy data frame of Marcel Proust's 7 novels from À la recherche du temps
-perdu. The data frame contains one column with the text, one with the book, and one with the 
-volume.
+Returns a tidy tibble of Marcel Proust's 7 novels from À la recherche du temps
+perdu. The tibble contains four columns: text, book, volume and year.
 }
 \examples{
 
-#Creates the tibble 
+#Create the tibble 
 proust <- proust_books()
  
 

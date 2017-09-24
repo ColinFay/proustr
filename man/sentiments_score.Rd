@@ -3,7 +3,7 @@
 \docType{data}
 \name{sentiments_score}
 \alias{sentiments_score}
-\title{Sentiment lexicon}
+\title{Sentiment lexicon with score}
 \format{A tibble}
 \source{
 \url{http://www.lirmm.fr/~abdaoui/FEEL.html}
@@ -12,6 +12,6 @@
 sentiments_score
 }
 \description{
-Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
+Dataset from: Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
 }
 \keyword{datasets}

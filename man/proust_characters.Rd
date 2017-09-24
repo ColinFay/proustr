@@ -3,6 +3,9 @@
 \name{proust_characters}
 \alias{proust_characters}
 \title{Characters from Proust Books}
+\source{
+\url{http://proust-personnages.fr/}
+}
 \usage{
 proust_characters()
 }
@@ -10,7 +13,7 @@ proust_characters()
 A tibble
 }
 \description{
-Returns a tidy data frame of Marcel Proust's characters, with their frequency in each book.
+Returns a tidy data frame of Marcel Proust's characters.
 }
 \examples{
 

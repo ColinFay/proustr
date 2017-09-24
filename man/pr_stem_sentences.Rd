@@ -17,8 +17,8 @@ pr_stem_sentences(df, col, language = "french")
 a tibble
 }
 \description{
-Implementation of the {SnowballC} stemmer. Note that punctuation and capitals letters 
-are also removed.
+Implementation of the {SnowballC} stemmer. Note that punctuation and capital letters 
+are removed when processing.
 }
 \examples{
 a <- proustr::laprisonniere[1:10,]

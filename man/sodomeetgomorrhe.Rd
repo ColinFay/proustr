@@ -13,6 +13,6 @@ sodomeetgomorrhe
 }
 \description{
 A dataset containing Marcel Proust's "Sodom et Gomorrhe". 
-This text has been downloaded on WikiSource.
+This text has been downloaded from WikiSource.
 }
 \keyword{datasets}

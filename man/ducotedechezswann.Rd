@@ -10,6 +10,6 @@ ducotedechezswann
 }
 \description{
 A dataset containing Marcel Proust's "Du côté de chez Swann". 
-This text has been downloaded on WikiSource.
+This text has been downloaded from WikiSource.
 }
 \keyword{datasets}

@@ -9,9 +9,11 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
-## An R Package for Marcel Proust's A La Recherche Du Temps Perdu
+## Tools for Doing Natural Language Processing with Proust's Novels
 
-This package gives you access to all the books from Marcel Proust "À la recherche du temps perdu" collection. This collection is divided in books, which are divided in volumes. 
+This package gives you access to tools designed to do NLP on the books from Marcel Proust "À la recherche du temps perdu" collection. Of course, these tools can be expanded to almost all french texts. 
+
+All the functions froms this package are consistent with the tidyverse philosophy. 
 
 Here is a list of all the books contained in this pacakage : 
 
@@ -23,38 +25,41 @@ Here is a list of all the books contained in this pacakage :
 + Albertine disparue (1925, also know as : La Fugitive) : `albertinedisparue`.
 + Le Temps retrouvé (1927) : `letempretrouve`.
 
-## A tibble of characters 
+## Find your way into {proustr}
+
+{proustr} is divided into two type of functions : 
+
++ `proust_*()` functions return data objects (books, characters, stop words...)
+
++ `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), (natural )p(rocess for f(r)ench, or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
+
+## `proust_*()` functions
+
+### Books 
+
+```{r}
+library(proustr)
+books <- proust_books()
+```
+
+
+### A tibble of characters 
 
 `proust_char` gives a tibble with each characters and how many time they appeared in each book. 
 
-```
-library(dplyr)
+```{r}
 characters <- proust_characters()
-characters %>%  
-  group_by(Nom) %>%
-  summarise(frequency = sum(frequency)) %>%
-  filter(frequency > 500)
-                               Nom frequency
-                             <chr>     <int>
- 1               Albertine Simonet      2375
- 2     Charlus (Palamède Baron de)      1361
- 3                       Françoise       794
- 4                        Gilberte       703
- 5         Grand-mère du narrateur       675
- 6 Guermantes (Duchesse Oriane de)       876
- 7               Mère du narrateur       561
- 8      Morel (Charles ou Charlie)       514
- 9                          Odette      1046
-10   Saint-Loup -en-Braye (Robert)       582
-11                 Swann (Charles)      1646
-12               Verdurin (Madame)       647
+characters
 ```
 
 ## Get random sentences 
 
 Create your own Proust text with the proust_random() function : 
 
-```r
+```{r eval = FALSE}
+proust_random()
+[1] "Cette voix était restée la même, inutilement chaude, prenante, avec un rien d’accent anglais."
+
 purrr::map(1:5, proust_random)
 
 [[1]]
@@ -73,20 +78,99 @@ purrr::map(1:5, proust_random)
 [1] "Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !"
 ```
 
+### NLP data tools 
+
+You can get a tibble of stopwords with: 
+
+```{r eval = FALSE}
+proust_stopwords()
+```
+
+Sentiments lexicon is launched with : 
+
+```{r}
+proust_sentiments()
+```
+
+You can chose between polarity (positive or negative — default behavior, or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
+
+## `pr_*()` functions
+
+### `pr_detect_days()`
+
+Detects the days from a tibble-text. 
+
+```{r}
+a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
+pr_detect_days(a, text)
+```
+
+### `pr_detect_months()`
+
+Detects the months from a tibble-text. 
+
+```{r}
+pr_detect_months(a, text)
+```
+
+### `pr_detect_pro()`
+
+Detects the pronouns from a tibble-text. 
+
+```{r}
+a <- proust_books()[1,]
+pr_detect_pro(a, text)
+```
+
+
+### `pr_normalize_punc()`
+
+French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. Even weirder, french people use apostrophe. This function removes most of the punctuation idiosyncracy from french. 
+
+Note: books from {proustr} have already been normalized.
+
+```{r}
+a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")
+pr_normalize_punc(a, text)
+```
+
+Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a behavior which can lead to some error when tokenizing a text.  
+
+### `pr_stem()`
+
+Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capital letters are removed by this function.
+
+You can stem a data.frame with a sentence column with `pr_stem_sentences` : 
+
+```{r}
+a <- proustr::laprisonniere[1:10,]
+pr_stem_sentences(a, text)
+```
+
+Or a column with words with `pr_stem_words` : 
+
+```{r}
+a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
+pr_stem_words(a, words)
+```
+
+
 ## Install proustr
 
 Install this package directly in R : 
 
-``` r
+```{r eval = FALSE}
 install.packages("proustr")
 ```
 
 From Github :
 
-``` r
+```{r eval = FALSE}
 devtools::install_github("ColinFay/proustr")
 ```
 
 ### Contact
 
-Questions and feedbacks [welcome](mailto:contact@colinfay.me) !
+Questions and feedbacks [welcome](mailto:contact@colinfay.me)!
+
+You want to contribute ? Open a [PR](https://github.com/ColinFay/proustr/pulls) :) If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).

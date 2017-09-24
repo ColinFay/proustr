@@ -1,10 +1,10 @@
 #' Characters from Proust Books
 #' 
-#' Returns a tidy data frame of Marcel Proust's characters, with their frequency in each book. 
+#' Returns a tidy data frame of Marcel Proust's characters.
 #' 
 #' @return A tibble 
 #' 
-#' @name proust_characters
+#' @source \url{http://proust-personnages.fr/}
 #' 
 #' @examples 
 #' 

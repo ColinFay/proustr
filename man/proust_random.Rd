@@ -4,10 +4,10 @@
 \alias{proust_random}
 \title{Create a Random Proust extract}
 \usage{
-proust_random(vol = 1, collapse = TRUE)
+proust_random(count = 1, collapse = TRUE)
 }
 \arguments{
-\item{vol}{the number of line you want to randomly extract and paste.}
+\item{count}{the number of line you want to randomly extract and paste.}
 
 \item{collapse}{if FALSE, the output will be a tibble. Default is TRUE, a character vector.}
 }
@@ -15,7 +15,7 @@ proust_random(vol = 1, collapse = TRUE)
 a character vector
 }
 \description{
-Create your own flavor of Proust
+Create your own flavor of Proust with this random extractor.
 }
 \examples{
 proust_random(3)

@@ -9,18 +9,19 @@
 #' @format A tibble with their name, and their frequency in each book
 "proust_char"
 
-#' Sentiment lexicon
+#' Sentiment lexicon with polarity
 #'
-#' Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
+#' Dataset from: Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
+#'
 #'
 #' @source \url{http://www.lirmm.fr/~abdaoui/FEEL.html}
 #'
 #' @format A tibble
 "sentiments_polarity"
 
-#' Sentiment lexicon
+#' Sentiment lexicon with score
 #'
-#' Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
+#' Dataset from: Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
 #'
 #' @source \url{http://www.lirmm.fr/~abdaoui/FEEL.html}
 #'

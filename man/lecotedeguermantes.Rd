@@ -10,6 +10,6 @@ lecotedeguermantes
 }
 \description{
 A dataset containing Marcel Proust's "À l’ombre des jeunes filles en fleurs". 
-This text has been downloaded on WikiSource.
+This text has been downloaded from WikiSource.
 }
 \keyword{datasets}
