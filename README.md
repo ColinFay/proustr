@@ -6,13 +6,15 @@
 
 \[Note: this package is a work in progress. Every undocumented function should be considered as still under development.\]
 
-Tools for Doing Natural Language Processing with Proust's Novels
-----------------------------------------------------------------
+Tools for NLP in French and texts from Marcel Proust's collection
+-----------------------------------------------------------------
+
+"A La Recherche Du Temps Perdu"
 
 <p align="center">
 <img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
 </p>
-This package gives you access to tools designed to do NLP on the books from Marcel Proust "À la recherche du temps perdu" collection. Of course, these tools can be expanded to almost all french texts.
+This package gives you access to tools designed to do NLP in French. You can use these tools which the books from Marcel Proust "À la recherche du temps perdu" collection which are provided with this package. Of course, these tools can be expanded to almost all french texts.
 
 All the functions froms this package are consistent with the tidyverse philosophy.
 
@@ -31,23 +33,25 @@ Find your way into {proustr}
 
 {proustr} is divided into two type of functions :
 
--   `proust_*()` functions return data objects (books, characters, stop words...)
+-   `proust_*()` functions return data objects (books, characters, stop words, random Proust extract...)
 
--   `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), (natural )p(rocess for f(r)ench, or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
+-   `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
 
 `proust_*()` functions
 ----------------------
 
-### Books
+### `proust_books()`
+
+Get the tibble with all the books :
 
 ``` r
 library(proustr)
 books <- proust_books()
 ```
 
-### A tibble of characters
+### `proust_characters()`
 
-`proust_char` gives a tibble with each characters and how many time they appeared in each book.
+`proust_characters` returns a tibble with each characters from the books.
 
 ``` r
 characters <- proust_characters()
@@ -68,8 +72,7 @@ characters
 #> # ... with 451 more rows
 ```
 
-Get random sentences
---------------------
+### `proust_random()`
 
 Create your own Proust text with the proust\_random() function :
 
@@ -95,7 +98,7 @@ purrr::map(1:5, proust_random)
 [1] "Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !"
 ```
 
-### NLP data tools
+### `proust_stopwords()`
 
 You can get a tibble of stopwords with:
 
@@ -103,13 +106,15 @@ You can get a tibble of stopwords with:
 proust_stopwords()
 ```
 
+### `proust_sentiments()`
+
 Sentiments lexicon is launched with :
 
 ``` r
 proust_sentiments()
 #> # A tibble: 14,127 x 2
 #>               word polarity
-#>              <chr>    <chr>
+#>  *           <chr>    <chr>
 #>  1 à ce endroit là positive
 #>  2       à le hâte negative
 #>  3          à part negative
@@ -123,14 +128,16 @@ proust_sentiments()
 #> # ... with 14,117 more rows
 ```
 
-You can chose between polarity (positive or negative — default behavior, or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
+You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
 
 `pr_*()` functions
 ------------------
 
+Please bear in mind that all these functions are designed to work with a data.frame.
+
 ### `pr_detect_days()`
 
-Detects the days from a tibble-text.
+Detects the days from a data.frame (in French).
 
 ``` r
 a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
@@ -145,7 +152,7 @@ pr_detect_days(a, text)
 
 ### `pr_detect_months()`
 
-Detects the months from a tibble-text.
+Detects the months from a data.frame (in French).
 
 ``` r
 pr_detect_months(a, text)
@@ -159,7 +166,7 @@ pr_detect_months(a, text)
 
 ### `pr_detect_pro()`
 
-Detects the pronouns from a tibble-text.
+Detects the pronouns from a data.frame (in French).
 
 ``` r
 a <- proust_books()[1,]
@@ -175,7 +182,7 @@ pr_detect_pro(a, text)
 
 ### `pr_normalize_punc()`
 
-French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. Even weirder, french people use apostrophe. This function removes most of the punctuation idiosyncracy from french.
+French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.
 
 Note: books from {proustr} have already been normalized.
 
@@ -192,9 +199,9 @@ Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a be
 
 ### `pr_stem()`
 
-Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capital letters are removed by this function.
+Turn your text into stems. This is an implementation of the {SnowballC} package in {proustr}.Please keep in mind that punctuation and capital letters are removed by this function.
 
-You can stem a data.frame with a sentence column with `pr_stem_sentences` :
+You can stem a data.frame with a column containing sentences with `pr_stem_sentences` :
 
 ``` r
 a <- proustr::laprisonniere[1:10,]
