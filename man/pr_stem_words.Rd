@@ -2,7 +2,7 @@
 % Please edit documentation in R/pr_stem.R
 \name{pr_stem_words}
 \alias{pr_stem_words}
-\title{Stem a dataframe column with words}
+\title{Stem a dataframe containing a column with words}
 \usage{
 pr_stem_words(df, col, language = "french")
 }
@@ -11,7 +11,7 @@ pr_stem_words(df, col, language = "french")
 
 \item{col}{the column with the sentences}
 
-\item{language}{the language of the sentences. Defaut is french. See SnowballC::getStemLanguages() function for a list of supported languages.}
+\item{language}{the language of the words Defaut is french. See SnowballC::getStemLanguages() function for a list of supported languages.}
 }
 \value{
 a tibble

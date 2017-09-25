@@ -1,10 +1,9 @@
 ## ------------------------------------------------------------------------
 library(proustr)
-books <- proust_books()
+proust_books()
 
 ## ------------------------------------------------------------------------
-characters <- proust_characters()
-characters
+proust_characters()
 
 ## ----eval = FALSE--------------------------------------------------------
 #  proust_random()
@@ -42,7 +41,8 @@ pr_detect_months(a, text)
 
 ## ------------------------------------------------------------------------
 a <- proust_books()[1,]
-pr_detect_pro(a, text)
+a <- pr_detect_pro(a, text)
+dplyr::select(a, -text)
 
 ## ------------------------------------------------------------------------
 a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")

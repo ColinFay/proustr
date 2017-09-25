@@ -2,7 +2,7 @@
 % Please edit documentation in R/pr_stem.R
 \name{pr_stem_sentences}
 \alias{pr_stem_sentences}
-\title{Stem a dataframe column with sentences}
+\title{Stem a dataframe containing a column with sentences}
 \usage{
 pr_stem_sentences(df, col, language = "french")
 }

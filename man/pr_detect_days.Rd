@@ -2,7 +2,7 @@
 % Please edit documentation in R/pr_detect_calendar.R
 \name{pr_detect_days}
 \alias{pr_detect_days}
-\title{Detect days}
+\title{Detect french days}
 \usage{
 pr_detect_days(df, col)
 }
@@ -15,7 +15,7 @@ pr_detect_days(df, col)
 a tibble with the number of days detected by the algo
 }
 \description{
-Detect the name of the days
+Detect the name of the days (in French)
 }
 \examples{
 a <- data.frame(jours = c("C'est lundi 1er mars et mardi 2", 

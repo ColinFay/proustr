@@ -16,6 +16,8 @@
 #' proust_random(3)
 
 proust_random <- function(count = 1, collapse = TRUE){
+  assertthat::assert_that(inherits(count, "numeric"), msg = "count should be a number")
+  assertthat::assert_that(inherits(collapse, "logical"), msg = "collapse should be a logical")
   temps <- proust_books() %>% 
     unnest_tokens(output = "sentence", input = "text", token = "sentences", to_lower = FALSE) %>% 
     select(sentence) %>% 

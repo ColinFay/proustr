@@ -12,7 +12,7 @@
 
 <meta name="author" content="Colin FAY" />
 
-<meta name="date" content="2017-09-24" />
+<meta name="date" content="2017-09-25" />
 
 <title>Getting started with proustr</title>
 
@@ -70,14 +70,14 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Getting started with proustr</h1>
 <h4 class="author"><em>Colin FAY</em></h4>
-<h4 class="date"><em>2017-09-24</em></h4>
+<h4 class="date"><em>2017-09-25</em></h4>
 
 
 
-<div id="tools-for-doing-natural-language-processing-with-prousts-novels" class="section level2">
-<h2>Tools for Doing Natural Language Processing with Proust’s Novels</h2>
-<p>This package gives you access to tools designed to do NLP on the books from Marcel Proust “À la recherche du temps perdu” collection. Of course, these tools can be expanded to almost all french texts.</p>
-<p>All the functions froms this package are consistent with the tidyverse philosophy.</p>
+<div id="tools-for-nlp-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
+<h2>Tools for NLP in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
+<p>TThis package gives you access to tools designed to do NLP in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
+<p>All the functions from this package are consistent with the tidyverse philosophy.</p>
 <p>Here is a list of all the books contained in this pacakage :</p>
 <ul>
 <li>Du côté de chez Swann (1913): <code>ducotedechezswann</code>.</li>
@@ -93,22 +93,37 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <h2>Find your way into {proustr}</h2>
 <p>{proustr} is divided into two type of functions :</p>
 <ul>
-<li><p><code>proust_*()</code> functions return data objects (books, characters, stop words…)</p></li>
-<li><p><code>pr_*()</code> functions perform actions on the data. <code>pr</code> is short for p(roust)r, pr(oust), (natural )p(rocess for f(r)ench, or anything you can think of :). This shortcode refers to functions like <code>pr_clean_punc()</code>.</p></li>
+<li><p><code>proust_*()</code> functions return data objects (books, characters, stop words, random Proust extract…)</p></li>
+<li><p><code>pr_*()</code> functions perform actions on the data. <code>pr</code> is short for p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can think of :). This shortcode refers to functions like <code>pr_clean_punc()</code>.</p></li>
 </ul>
 </div>
 <div id="proust_-functions" class="section level2">
 <h2><code>proust_*()</code> functions</h2>
-<div id="books" class="section level3">
-<h3>Books</h3>
+<div id="proust_books" class="section level3">
+<h3><code>proust_books()</code></h3>
+<p>Get the tibble with all the books :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)
-books &lt;-<span class="st"> </span><span class="kw">proust_books</span>()</code></pre></div>
+<span class="kw">proust_books</span>()</code></pre></div>
+<pre><code>## # A tibble: 4,690 x 4
+##                                                                           text
+##  *                                                                       &lt;chr&gt;
+##  1 &quot;Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
+##  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, 
+##  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins
+##  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant
+##  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre 
+##  6 &quot;Peut-être l'immobilité des choses autour de nous leur est-elle imposée par
+##  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un
+##  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec
+##  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière
+## 10 &quot;À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m
+## # ... with 4,680 more rows, and 3 more variables: book &lt;chr&gt;,
+## #   volume &lt;chr&gt;, year &lt;dbl&gt;</code></pre>
 </div>
-<div id="a-tibble-of-characters" class="section level3">
-<h3>A tibble of characters</h3>
-<p><code>proust_char</code> gives a tibble with each characters and how many time they appeared in each book.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">characters &lt;-<span class="st"> </span><span class="kw">proust_characters</span>()
-characters</code></pre></div>
+<div id="proust_characters" class="section level3">
+<h3><code>proust_characters()</code></h3>
+<p><code>proust_characters</code> returns a tibble with each characters from the books.</p>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_characters</span>()</code></pre></div>
 <pre><code>## # A tibble: 461 x 1
 ##              perso
 ##  *           &lt;chr&gt;
@@ -124,9 +139,8 @@ characters</code></pre></div>
 ## 10           Albon
 ## # ... with 451 more rows</code></pre>
 </div>
-</div>
-<div id="get-random-sentences" class="section level2">
-<h2>Get random sentences</h2>
+<div id="proust_random" class="section level3">
+<h3><code>proust_random()</code></h3>
 <p>Create your own Proust text with the proust_random() function :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_random</span>()
 [<span class="dv">1</span>] <span class="st">&quot;Cette voix était restée la même, inutilement chaude, prenante, avec un rien d’accent anglais.&quot;</span>
@@ -147,15 +161,19 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 
 [[<span class="dv">5</span>]]
 [<span class="dv">1</span>] <span class="st">&quot;Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !&quot;</span></code></pre></div>
-<div id="nlp-data-tools" class="section level3">
-<h3>NLP data tools</h3>
+</div>
+<div id="proust_stopwords" class="section level3">
+<h3><code>proust_stopwords()</code></h3>
 <p>You can get a tibble of stopwords with:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_stopwords</span>()</code></pre></div>
-<p>Sentiments lexicon is launched with :</p>
+</div>
+<div id="proust_sentiments" class="section level3">
+<h3><code>proust_sentiments()</code></h3>
+<p>Sentiment lexicon is launched with:</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_sentiments</span>()</code></pre></div>
 <pre><code>## # A tibble: 14,127 x 2
 ##               word polarity
-##              &lt;chr&gt;    &lt;chr&gt;
+##  *           &lt;chr&gt;    &lt;chr&gt;
 ##  1 à ce endroit là positive
 ##  2       à le hâte negative
 ##  3          à part negative
@@ -167,14 +185,15 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 ##  9          abrupt negative
 ## 10          absent negative
 ## # ... with 14,117 more rows</code></pre>
-<p>You can chose between polarity (positive or negative — default behavior, or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with <code>type = &quot;score&quot;</code>.</p>
+<p>You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with <code>type = &quot;score&quot;</code>.</p>
 </div>
 </div>
 <div id="pr_-functions" class="section level2">
 <h2><code>pr_*()</code> functions</h2>
+<p>Please bear in mind that all these functions are designed to work with a data.frame.</p>
 <div id="pr_detect_days" class="section level3">
 <h3><code>pr_detect_days()</code></h3>
-<p>Detects the days from a tibble-text.</p>
+<p>Detects the days from a data.frame (in French).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="kw">c</span>(<span class="st">&quot;C'était lundi 1er mars et mardi 2&quot;</span>, <span class="st">&quot;Et mercredi 3&quot;</span>, <span class="st">&quot;Il est revenu jeudi.&quot;</span>))
 <span class="kw">pr_detect_days</span>(a, text)</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
@@ -186,7 +205,7 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 </div>
 <div id="pr_detect_months" class="section level3">
 <h3><code>pr_detect_months()</code></h3>
-<p>Detects the months from a tibble-text.</p>
+<p>Detects the months from a data.frame (in French).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">pr_detect_months</span>(a, text)</code></pre></div>
 <pre><code>## # A tibble: 3 x 3
 ##                                text    months n_months
@@ -197,20 +216,19 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 </div>
 <div id="pr_detect_pro" class="section level3">
 <h3><code>pr_detect_pro()</code></h3>
-<p>Detects the pronouns from a tibble-text.</p>
+<p>Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun col stand for : + pps: first person singular (première personne du singulier) + dps: second person singular (deuxième personne du singulier) + tps: third person singular (troisième personne du singulier) + ppp: first person plural (première personne du pluriel) + dpp: second person singular (deuxième personne du pluriel) + tpp: third person singular (troisième personne du pluriel)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">proust_books</span>()[<span class="dv">1</span>,]
-<span class="kw">pr_detect_pro</span>(a, text)</code></pre></div>
-<pre><code>## # A tibble: 2 x 6
-##                                                                          text
-## *                                                                       &lt;chr&gt;
-## 1 &quot;Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-## 2 &quot;Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-## # ... with 5 more variables: book &lt;chr&gt;, volume &lt;chr&gt;, year &lt;dbl&gt;,
-## #   pronoun &lt;chr&gt;, count &lt;int&gt;</code></pre>
+a &lt;-<span class="st"> </span><span class="kw">pr_detect_pro</span>(a, text)
+dplyr<span class="op">::</span><span class="kw">select</span>(a, <span class="op">-</span>text)</code></pre></div>
+<pre><code>## # A tibble: 2 x 5
+##                    book                    volume  year pronoun count
+## *                 &lt;chr&gt;                     &lt;chr&gt; &lt;dbl&gt;   &lt;chr&gt; &lt;int&gt;
+## 1 Du côté de chez Swann Première partie : Combray  1913     pps    26
+## 2 Du côté de chez Swann Première partie : Combray  1913     tps    13</code></pre>
 </div>
 <div id="pr_normalize_punc" class="section level3">
 <h3><code>pr_normalize_punc()</code></h3>
-<p>French has a weird punctuation use. For example, quotes are <code>«</code> and <code>»</code>, instead of <code>&quot;&quot;</code>. Other strange characters may include <code>՚</code>,<code>︐</code> or <code>’</code> for apostrophe. Even weirder, french people use apostrophe. This function removes most of the punctuation idiosyncracy from french.</p>
+<p>French has a weird punctuation use. For example, quotes are <code>«</code> and <code>»</code>, instead of <code>&quot;</code>. Other strange characters may include <code>՚</code>,<code>︐</code> or <code>’</code> for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.</p>
 <p>Note: books from {proustr} have already been normalized.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="st">&quot;Il l՚a dit : « La ponctuation est chelou » !&quot;</span>)
 <span class="kw">pr_normalize_punc</span>(a, text)</code></pre></div>
@@ -222,8 +240,8 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 </div>
 <div id="pr_stem" class="section level3">
 <h3><code>pr_stem()</code></h3>
-<p>Turn your text into stem. This is an implementation of the {SnowballC} package in {proustr}.Please bear in mind that that punctuation and capital letters are removed by this function.</p>
-<p>You can stem a data.frame with a sentence column with <code>pr_stem_sentences</code> :</p>
+<p>Turn your text into stems. This is an implementation of the {SnowballC} package in {proustr}.Please keep in mind that punctuation and capital letters are removed by this function.</p>
+<p>You can stem a data.frame with a column containing sentences with <code>pr_stem_sentences</code> :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span>proustr<span class="op">::</span>laprisonniere[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,]
 <span class="kw">pr_stem_sentences</span>(a, text)</code></pre></div>
 <pre><code>## # A tibble: 10 x 4

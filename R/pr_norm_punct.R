@@ -8,14 +8,16 @@
 #' @export
 #' @importFrom rlang quo_name enquo
 #' @importFrom purrr map_chr
+#' @importFrom assertthat assert_that 
 #' 
-#' @return a normalized text
+#' @return a tibble with normalized text
 #'
 #' @examples
 #' a <- proustr::albertinedisparue[1:20,]
 #' pr_normalize_punc(albertinedisparue, text)
 
 pr_normalize_punc <- function(df, col){
+  assertthat::assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
   col <- rlang::quo_name(rlang::enquo(col))
   df[[col]] <- purrr::map_chr(.x = df[[col]], .f = clean_punc)
   structure(df, class = c("tbl_df", "tbl", "data.frame"))

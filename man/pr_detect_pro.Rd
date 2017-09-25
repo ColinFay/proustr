@@ -2,7 +2,7 @@
 % Please edit documentation in R/pr_detect_pronouns.R
 \name{pr_detect_pro}
 \alias{pr_detect_pro}
-\title{Detect pronoums}
+\title{Detect French pronoums}
 \usage{
 pr_detect_pro(df, col, verbose = FALSE)
 }
@@ -11,13 +11,28 @@ pr_detect_pro(df, col, verbose = FALSE)
 
 \item{col}{the column containing the text}
 
-\item{verbose}{wether or not to return the list of pronouns. Defaults is FALSE.}
+\item{verbose}{wether or not to return the list of pronouns. Defaults is FALSE}
 }
 \value{
-a dataframe
+a tibble with the detected pronouns
 }
 \description{
-Detect the pronouns from a text.
+Detect the pronouns from a text (in French)
+}
+\details{
+The shortcuts in the pronoun col stand for: 
+
+pps: first person singular (première personne du singulier)
+
+dps: second person singular (deuxième personne du singulier)
+
+tps: third person singular (troisième personne du singulier)
+
+ppp: first person plural (première personne du pluriel)
+
+dpp: second person singular (deuxième personne du pluriel)
+
+tpp: third person singular (troisième personne du pluriel)
 }
 \examples{
 library(proustr)

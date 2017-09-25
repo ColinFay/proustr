@@ -4,7 +4,7 @@
 \name{proust_char}
 \alias{proust_char}
 \title{Characters from "À la recherche du temps perdu"}
-\format{A tibble with their name, and their frequency in each book}
+\format{A tibble with their name}
 \source{
 \url{http://proust-personnages.fr/?page_id=10254}
 }
@@ -14,6 +14,6 @@ proust_char
 \description{
 A dataset containing Marcel Proust's characters from "À la recherche du temps perdu"  and 
 their frequency in each book. 
-This text has been downloaded on proust-personnages.
+This dataset has been downloaded from proust-personnages.
 }
 \keyword{datasets}

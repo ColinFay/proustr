@@ -14,9 +14,9 @@
 
 proust_sentiments <- function(type = "polarity") {
   if (type == "polarity"){
-    return(proustr::sentiments_polarity) 
+    structure(proustr::sentiments_polarity, class = c("tbl_df", "tbl", "data.frame"))
   } else if (type == "score") {
-    return(proustr::sentiments_score)
+    structure(proustr::sentiments_score, class = c("tbl_df", "tbl", "data.frame"))
   } else {
     warning("Unknown type")
   }

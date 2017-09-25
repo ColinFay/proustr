@@ -2,7 +2,7 @@
 % Please edit documentation in R/pr_detect_calendar.R
 \name{pr_detect_months}
 \alias{pr_detect_months}
-\title{Detect months}
+\title{Detect french months}
 \usage{
 pr_detect_months(df, col)
 }
@@ -12,10 +12,10 @@ pr_detect_months(df, col)
 \item{col}{the column containing the text}
 }
 \value{
-a dataframe with the number of days detected by the algo
+a tibble with the number of days detected by the algo
 }
 \description{
-Detect the name of the montth
+Detect the name of the months (in French)
 }
 \examples{
 a <- data.frame(month = c("C'est lundi 1er mars et mardi 2", 

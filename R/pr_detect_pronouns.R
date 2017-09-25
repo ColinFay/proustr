@@ -7,13 +7,27 @@ pronom_regex_ppp <- paste0("\\b[Nn]ous\\b|\\b[Nn][o",intToUtf8(244),"]tre\\b|\\b
 pronom_regex_dpp <- paste0("\\b[Vv]ous\\b|\\b[Vv][o",intToUtf8(244),"]tre\\b|\\b[Vv]os*\\b")
 pronom_regex_tpp <- "\\b[Ii]ls\\b|\\b[Ee]lles\\b|\\b[Ee]ux\\b|\\b[Ll]eurs*\\b"
 
-#' Detect pronoums
+#' Detect French pronoums
 #'
-#' Detect the pronouns from a text. 
+#' Detect the pronouns from a text (in French)
 #' 
 #' @param df a dataframe
 #' @param col the column containing the text
-#' @param verbose wether or not to return the list of pronouns. Defaults is FALSE. 
+#' @param verbose wether or not to return the list of pronouns. Defaults is FALSE
+#' 
+#' @details The shortcuts in the pronoun col stand for: 
+#' 
+#' pps: first person singular (première personne du singulier)
+#' 
+#' dps: second person singular (deuxième personne du singulier)
+#' 
+#' tps: third person singular (troisième personne du singulier)
+#' 
+#' ppp: first person plural (première personne du pluriel)
+#' 
+#' dpp: second person singular (deuxième personne du pluriel)
+#' 
+#' tpp: third person singular (troisième personne du pluriel)
 #' 
 #' @export
 #' @importFrom rlang quo_name enquo
@@ -21,8 +35,9 @@ pronom_regex_tpp <- "\\b[Ii]ls\\b|\\b[Ee]lles\\b|\\b[Ee]ux\\b|\\b[Ll]eurs*\\b"
 #' @importFrom stringr str_extract_all
 #' @importFrom tidyr gather
 #' @importFrom dplyr filter
+#' @importFrom assertthat assert_that
 #' 
-#' @return a dataframe
+#' @return a tibble with the detected pronouns
 #'
 #' @examples
 #' library(proustr)
@@ -31,6 +46,7 @@ pronom_regex_tpp <- "\\b[Ii]ls\\b|\\b[Ee]lles\\b|\\b[Ee]ux\\b|\\b[Ll]eurs*\\b"
 #' pr_detect_pro(a, text)
 
 pr_detect_pro <- function(df, col, verbose = FALSE){
+  assertthat::assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
   col <- rlang::quo_name(rlang::enquo(col))
   df$pps <- stringr::str_extract_all(df[[col]], pattern = pronom_regex_pps)
   df$dps <- stringr::str_extract_all(df[[col]], pattern = pronom_regex_dps)

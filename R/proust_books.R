@@ -22,5 +22,5 @@ proust_books <- function(){
                        proustr::laprisonniere,
                        proustr::albertinedisparue,
                        proustr::letempretrouve)
-       return(structure(books, class = c("tbl_df", "tbl", "data.frame")))
+       structure(books, class = c("tbl_df", "tbl", "data.frame"))
 }

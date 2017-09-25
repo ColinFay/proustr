@@ -12,7 +12,7 @@ pr_normalize_punc(df, col)
 \item{col}{the column to normalize}
 }
 \value{
-a normalized text
+a tibble with normalized text
 }
 \description{
 Normalize a text written with usual french punctuation

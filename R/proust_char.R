@@ -15,5 +15,5 @@
 #' @export
 #' 
 proust_characters <- function(){
-  return(structure(proustr::proust_char, class = c("tbl_df", "tbl", "data.frame")))
+  structure(proustr::proust_char, class = c("tbl_df", "tbl", "data.frame"))
 }
