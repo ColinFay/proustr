@@ -1,25 +1,41 @@
 # Devtools 
 
-devtools::use_code_of_conduct()
-devtools::use_cran_badge()
-devtools::use_mit_license()
-devtools::use_news_md()
-devtools::use_readme_rmd()
-devtools::use_testthat()
-devtools::use_test("init")
-devtools::use_test("clean-punc")
-devtools::use_test("detect-calendar")
-devtools::use_test("detect-pronouns")
-devtools::use_test("stem")
-devtools::use_test("error")
-devtools::use_vignette("getting started")
-devtools::use_package("tidytext")
-devtools::use_package("dplyr")
-devtools::use_package("magrittr")
-devtools::use_package("stringr")
-devtools::use_package("purrr")
-devtools::use_package("rlang")
-devtools::use_package("tokenizers")
-devtools::use_package("SnowballC")
-devtools::use_package("assertthat")
-devtools::build_vignettes()
+library(devtools)
+
+# init stuffs
+use_code_of_conduct()
+use_cran_badge()
+use_mit_license()
+use_news_md()
+use_readme_rmd()
+use_testthat()
+use_travis()
+
+#init tests 
+use_test("init")
+use_test("clean-punc")
+use_test("detect-calendar")
+use_test("detect-pronouns")
+use_test("stem")
+use_test("error")
+
+# init vignette
+use_vignette("getting started")
+build_vignettes()
+
+# dependencies
+use_package("tidytext")
+use_package("dplyr")
+use_package("magrittr")
+use_package("stringr")
+use_package("purrr")
+use_package("rlang")
+use_package("tokenizers")
+use_package("SnowballC")
+use_package("assertthat")
+
+# run tests 
+
+test()
+build_win()
+check()

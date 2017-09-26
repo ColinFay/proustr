@@ -12,7 +12,7 @@
 
 <meta name="author" content="Colin FAY" />
 
-<meta name="date" content="2017-09-25" />
+<meta name="date" content="2017-09-26" />
 
 <title>Getting started with proustr</title>
 
@@ -70,13 +70,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <h1 class="title toc-ignore">Getting started with proustr</h1>
 <h4 class="author"><em>Colin FAY</em></h4>
-<h4 class="date"><em>2017-09-25</em></h4>
+<h4 class="date"><em>2017-09-26</em></h4>
 
 
 
-<div id="tools-for-nlp-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
-<h2>Tools for NLP in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
-<p>TThis package gives you access to tools designed to do NLP in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
+<div id="tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
+<h2>Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
+<p>This package gives you access to tools designed to do NLP in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
 <p>All the functions from this package are consistent with the tidyverse philosophy.</p>
 <p>Here is a list of all the books contained in this pacakage :</p>
 <ul>
@@ -102,8 +102,13 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="proust_books" class="section level3">
 <h3><code>proust_books()</code></h3>
 <p>Get the tibble with all the books :</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)
-<span class="kw">proust_books</span>()</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)</code></pre></div>
+<pre><code>## 
+## Attaching package: 'proustr'</code></pre>
+<pre><code>## The following object is masked _by_ '.GlobalEnv':
+## 
+##     pr_detect_days</code></pre>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_books</span>()</code></pre></div>
 <pre><code>## # A tibble: 4,690 x 4
 ##                                                                           text
 ##  *                                                                       &lt;chr&gt;
@@ -196,12 +201,10 @@ purrr<span class="op">::</span><span class="kw">map</span>(<span class="dv">1</s
 <p>Detects the days from a data.frame (in French).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="kw">c</span>(<span class="st">&quot;C'était lundi 1er mars et mardi 2&quot;</span>, <span class="st">&quot;Et mercredi 3&quot;</span>, <span class="st">&quot;Il est revenu jeudi.&quot;</span>))
 <span class="kw">pr_detect_days</span>(a, text)</code></pre></div>
-<pre><code>## # A tibble: 3 x 3
-##                                text      days n_days
-## *                            &lt;fctr&gt;    &lt;list&gt;  &lt;int&gt;
-## 1 C'était lundi 1er mars et mardi 2 &lt;chr [2]&gt;      2
-## 2                     Et mercredi 3 &lt;chr [1]&gt;      1
-## 3              Il est revenu jeudi. &lt;chr [1]&gt;      1</code></pre>
+<pre><code>##                                text         days n_days
+## 1 C'était lundi 1er mars et mardi 2 lundi, mardi      2
+## 2                     Et mercredi 3     mercredi      1
+## 3              Il est revenu jeudi.        jeudi      1</code></pre>
 </div>
 <div id="pr_detect_months" class="section level3">
 <h3><code>pr_detect_months()</code></h3>
