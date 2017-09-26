@@ -30,4 +30,4 @@ Suggests: testthat,
     rmarkdown,
     covr
 VignetteBuilder: knitr
-BytesCompile: TRUE
+ByteCompile: true
