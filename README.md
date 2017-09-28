@@ -12,7 +12,7 @@ Tools for Natural Language Processing in French and texts from Marcel Proust's c
 <p align="center">
 <img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
 </p>
-This package gives you access to tools designed to do NLP in French. You can use these tools with the books from Marcel Proust "À la recherche du temps perdu", which are provided in this package. Of course, these tools can be expanded to almost all french texts.
+This package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust "À la recherche du temps perdu", which are provided in this package. Of course, these tools can be expanded to almost all french texts.
 
 All the functions from this package are consistent with the tidyverse philosophy.
 

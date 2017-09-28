@@ -18,5 +18,5 @@ a character vector
 Create your own flavor of Proust with this random extractor.
 }
 \examples{
-proust_random(3)
+proust_random(4)
 }

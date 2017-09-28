@@ -76,7 +76,7 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 
 <div id="tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
 <h2>Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
-<p>This package gives you access to tools designed to do NLP in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
+<p>This package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
 <p>All the functions from this package are consistent with the tidyverse philosophy.</p>
 <p>Here is a list of all the books contained in this pacakage :</p>
 <ul>
@@ -102,13 +102,8 @@ code > span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Inf
 <div id="proust_books" class="section level3">
 <h3><code>proust_books()</code></h3>
 <p>Get the tibble with all the books :</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)</code></pre></div>
-<pre><code>## 
-## Attaching package: 'proustr'</code></pre>
-<pre><code>## The following object is masked _by_ '.GlobalEnv':
-## 
-##     pr_detect_days</code></pre>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">proust_books</span>()</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)
+<span class="kw">proust_books</span>()</code></pre></div>
 <pre><code>## # A tibble: 4,690 x 4
 ##                                                                           text
 ##  *                                                                       &lt;chr&gt;

@@ -128,7 +128,7 @@ stop_words_fr <- c(stopwords$value, stopwords2$c..alors....au....aucuns....aussi
   unique()
 
 stop_words <- lapply(stop_words_fr, utf8ToInt)
-
+stop_words 
 # Sentiments 
 
 sentiments <- read_csv2("http://www.lirmm.fr/~abdaoui/FEEL.csv")
@@ -150,6 +150,6 @@ devtools::use_data(laprisonniere, overwrite = TRUE)
 devtools::use_data(albertinedisparue, overwrite = TRUE)
 devtools::use_data(letempretrouve, overwrite = TRUE)
 devtools::use_data(proust_char, overwrite = TRUE)
-devtools::use_data(stop_words, overwrite = TRUE, internal = TRUE)
+devtools::use_data(_words, overwrite = TRUE, internal = TRUE)
 devtools::use_data(sentiments_polarity, overwrite = TRUE)
 devtools::use_data(sentiments_score, overwrite = TRUE)
