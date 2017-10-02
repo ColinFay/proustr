@@ -2,21 +2,19 @@
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 [![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr)
 
-`proustr` is now on [CRAN](https://cran.r-project.org/web/packages/proustr/index.html).
+`proustr` is now on [CRAN](https://CRAN.R-project.org/package=proustr).
 
 \[Note: this package is a work in progress. Every undocumented function should be considered as still under development.\]
 
-Tools for NLP in French and texts from Marcel Proust's collection
------------------------------------------------------------------
-
-"A La Recherche Du Temps Perdu"
+Tools for Natural Language Processing in French and texts from Marcel Proust's collection "A La Recherche Du Temps Perdu"
+-------------------------------------------------------------------------------------------------------------------------
 
 <p align="center">
 <img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
 </p>
-This package gives you access to tools designed to do NLP in French. You can use these tools which the books from Marcel Proust "À la recherche du temps perdu" collection which are provided with this package. Of course, these tools can be expanded to almost all french texts.
+This package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust "À la recherche du temps perdu", which are provided in this package. Of course, these tools can be expanded to almost all french texts.
 
-All the functions froms this package are consistent with the tidyverse philosophy.
+All the functions from this package are consistent with the tidyverse philosophy.
 
 Here is a list of all the books contained in this pacakage :
 
@@ -46,7 +44,22 @@ Get the tibble with all the books :
 
 ``` r
 library(proustr)
-books <- proust_books()
+proust_books()
+#> # A tibble: 4,690 x 4
+#>                                                                           text
+#>  *                                                                       <chr>
+#>  1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
+#>  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, 
+#>  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins
+#>  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant
+#>  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre 
+#>  6 "Peut-être l'immobilité des choses autour de nous leur est-elle imposée par
+#>  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un
+#>  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec
+#>  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière
+#> 10 "À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m
+#> # ... with 4,680 more rows, and 3 more variables: book <chr>,
+#> #   volume <chr>, year <dbl>
 ```
 
 ### `proust_characters()`
@@ -54,8 +67,7 @@ books <- proust_books()
 `proust_characters` returns a tibble with each characters from the books.
 
 ``` r
-characters <- proust_characters()
-characters
+proust_characters()
 #> # A tibble: 461 x 1
 #>              perso
 #>  *           <chr>
@@ -108,7 +120,7 @@ proust_stopwords()
 
 ### `proust_sentiments()`
 
-Sentiments lexicon is launched with :
+Sentiment lexicon is launched with:
 
 ``` r
 proust_sentiments()
@@ -166,23 +178,22 @@ pr_detect_months(a, text)
 
 ### `pr_detect_pro()`
 
-Detects the pronouns from a data.frame (in French).
+Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun col stand for : + pps: first person singular (première personne du singulier) + dps: second person singular (deuxième personne du singulier) + tps: third person singular (troisième personne du singulier) + ppp: first person plural (première personne du pluriel) + dpp: second person singular (deuxième personne du pluriel) + tpp: third person singular (troisième personne du pluriel)
 
 ``` r
 a <- proust_books()[1,]
-pr_detect_pro(a, text)
-#> # A tibble: 2 x 6
-#>                                                                          text
-#> *                                                                       <chr>
-#> 1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-#> 2 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-#> # ... with 5 more variables: book <chr>, volume <chr>, year <dbl>,
-#> #   pronoun <chr>, count <int>
+a <- pr_detect_pro(a, text)
+dplyr::select(a, -text)
+#> # A tibble: 2 x 5
+#>                    book                    volume  year pronoun count
+#> *                 <chr>                     <chr> <dbl>   <chr> <int>
+#> 1 Du côté de chez Swann Première partie : Combray  1913     pps    26
+#> 2 Du côté de chez Swann Première partie : Combray  1913     tps    13
 ```
 
 ### `pr_normalize_punc()`
 
-French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `""`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.
+French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `"`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.
 
 Note: books from {proustr} have already been normalized.
 

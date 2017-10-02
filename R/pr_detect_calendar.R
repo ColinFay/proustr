@@ -11,7 +11,7 @@ days_regex <- "\\b[Ll]undi\\b|\\b[Mm]ardi\\b|\\b[Mm]ercredi\\b|\\b[Jj]eudi\\b|\\
 #' 
 #' @export
 #' @importFrom rlang quo_name enquo
-#' @importFrom magrittr %>% 
+#' @importFrom magrittr %>%
 #' @importFrom assertthat assert_that
 #' 
 #' @return a tibble with the number of days detected by the algo

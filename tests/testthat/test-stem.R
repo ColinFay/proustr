@@ -1,7 +1,7 @@
 context("stem")
 
 test_that("steming words works", {
-  a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
+  a <- data.frame(words = c("matin", "heure", "fatigue","sonner","lois", "tests","fusionner"))
   df <- pr_stem_words(a, words)
   expect_true(inherits(df, "data.frame"))
   expect_true(inherits(df, "tbl_df"))
@@ -13,7 +13,7 @@ test_that("steming words works", {
   expect_equal(ncol(df), 1)
 })
 
-test_that("steming words works", {
+test_that("steming sentences works", {
   a <- proustr::laprisonniere[1:10,]
   df <- pr_stem_sentences(a, text)
   expect_true(inherits(df, "data.frame"))

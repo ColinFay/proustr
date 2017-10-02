@@ -3,3 +3,7 @@
 ^data-raw
 ^\.travis\.yml$
 ^codecov\.yml$
+CONDUCT.md
+README.Rmd
+Untitled.RData
+proustr_hex.png
