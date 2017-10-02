@@ -139,8 +139,7 @@ sentiments_score <- sentiments %>%
   gather(key = sentiment, value = score, joy:disgust) %>%
   filter(score != 0) %>%
   arrange(word) %>%
-  select(word, sentiment)
-  select(-score)
+  select(word, sentiment) 
 
 ## Add data 
 
