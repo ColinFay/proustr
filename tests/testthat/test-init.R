@@ -40,6 +40,7 @@ test_that("sentiment tibble creation", {
   expect_true(inherits(prsent_df, "data.frame"))
   expect_true(inherits(prsent_df, "tbl_df"))
   expect_true(inherits(prsent_df, "tbl"))
+  expect_error(proust_sentiments(type = "plop"))
 })
 
 context("random")

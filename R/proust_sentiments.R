@@ -11,13 +11,13 @@
 #'
 #' @examples
 #' proust_sentiments(type = "score")
+#' proust_sentiments(type = "polarity")
 
-proust_sentiments <- function(type = "polarity") {
+proust_sentiments <- function(type = c("polarity", "score")) {
+  type <- match.arg(type)
   if (type == "polarity"){
     structure(proustr::sentiments_polarity, class = c("tbl_df", "tbl", "data.frame"))
-  } else if (type == "score") {
-    structure(proustr::sentiments_score, class = c("tbl_df", "tbl", "data.frame"))
   } else {
-    warning("Unknown type")
+    structure(proustr::sentiments_score, class = c("tbl_df", "tbl", "data.frame"))
   }
 }
