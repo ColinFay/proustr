@@ -39,3 +39,6 @@ use_package("assertthat")
 test()
 build_win()
 check()
+
+# package down
+pkgdown::build_site()

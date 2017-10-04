@@ -1,6 +1,6 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr) \[![Metacran](http://www.r-pkg.org/badges/version-last-release/proustr) \[![Metacran](https://cranlogs.r-pkg.org/badges/proustr)
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr) ![Metacran](http://www.r-pkg.org/badges/version-last-release/proustr) ![Metacran](https://cranlogs.r-pkg.org/badges/proustr)
 
 `proustr` is now on [CRAN](https://CRAN.R-project.org/package=proustr).
 
