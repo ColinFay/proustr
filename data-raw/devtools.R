@@ -40,4 +40,5 @@ build_win()
 check()
 
 # package down
+pkgdown::template_navbar()
 pkgdown::build_site()
