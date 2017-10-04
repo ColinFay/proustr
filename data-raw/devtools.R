@@ -24,7 +24,6 @@ use_vignette("getting started")
 build_vignettes()
 
 # dependencies
-use_package("tidytext")
 use_package("dplyr")
 use_package("magrittr")
 use_package("stringr")

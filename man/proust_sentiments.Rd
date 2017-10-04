@@ -7,7 +7,7 @@
 Amine Abdaoui, Jérôme Azé, Sandra Bringay et Pascal Poncelet. FEEL: French Expanded Emotion Lexicon. Language Resources and Evaluation, LRE 2016, pp 1-23.
 }
 \usage{
-proust_sentiments(type = "polarity")
+proust_sentiments(type = c("polarity", "score"))
 }
 \arguments{
 \item{type}{polarity (positive or negative) or score on six sentiments (joy, fear, sadness, anger, surprise, disgust)}
@@ -20,4 +20,5 @@ A sentiment lexicon with eitheir polarity or score.
 }
 \examples{
 proust_sentiments(type = "score")
+proust_sentiments(type = "polarity")
 }
