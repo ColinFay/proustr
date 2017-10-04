@@ -1,3 +1,11 @@
+# proustr 0.2.1
+
+2017-10
+
+- package now has his own pkgdown \o/
+- dataset has one less column (which was useless)
+- removed a dependency
+
 # proustr 0.2.0
 
 2017-09
