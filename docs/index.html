@@ -76,10 +76,6 @@
     
     
 <div class="contents">
-<!-- README.md is generated from README.Rmd. Please edit that file -->
-<p><a href="https://cran.r-project.org/package=proustr"><img src="http://www.r-pkg.org/badges/version/proustr" alt="CRAN_Status_Badge"></a> <a href="https://travis-ci.org/ColinFay/proustr"><img src="https://travis-ci.org/ColinFay/proustr.svg?branch=master" alt="Travis-CI Build Status"></a> <a href="http://www.rdocumentation.org/packages/proustr"><img src="http://www.rdocumentation.org/badges/version/proustr" alt="Rdoc"></a> <img src="http://www.r-pkg.org/badges/version-last-release/proustr" alt="Metacran"><img src="https://cranlogs.r-pkg.org/badges/proustr" alt="Metacran"></p>
-<p><code>proustr</code> is now on <a href="https://CRAN.R-project.org/package=proustr">CRAN</a>.</p>
-<p>[Note: this package is a work in progress. Every undocumented function should be considered as still under development.]</p>
 <div id="tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
 <h2 class="hasAnchor">
 <a href="#tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="anchor"></a>Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
@@ -116,43 +112,43 @@
 </h3>
 <p>Get the tibble with all the books :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">library</span>(proustr)
-<span class="kw"><a href="reference/proust_books.html">proust_books</a></span>()
-<span class="co">#&gt; # A tibble: 4,690 x 4</span>
-<span class="co">#&gt;                                                                           text</span>
-<span class="co">#&gt;  *                                                                       &lt;chr&gt;</span>
-<span class="co">#&gt;  1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét</span>
-<span class="co">#&gt;  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, </span>
-<span class="co">#&gt;  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins</span>
-<span class="co">#&gt;  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant</span>
-<span class="co">#&gt;  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre </span>
-<span class="co">#&gt;  6 "Peut-être l'immobilité des choses autour de nous leur est-elle imposée par</span>
-<span class="co">#&gt;  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un</span>
-<span class="co">#&gt;  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec</span>
-<span class="co">#&gt;  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière</span>
-<span class="co">#&gt; 10 "À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m</span>
-<span class="co">#&gt; # ... with 4,680 more rows, and 3 more variables: book &lt;chr&gt;,</span>
-<span class="co">#&gt; #   volume &lt;chr&gt;, year &lt;dbl&gt;</span></code></pre></div>
+<span class="kw"><a href="reference/proust_books.html">proust_books</a></span>()</code></pre></div>
+<pre><code>## # A tibble: 4,690 x 4
+##                                                                           text
+##  *                                                                       &lt;chr&gt;
+##  1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
+##  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, 
+##  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins
+##  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant
+##  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre 
+##  6 "Peut-être l'immobilité des choses autour de nous leur est-elle imposée par
+##  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un
+##  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec
+##  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière
+## 10 "À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m
+## # ... with 4,680 more rows, and 3 more variables: book &lt;chr&gt;,
+## #   volume &lt;chr&gt;, year &lt;dbl&gt;</code></pre>
 </div>
 <div id="proust_characters" class="section level3">
 <h3 class="hasAnchor">
 <a href="#proust_characters" class="anchor"></a><code><a href="reference/proust_characters.html">proust_characters()</a></code>
 </h3>
 <p><code>proust_characters</code> returns a tibble with each characters from the books.</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/proust_characters.html">proust_characters</a></span>()
-<span class="co">#&gt; # A tibble: 461 x 1</span>
-<span class="co">#&gt;              perso</span>
-<span class="co">#&gt;  *           &lt;chr&gt;</span>
-<span class="co">#&gt;  1            A.J.</span>
-<span class="co">#&gt;  2    Académicien </span>
-<span class="co">#&gt;  3        Adolphe </span>
-<span class="co">#&gt;  4      Agrigente </span>
-<span class="co">#&gt;  5      Agrigente </span>
-<span class="co">#&gt;  6            Aimé</span>
-<span class="co">#&gt;  7 Albaret Céleste</span>
-<span class="co">#&gt;  8          Albert</span>
-<span class="co">#&gt;  9       Albertine</span>
-<span class="co">#&gt; 10           Albon</span>
-<span class="co">#&gt; # ... with 451 more rows</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/proust_characters.html">proust_characters</a></span>()</code></pre></div>
+<pre><code>## # A tibble: 461 x 1
+##              perso
+##  *           &lt;chr&gt;
+##  1            A.J.
+##  2    Académicien 
+##  3        Adolphe 
+##  4      Agrigente 
+##  5      Agrigente 
+##  6            Aimé
+##  7 Albaret Céleste
+##  8          Albert
+##  9       Albertine
+## 10           Albon
+## # ... with 451 more rows</code></pre>
 </div>
 <div id="proust_random" class="section level3">
 <h3 class="hasAnchor">
@@ -191,21 +187,21 @@ purrr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <a href="#proust_sentiments" class="anchor"></a><code><a href="reference/proust_sentiments.html">proust_sentiments()</a></code>
 </h3>
 <p>Sentiment lexicon is launched with:</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/proust_sentiments.html">proust_sentiments</a></span>()
-<span class="co">#&gt; # A tibble: 14,127 x 2</span>
-<span class="co">#&gt;               word polarity</span>
-<span class="co">#&gt;  *           &lt;chr&gt;    &lt;chr&gt;</span>
-<span class="co">#&gt;  1 à ce endroit là positive</span>
-<span class="co">#&gt;  2       à le hâte negative</span>
-<span class="co">#&gt;  3          à part negative</span>
-<span class="co">#&gt;  4           à pic negative</span>
-<span class="co">#&gt;  5      à rallonge negative</span>
-<span class="co">#&gt;  6      abasourdir negative</span>
-<span class="co">#&gt;  7        ablation negative</span>
-<span class="co">#&gt;  8      abominable negative</span>
-<span class="co">#&gt;  9          abrupt negative</span>
-<span class="co">#&gt; 10          absent negative</span>
-<span class="co">#&gt; # ... with 14,117 more rows</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/proust_sentiments.html">proust_sentiments</a></span>()</code></pre></div>
+<pre><code>## # A tibble: 14,127 x 2
+##               word polarity
+##  *           &lt;chr&gt;    &lt;chr&gt;
+##  1 à ce endroit là positive
+##  2       à le hâte negative
+##  3          à part negative
+##  4           à pic negative
+##  5      à rallonge negative
+##  6      abasourdir negative
+##  7        ablation negative
+##  8      abominable negative
+##  9          abrupt negative
+## 10          absent negative
+## # ... with 14,117 more rows</code></pre>
 <p>You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with <code>type = "score"</code>.</p>
 </div>
 </div>
@@ -219,26 +215,26 @@ purrr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 </h3>
 <p>Detects the days from a data.frame (in French).</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="kw">c</span>(<span class="st">"C'était lundi 1er mars et mardi 2"</span>, <span class="st">"Et mercredi 3"</span>, <span class="st">"Il est revenu jeudi."</span>))
-<span class="kw"><a href="reference/pr_detect_days.html">pr_detect_days</a></span>(a, text)
-<span class="co">#&gt; # A tibble: 3 x 3</span>
-<span class="co">#&gt;                                text      days n_days</span>
-<span class="co">#&gt; *                            &lt;fctr&gt;    &lt;list&gt;  &lt;int&gt;</span>
-<span class="co">#&gt; 1 C'était lundi 1er mars et mardi 2 &lt;chr [2]&gt;      2</span>
-<span class="co">#&gt; 2                     Et mercredi 3 &lt;chr [1]&gt;      1</span>
-<span class="co">#&gt; 3              Il est revenu jeudi. &lt;chr [1]&gt;      1</span></code></pre></div>
+<span class="kw"><a href="reference/pr_detect_days.html">pr_detect_days</a></span>(a, text)</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##                                text      days n_days
+## *                            &lt;fctr&gt;    &lt;list&gt;  &lt;int&gt;
+## 1 C'était lundi 1er mars et mardi 2 &lt;chr [2]&gt;      2
+## 2                     Et mercredi 3 &lt;chr [1]&gt;      1
+## 3              Il est revenu jeudi. &lt;chr [1]&gt;      1</code></pre>
 </div>
 <div id="pr_detect_months" class="section level3">
 <h3 class="hasAnchor">
 <a href="#pr_detect_months" class="anchor"></a><code><a href="reference/pr_detect_months.html">pr_detect_months()</a></code>
 </h3>
 <p>Detects the months from a data.frame (in French).</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/pr_detect_months.html">pr_detect_months</a></span>(a, text)
-<span class="co">#&gt; # A tibble: 3 x 3</span>
-<span class="co">#&gt;                                text    months n_months</span>
-<span class="co">#&gt; *                            &lt;fctr&gt;    &lt;list&gt;    &lt;int&gt;</span>
-<span class="co">#&gt; 1 C'était lundi 1er mars et mardi 2 &lt;chr [1]&gt;        1</span>
-<span class="co">#&gt; 2                     Et mercredi 3 &lt;chr [0]&gt;        0</span>
-<span class="co">#&gt; 3              Il est revenu jeudi. &lt;chr [0]&gt;        0</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw"><a href="reference/pr_detect_months.html">pr_detect_months</a></span>(a, text)</code></pre></div>
+<pre><code>## # A tibble: 3 x 3
+##                                text    months n_months
+## *                            &lt;fctr&gt;    &lt;list&gt;    &lt;int&gt;
+## 1 C'était lundi 1er mars et mardi 2 &lt;chr [1]&gt;        1
+## 2                     Et mercredi 3 &lt;chr [0]&gt;        0
+## 3              Il est revenu jeudi. &lt;chr [0]&gt;        0</code></pre>
 </div>
 <div id="pr_detect_pro" class="section level3">
 <h3 class="hasAnchor">
@@ -247,12 +243,12 @@ purrr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentati
 <p>Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun col stand for : + pps: first person singular (première personne du singulier) + dps: second person singular (deuxième personne du singulier) + tps: third person singular (troisième personne du singulier) + ppp: first person plural (première personne du pluriel) + dpp: second person singular (deuxième personne du pluriel) + tpp: third person singular (troisième personne du pluriel)</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw"><a href="reference/proust_books.html">proust_books</a></span>()[<span class="dv">1</span>,]
 a &lt;-<span class="st"> </span><span class="kw"><a href="reference/pr_detect_pro.html">pr_detect_pro</a></span>(a, text)
-dplyr<span class="op">::</span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(a, <span class="op">-</span>text)
-<span class="co">#&gt; # A tibble: 2 x 5</span>
-<span class="co">#&gt;                    book                    volume  year pronoun count</span>
-<span class="co">#&gt; *                 &lt;chr&gt;                     &lt;chr&gt; &lt;dbl&gt;   &lt;chr&gt; &lt;int&gt;</span>
-<span class="co">#&gt; 1 Du côté de chez Swann Première partie : Combray  1913     pps    26</span>
-<span class="co">#&gt; 2 Du côté de chez Swann Première partie : Combray  1913     tps    13</span></code></pre></div>
+dplyr<span class="op">::</span><span class="kw"><a href="http://dplyr.tidyverse.org/reference/select.html">select</a></span>(a, <span class="op">-</span>text)</code></pre></div>
+<pre><code>## # A tibble: 2 x 5
+##                    book                    volume  year pronoun count
+## *                 &lt;chr&gt;                     &lt;chr&gt; &lt;dbl&gt;   &lt;chr&gt; &lt;int&gt;
+## 1 Du côté de chez Swann Première partie : Combray  1913     pps    26
+## 2 Du côté de chez Swann Première partie : Combray  1913     tps    13</code></pre>
 </div>
 <div id="pr_normalize_punc" class="section level3">
 <h3 class="hasAnchor">
@@ -261,11 +257,11 @@ dplyr<span class="op">::</span><span class="kw"><a href="http://dplyr.tidyverse.
 <p>French has a weird punctuation use. For example, quotes are <code>«</code> and <code>»</code>, instead of <code>"</code>. Other strange characters may include <code>՚</code>,<code>︐</code> or <code>’</code> for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.</p>
 <p>Note: books from {proustr} have already been normalized.</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="st">"Il l՚a dit : « La ponctuation est chelou » !"</span>)
-<span class="kw"><a href="reference/pr_normalize_punc.html">pr_normalize_punc</a></span>(a, text)
-<span class="co">#&gt; # A tibble: 1 x 1</span>
-<span class="co">#&gt;                                             text</span>
-<span class="co">#&gt; *                                          &lt;chr&gt;</span>
-<span class="co">#&gt; 1 "Il l'a dit : \"La ponctuation est chelou\" !"</span></code></pre></div>
+<span class="kw"><a href="reference/pr_normalize_punc.html">pr_normalize_punc</a></span>(a, text)</code></pre></div>
+<pre><code>## # A tibble: 1 x 1
+##                                             text
+## *                                          &lt;chr&gt;
+## 1 "Il l'a dit : \"La ponctuation est chelou\" !"</code></pre>
 <p>Why bother? Some text-mining tools perform a split with <code>'</code>, not with <code>՚</code>, a behavior which can lead to some error when tokenizing a text.</p>
 </div>
 <div id="pr_stem" class="section level3">
@@ -275,48 +271,34 @@ dplyr<span class="op">::</span><span class="kw"><a href="http://dplyr.tidyverse.
 <p>Turn your text into stems. This is an implementation of the {SnowballC} package in {proustr}.Please keep in mind that punctuation and capital letters are removed by this function.</p>
 <p>You can stem a data.frame with a column containing sentences with <code>pr_stem_sentences</code> :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span>proustr<span class="op">::</span>laprisonniere[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,]
-<span class="kw"><a href="reference/pr_stem_sentences.html">pr_stem_sentences</a></span>(a, text)
-<span class="co">#&gt; # A tibble: 10 x 4</span>
-<span class="co">#&gt;                                                                           text</span>
-<span class="co">#&gt;  *                                                                       &lt;chr&gt;</span>
-<span class="co">#&gt;  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus </span>
-<span class="co">#&gt;  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit </span>
-<span class="co">#&gt;  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau enc</span>
-<span class="co">#&gt;  4                  le douleur sont de foll et qui le écout est encor plus fou</span>
-<span class="co">#&gt;  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanso</span>
-<span class="co">#&gt;  6                                    une chanson d'adieu sort de sourc troubl</span>
-<span class="co">#&gt;  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisail</span>
-<span class="co">#&gt;  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout parei</span>
-<span class="co">#&gt;  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ord</span>
-<span class="co">#&gt; 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas</span>
-<span class="co">#&gt; # ... with 3 more variables: book &lt;chr&gt;, volume &lt;chr&gt;, year &lt;dbl&gt;</span></code></pre></div>
+<span class="kw"><a href="reference/pr_stem_sentences.html">pr_stem_sentences</a></span>(a, text)</code></pre></div>
+<pre><code>## # A tibble: 10 x 4
+##                                                                           text
+##  *                                                                       &lt;chr&gt;
+##  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus 
+##  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit 
+##  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau enc
+##  4                  le douleur sont de foll et qui le écout est encor plus fou
+##  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanso
+##  6                                    une chanson d'adieu sort de sourc troubl
+##  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisail
+##  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout parei
+##  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ord
+## 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas
+## # ... with 3 more variables: book &lt;chr&gt;, volume &lt;chr&gt;, year &lt;dbl&gt;</code></pre>
 <p>Or a column with words with <code>pr_stem_words</code> :</p>
 <div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">words =</span> <span class="kw">c</span>(<span class="st">"matin"</span>, <span class="st">"heure"</span>, <span class="st">"fatigué"</span>,<span class="st">"sonné"</span>,<span class="st">"lois"</span>, <span class="st">"tests"</span>,<span class="st">"fusionner"</span>))
-<span class="kw"><a href="reference/pr_stem_words.html">pr_stem_words</a></span>(a, words)
-<span class="co">#&gt; # A tibble: 7 x 1</span>
-<span class="co">#&gt;    words</span>
-<span class="co">#&gt; *  &lt;chr&gt;</span>
-<span class="co">#&gt; 1  matin</span>
-<span class="co">#&gt; 2   heur</span>
-<span class="co">#&gt; 3 fatigu</span>
-<span class="co">#&gt; 4    son</span>
-<span class="co">#&gt; 5   lois</span>
-<span class="co">#&gt; 6   test</span>
-<span class="co">#&gt; 7 fusion</span></code></pre></div>
-</div>
-</div>
-<div id="install-proustr" class="section level2">
-<h2 class="hasAnchor">
-<a href="#install-proustr" class="anchor"></a>Install proustr</h2>
-<p>Install this package directly in R :</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r"><span class="kw">install.packages</span>(<span class="st">"proustr"</span>)</code></pre></div>
-<p>From Github :</p>
-<div class="sourceCode"><pre class="sourceCode r"><code class="sourceCode r">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"ColinFay/proustr"</span>)</code></pre></div>
-<div id="contact" class="section level3">
-<h3 class="hasAnchor">
-<a href="#contact" class="anchor"></a>Contact</h3>
-<p>Questions and feedbacks <a href="mailto:contact@colinfay.me">welcome</a>!</p>
-<p>You want to contribute ? Open a <a href="https://github.com/ColinFay/proustr/pulls">PR</a> :) If you encounter a bug or want to suggest an enhancement, please <a href="https://github.com/ColinFay/proustr/issues">open an issue</a>.</p>
+<span class="kw"><a href="reference/pr_stem_words.html">pr_stem_words</a></span>(a, words)</code></pre></div>
+<pre><code>## # A tibble: 7 x 1
+##    words
+## *  &lt;chr&gt;
+## 1  matin
+## 2   heur
+## 3 fatigu
+## 4    son
+## 5   lois
+## 6   test
+## 7 fusion</code></pre>
 </div>
 </div>
 </div>
