@@ -10,3 +10,4 @@ proustr_hex.png
 ^docs$
 index.Rmd
 ^_pkgdown\.yml$
+^appveyor\.yml$
