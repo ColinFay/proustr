@@ -1,42 +1,67 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
-[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ColinFay/proustr?branch=master&svg=true)](https://ci.appveyor.com/project/ColinFay/proustr) [![Coverage status](https://codecov.io/gh/ColinFay/proustr/branch/master/graph/badge.svg)](https://codecov.io/github/ColinFay/proustr?branch=master) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr) ![Metacran](http://www.r-pkg.org/badges/version-last-release/proustr) ![Metacran](https://cranlogs.r-pkg.org/badges/proustr)
+
+[![CRAN\_Status\_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr)
+[![Travis-CI Build
+Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr)
+[![AppVeyor Build
+Status](https://ci.appveyor.com/api/projects/status/github/ColinFay/proustr?branch=master&svg=true)](https://ci.appveyor.com/project/ColinFay/proustr)
+[![Coverage
+status](https://codecov.io/gh/ColinFay/proustr/branch/master/graph/badge.svg)](https://codecov.io/github/ColinFay/proustr?branch=master)
+[![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr)
+![Metacran](http://www.r-pkg.org/badges/version-last-release/proustr)
+![Metacran](https://cranlogs.r-pkg.org/badges/proustr)
+
+![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 
 `proustr` is now on [CRAN](https://CRAN.R-project.org/package=proustr).
 
-\[Note: this package is a work in progress. Every undocumented function should be considered as still under development.\]
+\[Note: this package is a work in progress. Every undocumented function
+should be considered as still under
+development.\]
 
-Tools for Natural Language Processing in French and texts from Marcel Proust's collection "A La Recherche Du Temps Perdu"
--------------------------------------------------------------------------------------------------------------------------
+## Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”
 
 <p align="center">
-<img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
-</p>
-This package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust "À la recherche du temps perdu", which are provided in this package. Of course, these tools can be expanded to almost all french texts.
 
-All the functions from this package are consistent with the tidyverse philosophy.
+<img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
+
+</p>
+
+This package gives you access to tools designed to do Natural Language
+Processing in French. You can use these tools with the books from Marcel
+Proust “À la recherche du temps perdu”, which are provided in this
+package. Of course, these tools can be expanded to almost all french
+texts.
+
+All the functions from this package are consistent with the tidyverse
+philosophy.
 
 Here is a list of all the books contained in this pacakage :
 
--   Du côté de chez Swann (1913): `ducotedechezswann`.
--   À l'ombre des jeunes filles en fleurs (1919): `alombredesjeunesfillesenfleurs`.
--   Le Côté de Guermantes (1921): `lecotedeguermantes`.
--   Sodome et Gomorrhe (1922) : `sodomeetgomorrhe`.
--   La Prisonnière (1923) :`laprisonniere`.
--   Albertine disparue (1925, also know as : La Fugitive) : `albertinedisparue`.
--   Le Temps retrouvé (1927) : `letempretrouve`.
+  - Du côté de chez Swann (1913): `ducotedechezswann`.
+  - À l’ombre des jeunes filles en fleurs (1919):
+    `alombredesjeunesfillesenfleurs`.
+  - Le Côté de Guermantes (1921): `lecotedeguermantes`.
+  - Sodome et Gomorrhe (1922) : `sodomeetgomorrhe`.
+  - La Prisonnière (1923) :`laprisonniere`.
+  - Albertine disparue (1925, also know as : La Fugitive) :
+    `albertinedisparue`.
+  - Le Temps retrouvé (1927) : `letempretrouve`.
 
-Find your way into {proustr}
-----------------------------
+## Find your way into {proustr}
 
 {proustr} is divided into two type of functions :
 
--   `proust_*()` functions return data objects (books, characters, stop words, random Proust extract...)
+  - `proust_*()` functions return data objects (books, characters, stop
+    words, random Proust extract…)
 
--   `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
+  - `pr_*()` functions perform actions on the data. `pr` is short for
+    p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can
+    think of :). This shortcode refers to functions like
+    `pr_clean_punc()`.
 
-`proust_*()` functions
-----------------------
+## `proust_*()` functions
 
 ### `proust_books()`
 
@@ -64,7 +89,8 @@ proust_books()
 
 ### `proust_characters()`
 
-`proust_characters` returns a tibble with each characters from the books.
+`proust_characters` returns a tibble with each characters from the
+books.
 
 ``` r
 proust_characters()
@@ -140,16 +166,19 @@ proust_sentiments()
 #> # ... with 14,117 more rows
 ```
 
-You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
+You can chose between polarity (positive or negative, which is the
+default behavior), or a score on six sentiments (joy, fear, sadness,
+anger, surprise, disgust) with `type = "score"`.
 
-`pr_*()` functions
-------------------
+## `pr_*()` functions
 
-Please bear in mind that all these functions are designed to work with a data.frame.
+Please bear in mind that all these functions are designed to work with a
+data.frame.
 
 ### `pr_detect_days()`
 
-Detects the days from a data.frame (in French).
+Detects the days from a data.frame (in
+French).
 
 ``` r
 a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
@@ -178,7 +207,13 @@ pr_detect_months(a, text)
 
 ### `pr_detect_pro()`
 
-Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun col stand for : + pps: first person singular (première personne du singulier) + dps: second person singular (deuxième personne du singulier) + tps: third person singular (troisième personne du singulier) + ppp: first person plural (première personne du pluriel) + dpp: second person singular (deuxième personne du pluriel) + tpp: third person singular (troisième personne du pluriel)
+Detects the pronouns from a data.frame (in French). The shortcuts in the
+pronoun col stand for : + pps: first person singular (première personne
+du singulier) + dps: second person singular (deuxième personne du
+singulier) + tps: third person singular (troisième personne du
+singulier) + ppp: first person plural (première personne du pluriel) +
+dpp: second person singular (deuxième personne du pluriel) + tpp: third
+person singular (troisième personne du pluriel)
 
 ``` r
 a <- proust_books()[1,]
@@ -193,7 +228,10 @@ dplyr::select(a, -text)
 
 ### `pr_normalize_punc()`
 
-French has a weird punctuation use. For example, quotes are `«` and `»`, instead of `"`. Other strange characters may include `՚`,`︐` or `’` for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.
+French has a weird punctuation use. For example, quotes are `«` and `»`,
+instead of `"`. Other strange characters may include `՚`,`︐` or `’` for
+apostrophe. This function removes most of the punctuation idiosyncracy
+you can find in a french text.
 
 Note: books from {proustr} have already been normalized.
 
@@ -206,13 +244,17 @@ pr_normalize_punc(a, text)
 #> 1 "Il l'a dit : \"La ponctuation est chelou\" !"
 ```
 
-Why bother? Some text-mining tools perform a split with `'`, not with `՚`, a behavior which can lead to some error when tokenizing a text.
+Why bother? Some text-mining tools perform a split with `'`, not with
+`՚`, a behavior which can lead to some error when tokenizing a text.
 
 ### `pr_stem()`
 
-Turn your text into stems. This is an implementation of the {SnowballC} package in {proustr}.Please keep in mind that punctuation and capital letters are removed by this function.
+Turn your text into stems. This is an implementation of the {SnowballC}
+package in {proustr}.Please keep in mind that punctuation and capital
+letters are removed by this function.
 
-You can stem a data.frame with a column containing sentences with `pr_stem_sentences` :
+You can stem a data.frame with a column containing sentences with
+`pr_stem_sentences` :
 
 ``` r
 a <- proustr::laprisonniere[1:10,]
@@ -233,7 +275,8 @@ pr_stem_sentences(a, text)
 #> # ... with 3 more variables: book <chr>, volume <chr>, year <dbl>
 ```
 
-Or a column with words with `pr_stem_words` :
+Or a column with words with `pr_stem_words`
+:
 
 ``` r
 a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
@@ -250,8 +293,7 @@ pr_stem_words(a, words)
 #> 7 fusion
 ```
 
-Install proustr
----------------
+## Install proustr
 
 Install this package directly in R :
 
@@ -267,6 +309,9 @@ devtools::install_github("ColinFay/proustr")
 
 ### Contact
 
-Questions and feedbacks [welcome](mailto:contact@colinfay.me)!
+Questions and feedbacks [welcome](mailto:contact@colinfay.me)\!
 
-You want to contribute ? Open a [PR](https://github.com/ColinFay/proustr/pulls) :) If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).
+You want to contribute ? Open a
+[PR](https://github.com/ColinFay/proustr/pulls) :) If you encounter a
+bug or want to suggest an enhancement, please [open an
+issue](https://github.com/ColinFay/proustr/issues).

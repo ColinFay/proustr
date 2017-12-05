@@ -29,4 +29,3 @@ Suggests: testthat,
     rmarkdown,
     covr
 VignetteBuilder: knitr
-ByteCompile: true

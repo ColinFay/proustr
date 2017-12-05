@@ -16,6 +16,9 @@ knitr::opts_chunk$set(
 
 [![CRAN_Status_Badge](http://www.r-pkg.org/badges/version/proustr)](https://cran.r-project.org/package=proustr) [![Travis-CI Build Status](https://travis-ci.org/ColinFay/proustr.svg?branch=master)](https://travis-ci.org/ColinFay/proustr) [![AppVeyor Build Status](https://ci.appveyor.com/api/projects/status/github/ColinFay/proustr?branch=master&svg=true)](https://ci.appveyor.com/project/ColinFay/proustr) [![Coverage status](https://codecov.io/gh/ColinFay/proustr/branch/master/graph/badge.svg)](https://codecov.io/github/ColinFay/proustr?branch=master) [![Rdoc](http://www.rdocumentation.org/badges/version/proustr)](http://www.rdocumentation.org/packages/proustr) ![Metacran](http://www.r-pkg.org/badges/version-last-release/proustr) ![Metacran](https://cranlogs.r-pkg.org/badges/proustr)
 
+![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
+
+
 `proustr` is now on [CRAN](https://CRAN.R-project.org/package=proustr). 
 
 [Note: this package is a work in progress. Every undocumented function should be considered as still under development.]

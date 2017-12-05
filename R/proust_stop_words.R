@@ -14,6 +14,6 @@
 #' proust_stopwords()
 
 proust_stopwords <- function() {
-  return(structure(proustr::stop_words, class = c("tbl_df", "tbl", "data.frame")))
+  proustr::stop_words
 }
 

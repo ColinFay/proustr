@@ -9,6 +9,7 @@
 #'
 #' @importFrom tokenizers tokenize_word_stems
 #' @importFrom assertthat assert_that
+#' @importFrom purrr map_chr
 #'
 #' @return a tibble
 #' 
@@ -19,14 +20,14 @@
 #' pr_stem_sentences(a, text)
 #' 
 pr_stem_sentences <- function(df, col, language = "french"){
-  assertthat::assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
-  col <- rlang::quo_name(rlang::enquo(col))
-  df[[col]] <- purrr::map_chr(.x = df[[col]], .f = pr_stem_vec, language = language)
+  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  col <- quo_name(rlang::enquo(col))
+  df[[col]] <- map_chr(.x = df[[col]], .f = pr_stem_vec, language = language)
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
 
 pr_stem_vec <- function(vec, language = "french"){
-  vec <- tokenizers::tokenize_word_stems(vec, language = language)
+  vec <- tokenize_word_stems(vec, language = language)
   paste0(unlist(vec), collapse = " ")
 }
 
@@ -50,8 +51,8 @@ pr_stem_vec <- function(vec, language = "french"){
 #' pr_stem_words(a, words)
 #' 
 pr_stem_words <- function(df, col, language = "french"){
-  assertthat::assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
-  col <- rlang::quo_name(rlang::enquo(col))
-  df[[col]] <- purrr::map_chr(.x = df[[col]], .f = SnowballC::wordStem, language = language)
+  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  col <- quo_name(rlang::enquo(col))
+  df[[col]] <- map_chr(.x = df[[col]], .f = wordStem, language = language)
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
