@@ -106,29 +106,19 @@ proust_char <-   url %>%
 
 # Get stopwords 
 
-stopwords <- readLines("https://raw.githubusercontent.com/stopwords-iso/stopwords-fr/master/stopwords-fr.txt") %>%
-  as.tibble()
+stop_words <- jsonlite::read_json("https://raw.githubusercontent.com/stopwords-iso/stopwords-iso/master/stopwords-iso.json")
 
-stopwords2 <- read_html("http://www.ranks.nl/stopwords/french") %>%
-  html_nodes("table") %>%
-  html_text() %>%
-  stringr::str_split(pattern = " ") %>%
-  as.data.frame()
+library(tidyverse)
 
-stopwords4 <- read_html("http://www.naunaute.com/liste-stop-words-francais-393") %>%
-  html_nodes("code") %>%
-  html_text() %>%
-  stringr::str_split(pattern = "\n") %>%
-  as.data.frame()
+turn_to_df <- function(list_element, name){
+  tibble(word = list_element) %>%
+    unnest()
+}
 
-stopwords5 <- readLines("https://sites.google.com/site/kevinbouge/stopwords-lists/stopwords_fr.txt?attredirects=0&d=1") %>%
-  as.tibble()
+stop_words <- purrr::modify(stop_words, turn_to_df)
+stop_words <- stop_words$fr
+devtools::use_data(stop_words, overwrite = TRUE)
 
-stop_words_fr <- c(stopwords$value, stopwords2$c..alors....au....aucuns....aussi....autre....avant....avec..., stopwords4$c..à....à.demi....à.peine....à.peu.près....absolument..., stopwords5$value) %>%
-  unique()
-
-stop_words <- lapply(stop_words_fr, utf8ToInt)
-stop_words 
 # Sentiments 
 
 sentiments <- read_csv2("http://www.lirmm.fr/~abdaoui/FEEL.csv")

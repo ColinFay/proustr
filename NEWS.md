@@ -1,3 +1,10 @@
+# proustr 0.2.2
+
+2017-10
+
+- stop_words are now only ISO, and exported as a tibble with a chr column 
+- new function to `unacent` a vector
+
 # proustr 0.2.1
 
 2017-10

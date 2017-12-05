@@ -27,3 +27,13 @@
 #'
 #' @format A tibble
 "sentiments_score"
+
+#' Stopwords
+#'
+#' ISO stopwords
+#'
+#' @source \url{https://raw.githubusercontent.com/stopwords-iso/stopwords-iso/master/stopwords-iso.json}
+#'
+#' @format A tibble
+"stop_words"
+

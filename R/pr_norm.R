@@ -17,9 +17,9 @@
 #' pr_normalize_punc(albertinedisparue, text)
 
 pr_normalize_punc <- function(df, col){
-  assertthat::assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
-  col <- rlang::quo_name(rlang::enquo(col))
-  df[[col]] <- purrr::map_chr(.x = df[[col]], .f = clean_punc)
+  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  col <- quo_name(enquo(col))
+  df[[col]] <- map_chr(.x = df[[col]], .f = clean_punc)
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
 
@@ -40,3 +40,23 @@ clean_punc <- function(vec){
     # dot dot dot 
     stringr::str_replace_all(pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
 }
+
+#' Remove accents
+#'
+#' Remove accents from a character vector
+#'
+#' @param vec a vector
+#'
+#' @export
+#' 
+#' @return a vector 
+#' 
+#' @examples
+#' unacent("l'été")
+
+unacent <- function(text) {
+  gsub("['`^~\"]", " ", text) %>%
+    iconv(to="ASCII//TRANSLIT//IGNORE") %>%
+    gsub("['`^~\"]", "", .)
+}
+unacent("l'été")

@@ -14,8 +14,6 @@
 #' proust_stopwords()
 
 proust_stopwords <- function() {
-  l <- lapply(stop_words, intToUtf8)
-  df <- data.frame(word = unlist(l))
-  return(structure(df, class = c("tbl_df", "tbl", "data.frame")))
+  return(structure(proustr::stop_words, class = c("tbl_df", "tbl", "data.frame")))
 }
 

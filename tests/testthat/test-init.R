@@ -24,7 +24,7 @@ context("stopwords")
 
 test_that("stopwords tibble creation", {
   prd_df <- proust_stopwords()
-  expect_equal(nrow(prd_df), 783)
+  expect_equal(nrow(prd_df), 689)
   expect_equal(length(prd_df), 1)
   expect_true(inherits(prd_df, "data.frame"))
   expect_true(inherits(prd_df, "tbl_df"))
