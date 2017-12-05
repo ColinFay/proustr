@@ -59,4 +59,3 @@ unacent <- function(text) {
     iconv(to="ASCII//TRANSLIT//IGNORE") %>%
     gsub("['`^~\"]", "", .)
 }
-unacent("l'été")
