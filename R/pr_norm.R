@@ -45,7 +45,7 @@ clean_punc <- function(vec){
 #'
 #' Remove accents from a character vector
 #'
-#' @param vec a vector
+#' @param text a vector
 #'
 #' @export
 #' 

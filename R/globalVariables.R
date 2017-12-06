@@ -15,5 +15,8 @@ globalVariables(
     "full_list", 
     "vol", 
     "count", 
+    "text", 
+    ".", 
+    "vec", 
     "text")
 )

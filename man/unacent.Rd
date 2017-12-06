@@ -7,7 +7,7 @@
 unacent(text)
 }
 \arguments{
-\item{vec}{a vector}
+\item{text}{a vector}
 }
 \value{
 a vector
