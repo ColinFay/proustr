@@ -7,8 +7,7 @@
 #'
 #' @export
 #' @importFrom rlang quo_name enquo
-#' @importFrom purrr map_chr
-#' @importFrom assertthat assert_that 
+#' @importFrom attempt stop_if_not
 #' 
 #' @return a tibble with normalized text
 #'
@@ -17,9 +16,9 @@
 #' pr_normalize_punc(albertinedisparue, text)
 
 pr_normalize_punc <- function(df, col){
-  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  stop_if_not(inherits(df, "data.frame"), msg = "df should be a data.frame")
   col <- quo_name(enquo(col))
-  df[[col]] <- map_chr(.x = df[[col]], .f = clean_punc)
+  df[[col]] <- as.character(lapply(df[[col]], clean_punc))
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
 
@@ -29,16 +28,23 @@ pattern_quote <- paste0(intToUtf8(8243),"|",intToUtf8(8246),"|",intToUtf8(171),"
 
 pattern_apo <- paste0(intToUtf8(1370),"|",intToUtf8(65040),"|",intToUtf8(8217))
   
+#' @importFrom stringr str_replace_all
+
 clean_punc <- function(vec){
-  vec %>%
-    # Quotation mark 
-    stringr::str_replace_all(pattern = pattern_quote, 
-                             replacement = '"') %>%
-    # Apostrophe
-    stringr::str_replace_all(pattern = pattern_apo, 
-                             replacement ="'") %>%
-    # dot dot dot 
-    stringr::str_replace_all(pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
+  vec <- str_replace_all(vec, pattern = pattern_quote, 
+                         replacement = '"')
+  vec <- str_replace_all(vec, pattern = pattern_apo, 
+                         replacement ="'")
+  str_replace_all(vec, pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
+  # vec %>%
+  #   # Quotation mark 
+  #   str_replace_all(pattern = pattern_quote, 
+  #                            replacement = '"') %>%
+  #   # Apostrophe
+  #   str_replace_all(pattern = pattern_apo, 
+  #                            replacement ="'") %>%
+  #   # dot dot dot 
+  #   str_replace_all(pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
 }
 
 #' Remove accents
@@ -52,10 +58,29 @@ clean_punc <- function(vec){
 #' @return a vector 
 #' 
 #' @examples
-#' unacent("l'été")
+#' pr_unacent("du chêne")
 
-unacent <- function(text) {
-  gsub("['`^~\"]", " ", text) %>%
-    iconv(to="ASCII//TRANSLIT//IGNORE") %>%
-    gsub("['`^~\"]", "", .)
+pr_unacent <- function(text) {
+  text <- gsub("['`^~\"]", " ", text) 
+  text <- iconv(text, to="ASCII//TRANSLIT//IGNORE")
+  gsub("['`^~\"]", "", text)
 }
+
+#' Remove non alnum elements
+#'
+#' Remove non alnum elements
+#'
+#' @param text a vector
+#'
+#' @export
+#' 
+#' @return a vector 
+#' 
+#' @examples
+#' pr_keep_only_alnum("neuilly-en-thelle")
+
+pr_keep_only_alnum <- function(text, replacement = " "){
+  gsub("[^[:alnum:]]", replacement, text)
+}
+
+pr_keep_only_alnum("neuilly-en-thelle")

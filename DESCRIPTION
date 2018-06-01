@@ -1,6 +1,6 @@
 Package: proustr
 Title: Tools for Natural Language Processing in French
-Version: 0.2.2
+Version: 0.3.0.9000
 Date: 2017-12-05
 Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
 Description: Tools for Natural Language Processing in French and texts from Marcel Proust's collection 
@@ -11,7 +11,7 @@ URL: https://github.com/ColinFay/proustr
 BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
-Imports:
+Imports: 
     dplyr,
     magrittr,
     stringr,
@@ -20,7 +20,7 @@ Imports:
     tidyr,
     tokenizers,
     SnowballC,
-    assertthat
+    attempt
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Encoding: UTF-8

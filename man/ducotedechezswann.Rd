@@ -5,6 +5,9 @@
 \alias{ducotedechezswann}
 \title{Marcel Proust's novel "Du côté de chez Swann"}
 \format{A tibble with text, book, volume, and year}
+\source{
+<https://fr.wikisource.org/wiki/Du_c%C3%B4t%C3%A9_de_chez_Swann>
+}
 \usage{
 ducotedechezswann
 }

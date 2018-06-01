@@ -6,7 +6,7 @@
 \title{Marcel Proust's novel "Albertine disparue"}
 \format{A tibble with text, book, volume, and year}
 \source{
-\url{https://fr.wikisource.org/wiki/Albertine_disparue}
+<https://fr.wikisource.org/wiki/Albertine_disparue>
 }
 \usage{
 albertinedisparue

@@ -6,7 +6,7 @@
 \title{Marcel Proust's novel "Sodome et Gomorrhe"}
 \format{A tibble with text, book, volume, and year}
 \source{
-\url{https://fr.wikisource.org/wiki/Sodome_et_Gomorrhe}
+<https://fr.wikisource.org/wiki/Sodome_et_Gomorrhe>
 }
 \usage{
 sodomeetgomorrhe

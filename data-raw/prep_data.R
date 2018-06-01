@@ -117,7 +117,8 @@ turn_to_df <- function(list_element, name){
 
 stop_words <- purrr::modify(stop_words, turn_to_df)
 stop_words <- stop_words$fr
-devtools::use_data(stop_words, overwrite = TRUE)
+
+usethis::use_data(stop_words, overwrite = TRUE)
 
 # Sentiments 
 
