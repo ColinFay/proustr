@@ -82,5 +82,3 @@ pr_unacent <- function(text) {
 pr_keep_only_alnum <- function(text, replacement = " "){
   gsub("[^[:alnum:]]", replacement, text)
 }
-
-pr_keep_only_alnum("neuilly-en-thelle")
