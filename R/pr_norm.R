@@ -71,6 +71,7 @@ pr_unacent <- function(text) {
 #' Remove non alnum elements
 #'
 #' @param text a vector
+#' @param replacement what to replace the non alnum with. Defaut is " ". 
 #'
 #' @export
 #' 
@@ -80,5 +81,6 @@ pr_unacent <- function(text) {
 #' pr_keep_only_alnum("neuilly-en-thelle")
 
 pr_keep_only_alnum <- function(text, replacement = " "){
-  gsub("[^[:alnum:]]", replacement, text)
+  res <- gsub("[^[:alnum:]]", replacement, text) 
+  gsub(" {2,}", " ", res) 
 }

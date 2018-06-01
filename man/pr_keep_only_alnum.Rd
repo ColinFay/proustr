@@ -8,6 +8,8 @@ pr_keep_only_alnum(text, replacement = " ")
 }
 \arguments{
 \item{text}{a vector}
+
+\item{replacement}{what to replace the non alnum with. Defaut is " ".}
 }
 \value{
 a vector
