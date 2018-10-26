@@ -8,8 +8,8 @@
 #' @param language the language of the text. Defaut is french. See SnowballC::getStemLanguages() function for a list of supported languages.
 #'
 #' @importFrom tokenizers tokenize_word_stems
-#' @importFrom assertthat assert_that
-#' @importFrom purrr map_chr
+#' @importFrom attempt stop_if_not
+#' @importFrom rlang enquo
 #'
 #' @return a tibble
 #' 
@@ -20,9 +20,9 @@
 #' pr_stem_sentences(a, text)
 #' 
 pr_stem_sentences <- function(df, col, language = "french"){
-  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
-  col <- quo_name(rlang::enquo(col))
-  df[[col]] <- map_chr(.x = df[[col]], .f = pr_stem_vec, language = language)
+  stop_if_not(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  col <- quo_name(enquo(col))
+  df[[col]] <- as.character(lapply(df[[col]], pr_stem_vec, language = language))
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }
 
@@ -41,7 +41,8 @@ pr_stem_vec <- function(vec, language = "french"){
 #' @param language the language of the words Defaut is french. See SnowballC::getStemLanguages() function for a list of supported languages.
 #'
 #' @importFrom SnowballC wordStem
-#'
+#' @importFrom attempt stop_if_not
+#' 
 #' @return a tibble
 #' 
 #' @export
@@ -51,8 +52,8 @@ pr_stem_vec <- function(vec, language = "french"){
 #' pr_stem_words(a, words)
 #' 
 pr_stem_words <- function(df, col, language = "french"){
-  assert_that(inherits(df, "data.frame"), msg = "df should be a data.frame")
+  stop_if_not(inherits(df, "data.frame"), msg = "df should be a data.frame")
   col <- quo_name(rlang::enquo(col))
-  df[[col]] <- map_chr(.x = df[[col]], .f = wordStem, language = language)
+  df[[col]] <- as.character(lapply(df[[col]], wordStem, language = language))
   structure(df, class = c("tbl_df", "tbl", "data.frame"))
 }

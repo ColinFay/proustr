@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Tools for Natural Language Processing in French • proustr</title>
-<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/journal/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+<!-- jquery --><script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script><!-- Bootstrap --><link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script><!-- Font Awesome icons --><link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 <!-- pkgdown --><link href="pkgdown.css" rel="stylesheet">
 <script src="jquery.sticky-kit.min.js"></script><script src="pkgdown.js"></script><!-- mathjax --><script src="https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script><!--[if lt IE 9]>
@@ -29,7 +29,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
 <li>
-  <a href="/index.html">
+  <a href="index.html">
     <span class="fa fa-home fa-lg"></span>
      
   </a>
@@ -76,19 +76,19 @@
     
     
 <div class="contents">
-<div id="tools-for-nlp-in-french-and-texts-from-marcel-proust" class="section level2">
+<!-- README.md is generated from README.Rmd. Please edit that file -->
+<p><a href="https://cran.r-project.org/package=proustr"><img src="http://www.r-pkg.org/badges/version/proustr" alt="CRAN_Status_Badge"></a> <a href="https://travis-ci.org/ColinFay/proustr"><img src="https://travis-ci.org/ColinFay/proustr.svg?branch=master" alt="Travis-CI Build Status"></a> <a href="https://ci.appveyor.com/project/ColinFay/proustr"><img src="https://ci.appveyor.com/api/projects/status/github/ColinFay/proustr?branch=master&amp;svg=true" alt="AppVeyor Build Status"></a> <a href="https://codecov.io/github/ColinFay/proustr?branch=master"><img src="https://codecov.io/gh/ColinFay/proustr/branch/master/graph/badge.svg" alt="Coverage status"></a> <a href="http://www.rdocumentation.org/packages/proustr"><img src="http://www.rdocumentation.org/badges/version/proustr" alt="Rdoc"></a> <img src="http://www.r-pkg.org/badges/version-last-release/proustr" alt="Metacran"><img src="https://cranlogs.r-pkg.org/badges/proustr" alt="Metacran"></p>
+<div class="figure">
+<img src="https://img.shields.io/badge/lifecycle-stable-brightgreen.svg" alt="lifecycle"><p class="caption">lifecycle</p>
+</div>
+<p><code>proustr</code> is now on <a href="https://CRAN.R-project.org/package=proustr">CRAN</a>.</p>
+<p>[Note: this package is a work in progress. Every undocumented function should be considered as still under development.]</p>
+<div id="tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="section level2">
 <h2 class="hasAnchor">
-<a href="#tools-for-nlp-in-french-and-texts-from-marcel-proust" class="anchor"></a>Tools for NLP in French and texts from Marcel Proust</h2>
+<a href="#tools-for-natural-language-processing-in-french-and-texts-from-marcel-prousts-collection-a-la-recherche-du-temps-perdu" class="anchor"></a>Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”</h2>
 <p align="center">
 <img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width="250"></p>
-<div id="about-this-page" class="section level3">
-<h3 class="hasAnchor">
-<a href="#about-this-page" class="anchor"></a>About this page</h3>
-<p>This webpage (built with pkgdown) contains an overview of what you can do with {proustr}, a tool designed for doing natural language processing in French with R (but which you can also use in other languages).</p>
-<div id="proustr" class="section level4">
-<h4 class="hasAnchor">
-<a href="#proustr" class="anchor"></a>proustr</h4>
-<p>The package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
+<p>This package gives you access to tools designed to do Natural Language Processing in French. You can use these tools with the books from Marcel Proust “À la recherche du temps perdu”, which are provided in this package. Of course, these tools can be expanded to almost all french texts.</p>
 <p>All the functions from this package are consistent with the tidyverse philosophy.</p>
 <p>Here is a list of all the books contained in this pacakage :</p>
 <ul>
@@ -101,16 +101,243 @@
 <li>Le Temps retrouvé (1927) : <code>letempretrouve</code>.</li>
 </ul>
 </div>
-</div>
-<div id="find-your-way-into-proustr" class="section level3">
-<h3 class="hasAnchor">
-<a href="#find-your-way-into-proustr" class="anchor"></a>Find your way into {proustr}</h3>
+<div id="find-your-way-into-proustr" class="section level2">
+<h2 class="hasAnchor">
+<a href="#find-your-way-into-proustr" class="anchor"></a>Find your way into {proustr}</h2>
 <p>{proustr} is divided into two type of functions :</p>
 <ul>
 <li><p><code>proust_*()</code> functions return data objects (books, characters, stop words, random Proust extract…)</p></li>
 <li><p><code>pr_*()</code> functions perform actions on the data. <code>pr</code> is short for p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can think of :). This shortcode refers to functions like <code>pr_clean_punc()</code>.</p></li>
 </ul>
-<p>For an overview of all the available functions, please visit <a href="reference/index.html">the Reference page</a>.</p>
+</div>
+<div id="proust_-functions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#proust_-functions" class="anchor"></a><code>proust_*()</code> functions</h2>
+<div id="proust_books" class="section level3">
+<h3 class="hasAnchor">
+<a href="#proust_books" class="anchor"></a><code><a href="reference/proust_books.html">proust_books()</a></code>
+</h3>
+<p>Get the tibble with all the books :</p>
+<pre class="sourceCode r" id="cb1"><code class="sourceCode r"><div class="sourceLine" id="cb1-1" data-line-number="1">
+<span class="kw">library</span>(proustr)</div>
+<div class="sourceLine" id="cb1-2" data-line-number="2">
+<span class="kw"><a href="reference/proust_books.html">proust_books</a></span>()</div>
+<div class="sourceLine" id="cb1-3" data-line-number="3"><span class="co">#&gt; # A tibble: 4,690 x 4</span></div>
+<div class="sourceLine" id="cb1-4" data-line-number="4"><span class="co">#&gt;                                                                           text</span></div>
+<div class="sourceLine" id="cb1-5" data-line-number="5"><span class="co">#&gt;  *                                                                       &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb1-6" data-line-number="6"><span class="co">#&gt;  1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét</span></div>
+<div class="sourceLine" id="cb1-7" data-line-number="7"><span class="co">#&gt;  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, </span></div>
+<div class="sourceLine" id="cb1-8" data-line-number="8"><span class="co">#&gt;  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins</span></div>
+<div class="sourceLine" id="cb1-9" data-line-number="9"><span class="co">#&gt;  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant</span></div>
+<div class="sourceLine" id="cb1-10" data-line-number="10"><span class="co">#&gt;  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre </span></div>
+<div class="sourceLine" id="cb1-11" data-line-number="11"><span class="co">#&gt;  6 "Peut-être l'immobilité des choses autour de nous leur est-elle imposée par</span></div>
+<div class="sourceLine" id="cb1-12" data-line-number="12"><span class="co">#&gt;  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un</span></div>
+<div class="sourceLine" id="cb1-13" data-line-number="13"><span class="co">#&gt;  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec</span></div>
+<div class="sourceLine" id="cb1-14" data-line-number="14"><span class="co">#&gt;  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière</span></div>
+<div class="sourceLine" id="cb1-15" data-line-number="15"><span class="co">#&gt; 10 "À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m</span></div>
+<div class="sourceLine" id="cb1-16" data-line-number="16"><span class="co">#&gt; # ... with 4,680 more rows, and 3 more variables: book &lt;chr&gt;,</span></div>
+<div class="sourceLine" id="cb1-17" data-line-number="17"><span class="co">#&gt; #   volume &lt;chr&gt;, year &lt;dbl&gt;</span></div></code></pre>
+</div>
+<div id="proust_characters" class="section level3">
+<h3 class="hasAnchor">
+<a href="#proust_characters" class="anchor"></a><code><a href="reference/proust_characters.html">proust_characters()</a></code>
+</h3>
+<p><code>proust_characters</code> returns a tibble with each characters from the books.</p>
+<pre class="sourceCode r" id="cb2"><code class="sourceCode r"><div class="sourceLine" id="cb2-1" data-line-number="1">
+<span class="kw"><a href="reference/proust_characters.html">proust_characters</a></span>()</div>
+<div class="sourceLine" id="cb2-2" data-line-number="2"><span class="co">#&gt; # A tibble: 461 x 1</span></div>
+<div class="sourceLine" id="cb2-3" data-line-number="3"><span class="co">#&gt;              perso</span></div>
+<div class="sourceLine" id="cb2-4" data-line-number="4"><span class="co">#&gt;  *           &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb2-5" data-line-number="5"><span class="co">#&gt;  1            A.J.</span></div>
+<div class="sourceLine" id="cb2-6" data-line-number="6"><span class="co">#&gt;  2    Académicien </span></div>
+<div class="sourceLine" id="cb2-7" data-line-number="7"><span class="co">#&gt;  3        Adolphe </span></div>
+<div class="sourceLine" id="cb2-8" data-line-number="8"><span class="co">#&gt;  4      Agrigente </span></div>
+<div class="sourceLine" id="cb2-9" data-line-number="9"><span class="co">#&gt;  5      Agrigente </span></div>
+<div class="sourceLine" id="cb2-10" data-line-number="10"><span class="co">#&gt;  6            Aimé</span></div>
+<div class="sourceLine" id="cb2-11" data-line-number="11"><span class="co">#&gt;  7 Albaret Céleste</span></div>
+<div class="sourceLine" id="cb2-12" data-line-number="12"><span class="co">#&gt;  8          Albert</span></div>
+<div class="sourceLine" id="cb2-13" data-line-number="13"><span class="co">#&gt;  9       Albertine</span></div>
+<div class="sourceLine" id="cb2-14" data-line-number="14"><span class="co">#&gt; 10           Albon</span></div>
+<div class="sourceLine" id="cb2-15" data-line-number="15"><span class="co">#&gt; # ... with 451 more rows</span></div></code></pre>
+</div>
+<div id="proust_random" class="section level3">
+<h3 class="hasAnchor">
+<a href="#proust_random" class="anchor"></a><code><a href="reference/proust_random.html">proust_random()</a></code>
+</h3>
+<p>Create your own Proust text with the proust_random() function :</p>
+<pre class="sourceCode r" id="cb3"><code class="sourceCode r"><div class="sourceLine" id="cb3-1" data-line-number="1">
+<span class="kw"><a href="reference/proust_random.html">proust_random</a></span>()</div>
+<div class="sourceLine" id="cb3-2" data-line-number="2">[<span class="dv">1</span>] <span class="st">"Cette voix était restée la même, inutilement chaude, prenante, avec un rien d’accent anglais."</span>
+</div>
+<div class="sourceLine" id="cb3-3" data-line-number="3"></div>
+<div class="sourceLine" id="cb3-4" data-line-number="4">purrr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/purrr/topics/map">map</a></span>(<span class="dv">1</span><span class="op">:</span><span class="dv">5</span>, proust_random)</div>
+<div class="sourceLine" id="cb3-5" data-line-number="5"></div>
+<div class="sourceLine" id="cb3-6" data-line-number="6">[[<span class="dv">1</span>]]</div>
+<div class="sourceLine" id="cb3-7" data-line-number="7">[<span class="dv">1</span>] <span class="st">"Du reste cette réaction des matériaux locaux sur le génie qui les utilise et à qui elle donne plus de verdeur ne rend pas l’œuvre moins individuelle, et que ce soit celle d’un architecte, d’un ébéniste, ou d’un musicien, elle ne reflète pas moins minutieusement les traits les plus subtils de la personnalité de l’artiste, parce qu’il a été forcé de travailler dans la pierre meulière de Senlis ou le grès rouge de Strasbourg, qu’il a respecté les nœuds particuliers au frêne, qu’il a tenu compte dans son écriture des ressources et des limites, de la sonorité, des possibilités, de la flûte ou de l’alto."</span>
+</div>
+<div class="sourceLine" id="cb3-8" data-line-number="8"></div>
+<div class="sourceLine" id="cb3-9" data-line-number="9">[[<span class="dv">2</span>]]</div>
+<div class="sourceLine" id="cb3-10" data-line-number="10">[<span class="dv">1</span>] <span class="st">"Aussi bien, pas plus que les saisons à ses bras de mer infleurissables, les modernes années n’apportent de changement à la cité gothique ; je le savais, je ne pouvais l’imaginer, mais voilà ce que je voulais contempler, de ce même désir qui jadis, quand j’étais enfant, dans l’ardeur même du départ, avait brisé en moi la force de partir ; je voulais me trouver face à face avec mes imaginations vénitiennes ; voir comment cette mer divisée enserrait de ses méandres, comme les replis du fleuve Océan, une civilisation urbaine et raffinée, mais qui, isolée par leur ceinture azurée, s’était développée à part, avait eu à part ses écoles de peinture et d’architecture ; admirer ce jardin fabuleux de fruits et d’oiseaux de pierre de couleur, fleuri au milieu de la mer, qui venait le rafraîchir, frappait de son flux le fût des colonnes et, sur le puissant relief des chapiteaux, comme un regard de sombre azur qui veille dans l’ombre, posait par taches et fait remuer perpétuellement la lumière. Ne doutant pas que ce fût pour montrer qu’ils n’étaient pas intimidés par les titres, elle souhaitait d’imiter leur fierté, mais n’avait pas bien saisi par quelle forme grammaticale elle se traduisait."</span>
+</div>
+<div class="sourceLine" id="cb3-11" data-line-number="11"></div>
+<div class="sourceLine" id="cb3-12" data-line-number="12">[[<span class="dv">3</span>]]</div>
+<div class="sourceLine" id="cb3-13" data-line-number="13">[<span class="dv">1</span>] <span class="st">"Legrandin qui, retenu à Paris par sa profession d’ingénieur, ne pouvait, en dehors des grandes vacances, venir à sa propriété de Combray que du samedi soir au lundi matin. » Il avait bien pensé dans sa tendresse paternelle et pour émouvoir son fils à faire venir  l’instrument. Il me parla de la grande chaleur qu’il faisait ces jours-ci, mais, bien qu’il fût lettré et eût pu s’exprimer en bon français, il me dit : « Vous ne souffrez pas de cette hyperthermie ?"</span>
+</div>
+<div class="sourceLine" id="cb3-14" data-line-number="14"></div>
+<div class="sourceLine" id="cb3-15" data-line-number="15">[[<span class="dv">4</span>]]</div>
+<div class="sourceLine" id="cb3-16" data-line-number="16">[<span class="dv">1</span>] <span class="st">"À côté de leur immensité, je trouvai qu’un coup de chapeau serait mesquin et pourrait faire supposer à mon oncle que je ne me croyais pas tenu envers lui à plus qu’à une banale politesse. Comme ce n’était pas un lundi, nous ne savions pas si nous trouverions Mme Verdurin, car sauf ce jour-là, où elle recevait, il était imprudent d’aller la voir à l’improviste. Les mêmes noms de lieux, si troublants pour moi jadis que le simple Annuaire des Châteaux, feuilleté au chapitre du département de la Manche, me causait autant d’émotion que l’Indicateur des chemins de fer, m’étaient devenus si familiers que cet indicateur même, j’aurais pu le consulter, à la page Balbec-Douville par Doncières, avec la même heureuse tranquillité qu’un dictionnaire d’adresses. » Et elle dit à son institutrice de se dépêcher. — Mais, lui dis-je, est-ce que cela n’ennuie pas votre père ? — Pas le moins du monde. — Cependant, il avait peur que cela ne semble bizarre à cause de cet anniversaire. — Qu’est-ce que cela peut me faire ce que les autres pensent ?"</span>
+</div>
+<div class="sourceLine" id="cb3-17" data-line-number="17"></div>
+<div class="sourceLine" id="cb3-18" data-line-number="18">[[<span class="dv">5</span>]]</div>
+<div class="sourceLine" id="cb3-19" data-line-number="19">[<span class="dv">1</span>] <span class="st">"Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !"</span>
+</div></code></pre>
+</div>
+<div id="proust_stopwords" class="section level3">
+<h3 class="hasAnchor">
+<a href="#proust_stopwords" class="anchor"></a><code><a href="reference/proust_stopwords.html">proust_stopwords()</a></code>
+</h3>
+<p>You can get a tibble of stopwords with:</p>
+<pre class="sourceCode r" id="cb4"><code class="sourceCode r"><div class="sourceLine" id="cb4-1" data-line-number="1">
+<span class="kw"><a href="reference/proust_stopwords.html">proust_stopwords</a></span>()</div></code></pre>
+</div>
+<div id="proust_sentiments" class="section level3">
+<h3 class="hasAnchor">
+<a href="#proust_sentiments" class="anchor"></a><code><a href="reference/proust_sentiments.html">proust_sentiments()</a></code>
+</h3>
+<p>Sentiment lexicon is launched with:</p>
+<pre class="sourceCode r" id="cb5"><code class="sourceCode r"><div class="sourceLine" id="cb5-1" data-line-number="1">
+<span class="kw"><a href="reference/proust_sentiments.html">proust_sentiments</a></span>()</div>
+<div class="sourceLine" id="cb5-2" data-line-number="2"><span class="co">#&gt; # A tibble: 14,127 x 2</span></div>
+<div class="sourceLine" id="cb5-3" data-line-number="3"><span class="co">#&gt;               word polarity</span></div>
+<div class="sourceLine" id="cb5-4" data-line-number="4"><span class="co">#&gt;  *           &lt;chr&gt;    &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb5-5" data-line-number="5"><span class="co">#&gt;  1 à ce endroit là positive</span></div>
+<div class="sourceLine" id="cb5-6" data-line-number="6"><span class="co">#&gt;  2       à le hâte negative</span></div>
+<div class="sourceLine" id="cb5-7" data-line-number="7"><span class="co">#&gt;  3          à part negative</span></div>
+<div class="sourceLine" id="cb5-8" data-line-number="8"><span class="co">#&gt;  4           à pic negative</span></div>
+<div class="sourceLine" id="cb5-9" data-line-number="9"><span class="co">#&gt;  5      à rallonge negative</span></div>
+<div class="sourceLine" id="cb5-10" data-line-number="10"><span class="co">#&gt;  6      abasourdir negative</span></div>
+<div class="sourceLine" id="cb5-11" data-line-number="11"><span class="co">#&gt;  7        ablation negative</span></div>
+<div class="sourceLine" id="cb5-12" data-line-number="12"><span class="co">#&gt;  8      abominable negative</span></div>
+<div class="sourceLine" id="cb5-13" data-line-number="13"><span class="co">#&gt;  9          abrupt negative</span></div>
+<div class="sourceLine" id="cb5-14" data-line-number="14"><span class="co">#&gt; 10          absent negative</span></div>
+<div class="sourceLine" id="cb5-15" data-line-number="15"><span class="co">#&gt; # ... with 14,117 more rows</span></div></code></pre>
+<p>You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with <code>type = "score"</code>.</p>
+</div>
+</div>
+<div id="pr_-functions" class="section level2">
+<h2 class="hasAnchor">
+<a href="#pr_-functions" class="anchor"></a><code>pr_*()</code> functions</h2>
+<p>Please bear in mind that all these functions are designed to work with a data.frame.</p>
+<div id="pr_detect_days" class="section level3">
+<h3 class="hasAnchor">
+<a href="#pr_detect_days" class="anchor"></a><code><a href="reference/pr_detect_days.html">pr_detect_days()</a></code>
+</h3>
+<p>Detects the days from a data.frame (in French).</p>
+<pre class="sourceCode r" id="cb6"><code class="sourceCode r"><div class="sourceLine" id="cb6-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="kw">c</span>(<span class="st">"C'était lundi 1er mars et mardi 2"</span>, <span class="st">"Et mercredi 3"</span>, <span class="st">"Il est revenu jeudi."</span>))</div>
+<div class="sourceLine" id="cb6-2" data-line-number="2">
+<span class="kw"><a href="reference/pr_detect_days.html">pr_detect_days</a></span>(a, text)</div>
+<div class="sourceLine" id="cb6-3" data-line-number="3"><span class="co">#&gt; # A tibble: 3 x 3</span></div>
+<div class="sourceLine" id="cb6-4" data-line-number="4"><span class="co">#&gt;                                text      days n_days</span></div>
+<div class="sourceLine" id="cb6-5" data-line-number="5"><span class="co">#&gt; *                            &lt;fctr&gt;    &lt;list&gt;  &lt;int&gt;</span></div>
+<div class="sourceLine" id="cb6-6" data-line-number="6"><span class="co">#&gt; 1 C'était lundi 1er mars et mardi 2 &lt;chr [2]&gt;      2</span></div>
+<div class="sourceLine" id="cb6-7" data-line-number="7"><span class="co">#&gt; 2                     Et mercredi 3 &lt;chr [1]&gt;      1</span></div>
+<div class="sourceLine" id="cb6-8" data-line-number="8"><span class="co">#&gt; 3              Il est revenu jeudi. &lt;chr [1]&gt;      1</span></div></code></pre>
+</div>
+<div id="pr_detect_months" class="section level3">
+<h3 class="hasAnchor">
+<a href="#pr_detect_months" class="anchor"></a><code><a href="reference/pr_detect_months.html">pr_detect_months()</a></code>
+</h3>
+<p>Detects the months from a data.frame (in French).</p>
+<pre class="sourceCode r" id="cb7"><code class="sourceCode r"><div class="sourceLine" id="cb7-1" data-line-number="1">
+<span class="kw"><a href="reference/pr_detect_months.html">pr_detect_months</a></span>(a, text)</div>
+<div class="sourceLine" id="cb7-2" data-line-number="2"><span class="co">#&gt; # A tibble: 3 x 3</span></div>
+<div class="sourceLine" id="cb7-3" data-line-number="3"><span class="co">#&gt;                                text    months n_months</span></div>
+<div class="sourceLine" id="cb7-4" data-line-number="4"><span class="co">#&gt; *                            &lt;fctr&gt;    &lt;list&gt;    &lt;int&gt;</span></div>
+<div class="sourceLine" id="cb7-5" data-line-number="5"><span class="co">#&gt; 1 C'était lundi 1er mars et mardi 2 &lt;chr [1]&gt;        1</span></div>
+<div class="sourceLine" id="cb7-6" data-line-number="6"><span class="co">#&gt; 2                     Et mercredi 3 &lt;chr [0]&gt;        0</span></div>
+<div class="sourceLine" id="cb7-7" data-line-number="7"><span class="co">#&gt; 3              Il est revenu jeudi. &lt;chr [0]&gt;        0</span></div></code></pre>
+</div>
+<div id="pr_detect_pro" class="section level3">
+<h3 class="hasAnchor">
+<a href="#pr_detect_pro" class="anchor"></a><code><a href="reference/pr_detect_pro.html">pr_detect_pro()</a></code>
+</h3>
+<p>Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun col stand for : + pps: first person singular (première personne du singulier) + dps: second person singular (deuxième personne du singulier) + tps: third person singular (troisième personne du singulier) + ppp: first person plural (première personne du pluriel) + dpp: second person singular (deuxième personne du pluriel) + tpp: third person singular (troisième personne du pluriel)</p>
+<pre class="sourceCode r" id="cb8"><code class="sourceCode r"><div class="sourceLine" id="cb8-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw"><a href="reference/proust_books.html">proust_books</a></span>()[<span class="dv">1</span>,]</div>
+<div class="sourceLine" id="cb8-2" data-line-number="2">a &lt;-<span class="st"> </span><span class="kw"><a href="reference/pr_detect_pro.html">pr_detect_pro</a></span>(a, text)</div>
+<div class="sourceLine" id="cb8-3" data-line-number="3">dplyr<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/dplyr/topics/select">select</a></span>(a, <span class="op">-</span>text)</div>
+<div class="sourceLine" id="cb8-4" data-line-number="4"><span class="co">#&gt; # A tibble: 2 x 5</span></div>
+<div class="sourceLine" id="cb8-5" data-line-number="5"><span class="co">#&gt;                    book                    volume  year pronoun count</span></div>
+<div class="sourceLine" id="cb8-6" data-line-number="6"><span class="co">#&gt; *                 &lt;chr&gt;                     &lt;chr&gt; &lt;dbl&gt;   &lt;chr&gt; &lt;int&gt;</span></div>
+<div class="sourceLine" id="cb8-7" data-line-number="7"><span class="co">#&gt; 1 Du côté de chez Swann Première partie : Combray  1913     pps    26</span></div>
+<div class="sourceLine" id="cb8-8" data-line-number="8"><span class="co">#&gt; 2 Du côté de chez Swann Première partie : Combray  1913     tps    13</span></div></code></pre>
+</div>
+<div id="pr_normalize_punc" class="section level3">
+<h3 class="hasAnchor">
+<a href="#pr_normalize_punc" class="anchor"></a><code><a href="reference/pr_normalize_punc.html">pr_normalize_punc()</a></code>
+</h3>
+<p>French has a weird punctuation use. For example, quotes are <code>«</code> and <code>»</code>, instead of <code>"</code>. Other strange characters may include <code>՚</code>,<code>︐</code> or <code>’</code> for apostrophe. This function removes most of the punctuation idiosyncracy you can find in a french text.</p>
+<p>Note: books from {proustr} have already been normalized.</p>
+<pre class="sourceCode r" id="cb9"><code class="sourceCode r"><div class="sourceLine" id="cb9-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">text =</span> <span class="st">"Il l՚a dit : « La ponctuation est chelou » !"</span>)</div>
+<div class="sourceLine" id="cb9-2" data-line-number="2">
+<span class="kw"><a href="reference/pr_normalize_punc.html">pr_normalize_punc</a></span>(a, text)</div>
+<div class="sourceLine" id="cb9-3" data-line-number="3"><span class="co">#&gt; # A tibble: 1 x 1</span></div>
+<div class="sourceLine" id="cb9-4" data-line-number="4"><span class="co">#&gt;                                             text</span></div>
+<div class="sourceLine" id="cb9-5" data-line-number="5"><span class="co">#&gt; *                                          &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb9-6" data-line-number="6"><span class="co">#&gt; 1 "Il l'a dit : \"La ponctuation est chelou\" !"</span></div></code></pre>
+<p>Why bother? Some text-mining tools perform a split with <code>'</code>, not with <code>՚</code>, a behavior which can lead to some error when tokenizing a text.</p>
+</div>
+<div id="pr_stem" class="section level3">
+<h3 class="hasAnchor">
+<a href="#pr_stem" class="anchor"></a><code>pr_stem()</code>
+</h3>
+<p>Turn your text into stems. This is an implementation of the {SnowballC} package in {proustr}.Please keep in mind that punctuation and capital letters are removed by this function.</p>
+<p>You can stem a data.frame with a column containing sentences with <code>pr_stem_sentences</code> :</p>
+<pre class="sourceCode r" id="cb10"><code class="sourceCode r"><div class="sourceLine" id="cb10-1" data-line-number="1">a &lt;-<span class="st"> </span>proustr<span class="op">::</span>laprisonniere[<span class="dv">1</span><span class="op">:</span><span class="dv">10</span>,]</div>
+<div class="sourceLine" id="cb10-2" data-line-number="2">
+<span class="kw"><a href="reference/pr_stem_sentences.html">pr_stem_sentences</a></span>(a, text)</div>
+<div class="sourceLine" id="cb10-3" data-line-number="3"><span class="co">#&gt; # A tibble: 10 x 4</span></div>
+<div class="sourceLine" id="cb10-4" data-line-number="4"><span class="co">#&gt;                                                                           text</span></div>
+<div class="sourceLine" id="cb10-5" data-line-number="5"><span class="co">#&gt;  *                                                                       &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb10-6" data-line-number="6"><span class="co">#&gt;  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus </span></div>
+<div class="sourceLine" id="cb10-7" data-line-number="7"><span class="co">#&gt;  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit </span></div>
+<div class="sourceLine" id="cb10-8" data-line-number="8"><span class="co">#&gt;  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau enc</span></div>
+<div class="sourceLine" id="cb10-9" data-line-number="9"><span class="co">#&gt;  4                  le douleur sont de foll et qui le écout est encor plus fou</span></div>
+<div class="sourceLine" id="cb10-10" data-line-number="10"><span class="co">#&gt;  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanso</span></div>
+<div class="sourceLine" id="cb10-11" data-line-number="11"><span class="co">#&gt;  6                                    une chanson d'adieu sort de sourc troubl</span></div>
+<div class="sourceLine" id="cb10-12" data-line-number="12"><span class="co">#&gt;  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisail</span></div>
+<div class="sourceLine" id="cb10-13" data-line-number="13"><span class="co">#&gt;  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout parei</span></div>
+<div class="sourceLine" id="cb10-14" data-line-number="14"><span class="co">#&gt;  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ord</span></div>
+<div class="sourceLine" id="cb10-15" data-line-number="15"><span class="co">#&gt; 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas</span></div>
+<div class="sourceLine" id="cb10-16" data-line-number="16"><span class="co">#&gt; # ... with 3 more variables: book &lt;chr&gt;, volume &lt;chr&gt;, year &lt;dbl&gt;</span></div></code></pre>
+<p>Or a column with words with <code>pr_stem_words</code> :</p>
+<pre class="sourceCode r" id="cb11"><code class="sourceCode r"><div class="sourceLine" id="cb11-1" data-line-number="1">a &lt;-<span class="st"> </span><span class="kw">data.frame</span>(<span class="dt">words =</span> <span class="kw">c</span>(<span class="st">"matin"</span>, <span class="st">"heure"</span>, <span class="st">"fatigué"</span>,<span class="st">"sonné"</span>,<span class="st">"lois"</span>, <span class="st">"tests"</span>,<span class="st">"fusionner"</span>))</div>
+<div class="sourceLine" id="cb11-2" data-line-number="2">
+<span class="kw"><a href="reference/pr_stem_words.html">pr_stem_words</a></span>(a, words)</div>
+<div class="sourceLine" id="cb11-3" data-line-number="3"><span class="co">#&gt; # A tibble: 7 x 1</span></div>
+<div class="sourceLine" id="cb11-4" data-line-number="4"><span class="co">#&gt;    words</span></div>
+<div class="sourceLine" id="cb11-5" data-line-number="5"><span class="co">#&gt; *  &lt;chr&gt;</span></div>
+<div class="sourceLine" id="cb11-6" data-line-number="6"><span class="co">#&gt; 1  matin</span></div>
+<div class="sourceLine" id="cb11-7" data-line-number="7"><span class="co">#&gt; 2   heur</span></div>
+<div class="sourceLine" id="cb11-8" data-line-number="8"><span class="co">#&gt; 3 fatigu</span></div>
+<div class="sourceLine" id="cb11-9" data-line-number="9"><span class="co">#&gt; 4    son</span></div>
+<div class="sourceLine" id="cb11-10" data-line-number="10"><span class="co">#&gt; 5   lois</span></div>
+<div class="sourceLine" id="cb11-11" data-line-number="11"><span class="co">#&gt; 6   test</span></div>
+<div class="sourceLine" id="cb11-12" data-line-number="12"><span class="co">#&gt; 7 fusion</span></div></code></pre>
+</div>
+</div>
+<div id="install-proustr" class="section level2">
+<h2 class="hasAnchor">
+<a href="#install-proustr" class="anchor"></a>Install proustr</h2>
+<p>Install this package directly in R :</p>
+<pre class="sourceCode r" id="cb12"><code class="sourceCode r"><div class="sourceLine" id="cb12-1" data-line-number="1">
+<span class="kw">install.packages</span>(<span class="st">"proustr"</span>)</div></code></pre>
+<p>From Github :</p>
+<pre class="sourceCode r" id="cb13"><code class="sourceCode r"><div class="sourceLine" id="cb13-1" data-line-number="1">devtools<span class="op">::</span><span class="kw"><a href="http://www.rdocumentation.org/packages/devtools/topics/install_github">install_github</a></span>(<span class="st">"ColinFay/proustr"</span>)</div></code></pre>
+<div id="contact" class="section level3">
+<h3 class="hasAnchor">
+<a href="#contact" class="anchor"></a>Contact</h3>
+<p>Questions and feedbacks <a href="mailto:contact@colinfay.me">welcome</a>!</p>
+<p>You want to contribute ? Open a <a href="https://github.com/ColinFay/proustr/pulls">PR</a> :) If you encounter a bug or want to suggest an enhancement, please <a href="https://github.com/ColinFay/proustr/issues">open an issue</a>.</p>
 </div>
 </div>
 </div>
@@ -120,8 +347,6 @@
     <h2 class="hasAnchor">
 <a href="#sidebar" class="anchor"></a>Links</h2>
 <ul class="list-unstyled">
-<li>Download from CRAN at <br><a href="https://cran.r-project.org/package=proustr">https://​cran.r-project.org/​package=proustr</a>
-</li>
 <li>Browse source code at <br><a href="https://github.com/ColinFay/proustr">https://​github.com/​ColinFay/​proustr</a>
 </li>
 <li>Report a bug at <br><a href="https://github.com/ColinFay/proustr/issues">https://​github.com/​ColinFay/​proustr/​issues</a>

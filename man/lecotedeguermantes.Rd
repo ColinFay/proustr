@@ -5,6 +5,9 @@
 \alias{lecotedeguermantes}
 \title{Marcel Proust's novel "Le côté de Guermantes"}
 \format{A tibble with text, book, volume, and year}
+\source{
+<https://fr.wikisource.org/wiki/Le_C%C3%B4t%C3%A9_de_Guermantes>
+}
 \usage{
 lecotedeguermantes
 }

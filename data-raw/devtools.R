@@ -31,7 +31,7 @@ use_package("purrr")
 use_package("rlang")
 use_package("tokenizers")
 use_package("SnowballC")
-use_package("assertthat")
+use_package("attempt")
 
 # run tests 
 
