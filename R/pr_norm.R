@@ -82,5 +82,4 @@ pr_unacent <- function(text) {
 pr_keep_only_alnum <- function(text, replacement = " "){
   res <- gsub("[^[:alnum:]]", replacement, text) 
   gsub(" {2,}", " ", res) 
->>>>>>> 66edb642919c9504704774ce24bfbfdad01dc1b3
 }

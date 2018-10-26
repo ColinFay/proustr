@@ -15,7 +15,7 @@
 
 proust_sentiments <- function(type = c("polarity", "score")) {
   type <- match.arg(type)
-  message("This function uses a derived version of the FEEL dataset. \nIt can be used freely for research purposes. \nSee https://saifmohammad.com/WebDocs/README-NRC-Lex.txt for more info")
+  cat(crayon::green("This function uses a derived version of the FEEL dataset. \nIt can be used freely for research purposes. \nSee https://saifmohammad.com/WebDocs/README-NRC-Lex.txt for more info\n"))
   if (type == "polarity"){
     structure(proustr::sentiments_polarity, class = c("tbl_df", "tbl", "data.frame"))
   } else {
