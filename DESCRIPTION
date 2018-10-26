@@ -11,7 +11,8 @@ URL: https://github.com/ColinFay/proustr
 BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
-Imports:
+Imports: 
+    crayon,
     dplyr,
     magrittr,
     stringr,
@@ -20,7 +21,7 @@ Imports:
     tidyr,
     tokenizers,
     SnowballC,
-    assertthat
+    attempt
 LazyData: true
 RoxygenNote: 6.0.1.9000
 Encoding: UTF-8
