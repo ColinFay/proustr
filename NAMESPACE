@@ -3,6 +3,7 @@
 export(pr_detect_days)
 export(pr_detect_months)
 export(pr_detect_pro)
+export(pr_keep_only_alnum)
 export(pr_normalize_punc)
 export(pr_stem_sentences)
 export(pr_stem_words)

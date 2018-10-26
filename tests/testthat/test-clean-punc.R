@@ -23,3 +23,7 @@ test_that("dot dot dot cleaning", {
   expect_equal(clean_punc(vec = intToUtf8(8230)), "...")
 })
 
+test_that("alnum cleaning", {
+  a <- pr_keep_only_alnum("neuilly-en-thelle")
+  expect_equal(a, "neuilly en thelle")
+})

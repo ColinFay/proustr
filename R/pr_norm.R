@@ -59,9 +59,28 @@ clean_punc <- function(vec){
 #' 
 #' @examples
 #' pr_unacent("du chêne")
-
 pr_unacent <- function(text) {
   text <- gsub("['`^~\"]", " ", text) 
   text <- iconv(text, to="ASCII//TRANSLIT//IGNORE")
   gsub("['`^~\"]", "", text)
+}
+
+#' Remove non alnum elements
+#'
+#' Remove non alnum elements
+#'
+#' @param text a vector
+#' @param replacement what to replace the non alnum with. Defaut is " ". 
+#'
+#' @export
+#' 
+#' @return a vector 
+#' 
+#' @examples
+#' pr_keep_only_alnum("neuilly-en-thelle")
+
+pr_keep_only_alnum <- function(text, replacement = " "){
+  res <- gsub("[^[:alnum:]]", replacement, text) 
+  gsub(" {2,}", " ", res) 
+>>>>>>> 66edb642919c9504704774ce24bfbfdad01dc1b3
 }
