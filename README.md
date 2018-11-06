@@ -14,17 +14,14 @@ status](https://codecov.io/gh/ColinFay/proustr/branch/master/graph/badge.svg)](h
 
 ![lifecycle](https://img.shields.io/badge/lifecycle-stable-brightgreen.svg)
 
-`proustr` is now on [CRAN](https://CRAN.R-project.org/package=proustr).
-
-\[Note: this package is a work in progress. Every undocumented function
-should be considered as still under
-development.\]
+`proustr` is now on
+[CRAN](https://CRAN.R-project.org/package=proustr).
 
 ## Tools for Natural Language Processing in French and texts from Marcel Proust’s collection “A La Recherche Du Temps Perdu”
 
 <p align="center">
 
-<img src="https://github.com/ColinFay/proustr/blob/master/proustr_hex.png?raw=true" width = "250">
+<img src="inst/hex-proustr.png" width = "250">
 
 </p>
 
@@ -51,9 +48,9 @@ Here is a list of all the books contained in this pacakage :
 
 ## Find your way into {proustr}
 
-{proustr} is divided into two type of functions :
+`{proustr}` is divided into two type of functions:
 
-  - `proust_*()` functions return data objects (books, characters, stop
+  - `proust_*()` functions return data objects (books, characters,
     words, random Proust extract…)
 
   - `pr_*()` functions perform actions on the data. `pr` is short for
@@ -71,20 +68,19 @@ Get the tibble with all the books :
 library(proustr)
 proust_books()
 #> # A tibble: 4,690 x 4
-#>                                                                           text
-#>  *                                                                       <chr>
-#>  1 "Longtemps, je me suis couché de bonne heure. Parfois, à peine ma bougie ét
-#>  2 J'appuyais tendrement mes joues contre les belles joues de l'oreiller qui, 
-#>  3 Je me rendormais, et parfois je n'avais plus que de courts réveils d'un ins
-#>  4 Quelquefois, comme Ève naquit d'une côte d'Adam, une femme naissait pendant
-#>  5 Un homme qui dort tient en cercle autour de lui le fil des heures, l'ordre 
-#>  6 "Peut-être l'immobilité des choses autour de nous leur est-elle imposée par
-#>  7 Puis renaissait le souvenir d'une nouvelle attitude ; le mur filait dans un
-#>  8 Ces évocations tournoyantes et confuses ne duraient jamais que quelques sec
-#>  9 Certes, j'étais bien éveillé maintenant : mon corps avait viré une dernière
-#> 10 "À Combray, tous les jours dès la fin de l'après-midi, longtemps avant le m
-#> # ... with 4,680 more rows, and 3 more variables: book <chr>,
-#> #   volume <chr>, year <dbl>
+#>    text                                 book          volume          year
+#>  * <chr>                                <chr>         <chr>          <dbl>
+#>  1 "Longtemps, je me suis couché de bo… Du côté de c… Première part…  1913
+#>  2 J'appuyais tendrement mes joues con… Du côté de c… Première part…  1913
+#>  3 Je me rendormais, et parfois je n'a… Du côté de c… Première part…  1913
+#>  4 Quelquefois, comme Ève naquit d'une… Du côté de c… Première part…  1913
+#>  5 Un homme qui dort tient en cercle a… Du côté de c… Première part…  1913
+#>  6 "Peut-être l'immobilité des choses … Du côté de c… Première part…  1913
+#>  7 Puis renaissait le souvenir d'une n… Du côté de c… Première part…  1913
+#>  8 Ces évocations tournoyantes et conf… Du côté de c… Première part…  1913
+#>  9 Certes, j'étais bien éveillé mainte… Du côté de c… Première part…  1913
+#> 10 "À Combray, tous les jours dès la f… Du côté de c… Première part…  1913
+#> # ... with 4,680 more rows
 ```
 
 ### `proust_characters()`
@@ -95,18 +91,18 @@ books.
 ``` r
 proust_characters()
 #> # A tibble: 461 x 1
-#>              perso
-#>  *           <chr>
-#>  1            A.J.
-#>  2    Académicien 
-#>  3        Adolphe 
-#>  4      Agrigente 
-#>  5      Agrigente 
-#>  6            Aimé
+#>    perso          
+#>  * <chr>          
+#>  1 A.J.           
+#>  2 "Académicien " 
+#>  3 "Adolphe "     
+#>  4 "Agrigente "   
+#>  5 "Agrigente "   
+#>  6 Aimé           
 #>  7 Albaret Céleste
-#>  8          Albert
-#>  9       Albertine
-#> 10           Albon
+#>  8 Albert         
+#>  9 Albertine      
+#> 10 Albon          
 #> # ... with 451 more rows
 ```
 
@@ -142,33 +138,21 @@ You can get a tibble of stopwords with:
 
 ``` r
 proust_stopwords()
+#> # A tibble: 689 x 1
+#>    word      
+#>    <chr>     
+#>  1 a         
+#>  2 abord     
+#>  3 absolument
+#>  4 afin      
+#>  5 ah        
+#>  6 ai        
+#>  7 aie       
+#>  8 aient     
+#>  9 aies      
+#> 10 ailleurs  
+#> # ... with 679 more rows
 ```
-
-### `proust_sentiments()`
-
-Sentiment lexicon is launched with:
-
-``` r
-proust_sentiments()
-#> # A tibble: 14,127 x 2
-#>               word polarity
-#>  *           <chr>    <chr>
-#>  1 à ce endroit là positive
-#>  2       à le hâte negative
-#>  3          à part negative
-#>  4           à pic negative
-#>  5      à rallonge negative
-#>  6      abasourdir negative
-#>  7        ablation negative
-#>  8      abominable negative
-#>  9          abrupt negative
-#> 10          absent negative
-#> # ... with 14,117 more rows
-```
-
-You can chose between polarity (positive or negative, which is the
-default behavior), or a score on six sentiments (joy, fear, sadness,
-anger, surprise, disgust) with `type = "score"`.
 
 ## `pr_*()` functions
 
@@ -184,11 +168,11 @@ French).
 a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
 pr_detect_days(a, text)
 #> # A tibble: 3 x 3
-#>                                text      days n_days
-#> *                            <fctr>    <list>  <int>
+#>   text                              days      n_days
+#> * <fct>                             <list>     <int>
 #> 1 C'était lundi 1er mars et mardi 2 <chr [2]>      2
-#> 2                     Et mercredi 3 <chr [1]>      1
-#> 3              Il est revenu jeudi. <chr [1]>      1
+#> 2 Et mercredi 3                     <chr [1]>      1
+#> 3 Il est revenu jeudi.              <chr [1]>      1
 ```
 
 ### `pr_detect_months()`
@@ -198,11 +182,11 @@ Detects the months from a data.frame (in French).
 ``` r
 pr_detect_months(a, text)
 #> # A tibble: 3 x 3
-#>                                text    months n_months
-#> *                            <fctr>    <list>    <int>
+#>   text                              months    n_months
+#> * <fct>                             <list>       <int>
 #> 1 C'était lundi 1er mars et mardi 2 <chr [1]>        1
-#> 2                     Et mercredi 3 <chr [0]>        0
-#> 3              Il est revenu jeudi. <chr [0]>        0
+#> 2 Et mercredi 3                     <chr [0]>        0
+#> 3 Il est revenu jeudi.              <chr [0]>        0
 ```
 
 ### `pr_detect_pro()`
@@ -220,10 +204,19 @@ a <- proust_books()[1,]
 a <- pr_detect_pro(a, text)
 dplyr::select(a, -text)
 #> # A tibble: 2 x 5
-#>                    book                    volume  year pronoun count
-#> *                 <chr>                     <chr> <dbl>   <chr> <int>
-#> 1 Du côté de chez Swann Première partie : Combray  1913     pps    26
-#> 2 Du côté de chez Swann Première partie : Combray  1913     tps    13
+#>   book                  volume                     year pronoun count
+#> * <chr>                 <chr>                     <dbl> <chr>   <int>
+#> 1 Du côté de chez Swann Première partie : Combray  1913 pps        26
+#> 2 Du côté de chez Swann Première partie : Combray  1913 tps        13
+```
+
+### `pr_keep_only_alnum()`
+
+Removes non alpha numeric elements:
+
+``` r
+pr_keep_only_alnum("neuilly-en-thelle")
+#> [1] "neuilly en thelle"
 ```
 
 ### `pr_normalize_punc()`
@@ -239,8 +232,8 @@ Note: books from {proustr} have already been normalized.
 a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")
 pr_normalize_punc(a, text)
 #> # A tibble: 1 x 1
-#>                                             text
-#> *                                          <chr>
+#>   text                                          
+#> * <chr>                                         
 #> 1 "Il l'a dit : \"La ponctuation est chelou\" !"
 ```
 
@@ -260,19 +253,18 @@ You can stem a data.frame with a column containing sentences with
 a <- proustr::laprisonniere[1:10,]
 pr_stem_sentences(a, text)
 #> # A tibble: 10 x 4
-#>                                                                           text
-#>  *                                                                       <chr>
-#>  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus 
-#>  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit 
-#>  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau enc
-#>  4                  le douleur sont de foll et qui le écout est encor plus fou
-#>  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanso
-#>  6                                    une chanson d'adieu sort de sourc troubl
-#>  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisail
-#>  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout parei
-#>  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ord
-#> 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas
-#> # ... with 3 more variables: book <chr>, volume <chr>, year <dbl>
+#>    text                                         book        volume    year
+#>  * <chr>                                        <chr>       <chr>    <dbl>
+#>  1 des le matin la têt encor tourn contr le mu… La Prisonn… Tome Un…  1923
+#>  2 quand je pens mainten que mon ami était ven… La Prisonn… Tome Un…  1923
+#>  3 quand albertin sav par françois que dan la … La Prisonn… Tome Un…  1923
+#>  4 le douleur sont de foll et qui le écout est… La Prisonn… Tome Un…  1923
+#>  5 je l'aim trop pour ne pas joyeux sourir de … La Prisonn… Tome Un…  1923
+#>  6 une chanson d'adieu sort de sourc troubl     La Prisonn… Tome Un…  1923
+#>  7 une nu pass elle éclips le soleil je voi s'… La Prisonn… Tome Un…  1923
+#>  8 le cloison qui sépar nos deux cabinet de to… La Prisonn… Tome Un…  1923
+#>  9 d'autr fois je rest couch rêv auss longtemp… La Prisonn… Tome Un…  1923
+#> 10 je son françois j'ouvr le figaro j'y cherch… La Prisonn… Tome Un…  1923
 ```
 
 Or a column with words with `pr_stem_words`
@@ -282,14 +274,14 @@ Or a column with words with `pr_stem_words`
 a <- data.frame(words = c("matin", "heure", "fatigué","sonné","lois", "tests","fusionner"))
 pr_stem_words(a, words)
 #> # A tibble: 7 x 1
-#>    words
-#> *  <chr>
-#> 1  matin
-#> 2   heur
+#>   words 
+#> * <chr> 
+#> 1 matin 
+#> 2 heur  
 #> 3 fatigu
-#> 4    son
-#> 5   lois
-#> 6   test
+#> 4 son   
+#> 5 lois  
+#> 6 test  
 #> 7 fusion
 ```
 
@@ -304,7 +296,7 @@ install.packages("proustr")
 From Github :
 
 ``` r
-devtools::install_github("ColinFay/proustr")
+remotes::install_github("ColinFay/proustr")
 ```
 
 ### Contact

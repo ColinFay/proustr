@@ -102,6 +102,7 @@ proust_char <-   url %>%
   as.tibble() %>%
   slice(62:522) %>%
   mutate(value = str_replace_all(value, pattern = "\\(.*\\)", replacement =  "")) %>%
+  mutate(value = str_replace_all(value, pattern = " *$", replacement =  "")) %>%
   rename(perso = value)
 
 # Get stopwords 
@@ -120,17 +121,6 @@ stop_words <- stop_words$fr
 
 usethis::use_data(stop_words, overwrite = TRUE)
 
-# Sentiments 
-
-sentiments <- read_csv2("http://www.lirmm.fr/~abdaoui/FEEL.csv")
-sentiments_polarity <- sentiments %>%
-  select(word, polarity)
-sentiments_score <- sentiments %>% 
-  select(word, joy:disgust) %>% 
-  gather(key = sentiment, value = score, joy:disgust) %>%
-  filter(score != 0) %>%
-  arrange(word) %>%
-  select(word, sentiment) 
 
 ## Add data 
 
@@ -143,5 +133,3 @@ devtools::use_data(albertinedisparue, overwrite = TRUE)
 devtools::use_data(letempretrouve, overwrite = TRUE)
 devtools::use_data(proust_char, overwrite = TRUE)
 devtools::use_data(_words, overwrite = TRUE, internal = TRUE)
-devtools::use_data(sentiments_polarity, overwrite = TRUE)
-devtools::use_data(sentiments_score, overwrite = TRUE)
