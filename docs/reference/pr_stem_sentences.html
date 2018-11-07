@@ -18,13 +18,26 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Stem a dataframe containing a column with sentences — pr_stem_sentences" />
+
+<meta property="og:description" content="Implementation of the SnowballC stemmer. Note that punctuation and capital letters 
+are removed when processing." />
+<meta name="twitter:card" content="summary" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,8 +60,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">proustr</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">proustr</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.0.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -73,7 +90,7 @@
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -85,6 +102,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -92,20 +110,24 @@
       
       </header>
 
-      <div class="row">
+<div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
     <h1>Stem a dataframe containing a column with sentences</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ColinFay/proustr/blob/master/R/pr_stem.R'><code>R/pr_stem.R</code></a></small>
+    <div class="hidden name"><code>pr_stem_sentences.Rd</code></div>
     </div>
 
+    <div class="ref-description">
     
     <p>Implementation of the SnowballC stemmer. Note that punctuation and capital letters 
 are removed when processing.</p>
     
+    </div>
 
     <pre class="usage"><span class='fu'>pr_stem_sentences</span>(<span class='no'>df</span>, <span class='no'>col</span>, <span class='kw'>language</span> <span class='kw'>=</span> <span class='st'>"french"</span>)</pre>
     
-    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a> Arguments</h2>
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
     <table class="ref-arguments">
     <colgroup><col class="name" /><col class="desc" /></colgroup>
     <tr>
@@ -130,19 +152,18 @@ are removed when processing.</p>
     <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
     <pre class="examples"><div class='input'><span class='no'>a</span> <span class='kw'>&lt;-</span> <span class='kw pkg'>proustr</span><span class='kw ns'>::</span><span class='no'><a href='http://www.rdocumentation.org/packages/proustr/topics/laprisonniere'>laprisonniere</a></span>[<span class='fl'>1</span>:<span class='fl'>10</span>,]
 <span class='fu'>pr_stem_sentences</span>(<span class='no'>a</span>, <span class='no'>text</span>)</div><div class='output co'>#&gt; # A tibble: 10 x 4
-#&gt;                                                                                text
-#&gt;  *                                                                            &lt;chr&gt;
-#&gt;  1 des le matin la têt encor tourn contr le mur et avant d'avoir vu au dessus de gr
-#&gt;  2 quand je pens mainten que mon ami était venu à notr retour de balbec habit à par
-#&gt;  3 quand albertin sav par françois que dan la nuit de ma chambr aux rideau encor fe
-#&gt;  4                       le douleur sont de foll et qui le écout est encor plus fou
-#&gt;  5 je l'aim trop pour ne pas joyeux sourir de son mauv goût musical cet chanson du 
-#&gt;  6                                         une chanson d'adieu sort de sourc troubl
-#&gt;  7 une nu pass elle éclips le soleil je voi s'éteindr et rentr dan une grisaill le 
-#&gt;  8 le cloison qui sépar nos deux cabinet de toilet celui d'albertin tout pareil éta
-#&gt;  9 d'autr fois je rest couch rêv auss longtemp que je le voul car on avait ordre de
-#&gt; 10 je son françois j'ouvr le figaro j'y cherch et constat que ne s'y trouv pas un a
-#&gt; # ... with 3 more variables: book &lt;chr&gt;, volume &lt;chr&gt;, year &lt;dbl&gt;</div><div class='input'>
+#&gt;    text                                              book       volume     year
+#&gt;  * &lt;chr&gt;                                             &lt;chr&gt;      &lt;chr&gt;     &lt;dbl&gt;
+#&gt;  1 des le matin la têt encor tourn contr le mur et … La Prison… Tome Uni…  1923
+#&gt;  2 quand je pens mainten que mon ami était venu à n… La Prison… Tome Uni…  1923
+#&gt;  3 quand albertin sav par françois que dan la nuit … La Prison… Tome Uni…  1923
+#&gt;  4 le douleur sont de foll et qui le écout est enco… La Prison… Tome Uni…  1923
+#&gt;  5 je l'aim trop pour ne pas joyeux sourir de son m… La Prison… Tome Uni…  1923
+#&gt;  6 une chanson d'adieu sort de sourc troubl          La Prison… Tome Uni…  1923
+#&gt;  7 une nu pass elle éclips le soleil je voi s'étein… La Prison… Tome Uni…  1923
+#&gt;  8 le cloison qui sépar nos deux cabinet de toilet … La Prison… Tome Uni…  1923
+#&gt;  9 d'autr fois je rest couch rêv auss longtemp que … La Prison… Tome Uni…  1923
+#&gt; 10 je son françois j'ouvr le figaro j'y cherch et c… La Prison… Tome Uni…  1923</div><div class='input'>
 </div></pre>
   </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -164,11 +185,14 @@ are removed when processing.</p>
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

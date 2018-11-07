@@ -18,13 +18,22 @@
 <!-- Font Awesome icons -->
 <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
 
+<!-- clipboard.js -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.7.1/clipboard.min.js" integrity="sha384-cV+rhyOuRHc9Ub/91rihWcGmMmCXDeksTtCihMupQHSsi8GIIRDG0ThDc3HGQFJ3" crossorigin="anonymous"></script>
+
+<!-- sticky kit -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sticky-kit/1.1.3/sticky-kit.min.js" integrity="sha256-c4Rlo1ZozqTPE2RLuvbusY3+SU1pQaJC0TjuhygMipw=" crossorigin="anonymous"></script>
 
 <!-- pkgdown -->
 <link href="../pkgdown.css" rel="stylesheet">
-<script src="../jquery.sticky-kit.min.js"></script>
 <script src="../pkgdown.js"></script>
-  
-  
+
+
+
+<meta property="og:title" content="Function reference" />
+
+
+
 <!-- mathjax -->
 <script src='https://mathjax.rstudio.com/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
 
@@ -47,8 +56,12 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="../index.html">proustr</a>
+      <span class="navbar-brand">
+        <a class="navbar-link" href="../index.html">proustr</a>
+        <span class="label label-default" data-toggle="tooltip" data-placement="bottom" title="Released package">0.4.0.9000</span>
+      </span>
     </div>
+
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav">
         <li>
@@ -73,7 +86,7 @@
   </ul>
 </li>
 <li>
-  <a href="../news/index.html">News</a>
+  <a href="../news/index.html">Changelog</a>
 </li>
       </ul>
       
@@ -85,6 +98,7 @@
   </a>
 </li>
       </ul>
+      
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
@@ -92,172 +106,162 @@
       
       </header>
 
-      <div class="row">
-  <div class="col-md-9">
+<div class="row">
+  <div class="contents col-md-9">
     <div class="page-header">
-      <h1>
-        Reference
-        <small>version&nbsp;0.2.2</small>
-      </h1>
+      <h1>Reference</h1>
     </div>
 
-    <div class="contents">
-      <table class="ref-index">
+    <table class="ref-index">
 
-      <colgroup>
-        <col class="alias" />
-        <col class="title" />
-      </colgroup>
+    <colgroup>
+      
+      <col class="alias" />
+      <col class="title" />
+    </colgroup>
 
-      <tbody>
-        <tr>
-          <th colspan="2">
-            <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
-            <p class="section-desc"></p>
-          </th>
-        </tr>
-        <tr>
-          <!--  -->
-          <td>
-            <p><code><a href="albertinedisparue.html">albertinedisparue</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "Albertine disparue"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="alombredesjeunesfillesenfleurs.html">alombredesjeunesfillesenfleurs</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "À l’ombre des jeunes filles en fleurs"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="ducotedechezswann.html">ducotedechezswann</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "Du côté de chez Swann"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="laprisonniere.html">laprisonniere</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "La Prisonnière"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="lecotedeguermantes.html">lecotedeguermantes</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "Le côté de Guermantes"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="letempretrouve.html">letempretrouve</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "Le temps retrouvé"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_detect_days.html">pr_detect_days</a></code> </p>
-          </td>
-          <td><p>Detect french days</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_detect_months.html">pr_detect_months</a></code> </p>
-          </td>
-          <td><p>Detect french months</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_detect_pro.html">pr_detect_pro</a></code> </p>
-          </td>
-          <td><p>Detect French pronoums</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_normalize_punc.html">pr_normalize_punc</a></code> </p>
-          </td>
-          <td><p>Normalize punctuation</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_stem_sentences.html">pr_stem_sentences</a></code> </p>
-          </td>
-          <td><p>Stem a dataframe containing a column with sentences</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="pr_stem_words.html">pr_stem_words</a></code> </p>
-          </td>
-          <td><p>Stem a dataframe containing a column with words</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_books.html">proust_books</a></code> </p>
-          </td>
-          <td><p>Tidy data frame of Marcel Proust's 7 novels from La Recherche</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_char.html">proust_char</a></code> </p>
-          </td>
-          <td><p>Characters from "À la recherche du temps perdu"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_characters.html">proust_characters</a></code> </p>
-          </td>
-          <td><p>Characters from Proust Books</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_random.html">proust_random</a></code> </p>
-          </td>
-          <td><p>Create a Random Proust extract</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_sentiments.html">proust_sentiments</a></code> </p>
-          </td>
-          <td><p>Sentiment Lexicon</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="proust_stopwords.html">proust_stopwords</a></code> </p>
-          </td>
-          <td><p>Stop Words</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="sentiments_polarity.html">sentiments_polarity</a></code> </p>
-          </td>
-          <td><p>Sentiment lexicon with polarity</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="sentiments_score.html">sentiments_score</a></code> </p>
-          </td>
-          <td><p>Sentiment lexicon with score</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="sodomeetgomorrhe.html">sodomeetgomorrhe</a></code> </p>
-          </td>
-          <td><p>Marcel Proust's novel "Sodome et Gomorrhe"</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="stop_words.html">stop_words</a></code> </p>
-          </td>
-          <td><p>Stopwords</p></td>
-        </tr><tr>
-          <!--  -->
-          <td>
-            <p><code><a href="unacent.html">unacent</a></code> </p>
-          </td>
-          <td><p>Remove accents</p></td>
-        </tr>
-      </tbody>
-      </table>
-    </div>
+    <tbody>
+      <tr>
+        <th colspan="2">
+          <h2 id="section-all-functions" class="hasAnchor"><a href="#section-all-functions" class="anchor"></a>All functions</h2>
+          <p class="section-desc"></p>
+        </th>
+      </tr>
+      <tr>
+        
+        <td>
+          <p><code><a href="albertinedisparue.html">albertinedisparue</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "Albertine disparue"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="alombredesjeunesfillesenfleurs.html">alombredesjeunesfillesenfleurs</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "À l’ombre des jeunes filles en fleurs"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="ducotedechezswann.html">ducotedechezswann</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "Du côté de chez Swann"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="laprisonniere.html">laprisonniere</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "La Prisonnière"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="lecotedeguermantes.html">lecotedeguermantes</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "Le côté de Guermantes"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="letempretrouve.html">letempretrouve</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "Le temps retrouvé"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_detect_days.html">pr_detect_days()</a></code> </p>
+        </td>
+        <td><p>Detect french days</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_detect_months.html">pr_detect_months()</a></code> </p>
+        </td>
+        <td><p>Detect french months</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_detect_pro.html">pr_detect_pro()</a></code> </p>
+        </td>
+        <td><p>Detect French pronoums</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_keep_only_alnum.html">pr_keep_only_alnum()</a></code> </p>
+        </td>
+        <td><p>Remove non alnum elements</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_normalize_punc.html">pr_normalize_punc()</a></code> </p>
+        </td>
+        <td><p>Normalize punctuation</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_stem_sentences.html">pr_stem_sentences()</a></code> </p>
+        </td>
+        <td><p>Stem a dataframe containing a column with sentences</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_stem_words.html">pr_stem_words()</a></code> </p>
+        </td>
+        <td><p>Stem a dataframe containing a column with words</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="pr_unacent.html">pr_unacent()</a></code> </p>
+        </td>
+        <td><p>Remove accents</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_books.html">proust_books()</a></code> </p>
+        </td>
+        <td><p>Tidy data frame of Marcel Proust's 7 novels from La Recherche</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_char.html">proust_char</a></code> </p>
+        </td>
+        <td><p>Characters from "À la recherche du temps perdu"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_characters.html">proust_characters()</a></code> </p>
+        </td>
+        <td><p>Characters from Proust Books</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_random.html">proust_random()</a></code> </p>
+        </td>
+        <td><p>Create a Random Proust extract</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_sentiments.html">proust_sentiments()</a></code> </p>
+        </td>
+        <td><p>Old sentiment lexicon</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="proust_stopwords.html">proust_stopwords()</a></code> </p>
+        </td>
+        <td><p>Stop Words</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="sodomeetgomorrhe.html">sodomeetgomorrhe</a></code> </p>
+        </td>
+        <td><p>Marcel Proust's novel "Sodome et Gomorrhe"</p></td>
+      </tr><tr>
+        
+        <td>
+          <p><code><a href="stop_words.html">stop_words</a></code> </p>
+        </td>
+        <td><p>Stopwords</p></td>
+      </tr>
+    </tbody>
+    </table>
   </div>
 
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
@@ -274,11 +278,14 @@
 </div>
 
 <div class="pkgdown">
-  <p>Site built with <a href="http://hadley.github.io/pkgdown/">pkgdown</a>.</p>
+  <p>Site built with <a href="http://pkgdown.r-lib.org/">pkgdown</a>.</p>
 </div>
 
       </footer>
    </div>
 
+  
+
   </body>
 </html>
+

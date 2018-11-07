@@ -6,7 +6,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Changelog • proustr</title>
+<title>Remove non alnum elements — pr_keep_only_alnum • proustr</title>
 
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha384-nrOSfDHtoPMzJHjVTdCopGqIqeYETSXhZDFyniQ8ZHcVy08QesyHcnOUpMpqnmWq" crossorigin="anonymous"></script>
@@ -30,7 +30,10 @@
 
 
 
-<meta property="og:title" content="Changelog" />
+<meta property="og:title" content="Remove non alnum elements — pr_keep_only_alnum" />
+
+<meta property="og:description" content="Remove non alnum elements" />
+<meta name="twitter:card" content="summary" />
 
 
 
@@ -46,7 +49,7 @@
   </head>
 
   <body>
-    <div class="container template-news">
+    <div class="container template-reference-topic">
       <header>
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
   <div class="container">
@@ -109,90 +112,51 @@
 <div class="row">
   <div class="col-md-9 contents">
     <div class="page-header">
-      <h1>Changelog <small></small></h1>
-      <small>Source: <a href='https://github.com/ColinFay/proustr/blob/master/NEWS.md'><code>NEWS.md</code></a></small>
+    <h1>Remove non alnum elements</h1>
+    <small class="dont-index">Source: <a href='https://github.com/ColinFay/proustr/blob/master/R/pr_norm.R'><code>R/pr_norm.R</code></a></small>
+    <div class="hidden name"><code>pr_keep_only_alnum.Rd</code></div>
     </div>
 
-    <div id="proustr-0-4-0" class="section level1">
-<h1 class="page-header">
-<a href="#proustr-0-4-0" class="anchor"></a>proustr 0.4.0<small> Unreleased </small>
-</h1>
-<div id="breaking-change" class="section level2">
-<h2 class="hasAnchor">
-<a href="#breaking-change" class="anchor"></a>Breaking change</h2>
-<p>The sentiment lexicon is no longer included in this package. It has been moved to the <a href="https://github.com/ColinFay/rfeel">{rfeel} package</a>, for license compatibility reasons.</p>
-</div>
-<div id="new-funs" class="section level2">
-<h2 class="hasAnchor">
-<a href="#new-funs" class="anchor"></a>New funs</h2>
-<ul>
-<li><code><a href="../reference/pr_keep_only_alnum.html">pr_keep_only_alnum()</a></code></li>
-</ul>
-</div>
-<div id="small-updates" class="section level2">
-<h2 class="hasAnchor">
-<a href="#small-updates" class="anchor"></a>Small updates</h2>
-<ul>
-<li>Cleaned the <code><a href="../reference/proust_char.html">proust_char()</a></code> output a little bit.</li>
-</ul>
-</div>
-</div>
-    <div id="proustr-0-2-2" class="section level1">
-<h1 class="page-header">
-<a href="#proustr-0-2-2" class="anchor"></a>proustr 0.2.2<small> Unreleased </small>
-</h1>
-<p>2017-10</p>
-<ul>
-<li>stop_words are now only ISO, and exported as a tibble with a chr column</li>
-<li>new function to <code>unacent</code> a vector</li>
-</ul>
-</div>
-    <div id="proustr-0-2-1" class="section level1">
-<h1 class="page-header">
-<a href="#proustr-0-2-1" class="anchor"></a>proustr 0.2.1<small> 2017-10-04 </small>
-</h1>
-<p>2017-10</p>
-<ul>
-<li>package now has his own pkgdown \o/</li>
-<li>dataset has one less column (which was useless)</li>
-<li>removed a dependency</li>
-</ul>
-</div>
-    <div id="proustr-0-2-0" class="section level1">
-<h1 class="page-header">
-<a href="#proustr-0-2-0" class="anchor"></a>proustr 0.2.0<small> 2017-09-27 </small>
-</h1>
-<p>2017-09</p>
-<ul>
-<li>new <code>pr_</code> functions</li>
-<li>put a bunch of tests</li>
-<li>built is now available with travis</li>
-<li>stopwords with non ascii characters are now handled</li>
-</ul>
-<p>2017-08</p>
-<ul>
-<li>Cleaner dataset</li>
-<li>bug corrections</li>
-<li>new dataset</li>
-<li>new functions <code><a href="../reference/proust_random.html">proust_random()</a></code>, <code><a href="../reference/proust_sentiments.html">proust_sentiments()</a></code> and <code><a href="../reference/proust_stopwords.html">proust_stopwords()</a></code>.</li>
-<li>books alone are no longer Rd exported</li>
-<li>new vignette</li>
-</ul>
-</div>
-  </div>
+    <div class="ref-description">
+    
+    <p>Remove non alnum elements</p>
+    
+    </div>
 
+    <pre class="usage"><span class='fu'>pr_keep_only_alnum</span>(<span class='no'>text</span>, <span class='kw'>replacement</span> <span class='kw'>=</span> <span class='st'>" "</span>)</pre>
+    
+    <h2 class="hasAnchor" id="arguments"><a class="anchor" href="#arguments"></a>Arguments</h2>
+    <table class="ref-arguments">
+    <colgroup><col class="name" /><col class="desc" /></colgroup>
+    <tr>
+      <th>text</th>
+      <td><p>a vector</p></td>
+    </tr>
+    <tr>
+      <th>replacement</th>
+      <td><p>what to replace the non alnum with. Defaut is " ".</p></td>
+    </tr>
+    </table>
+    
+    <h2 class="hasAnchor" id="value"><a class="anchor" href="#value"></a>Value</h2>
+
+    <p>a vector</p>
+    
+
+    <h2 class="hasAnchor" id="examples"><a class="anchor" href="#examples"></a>Examples</h2>
+    <pre class="examples"><div class='input'><span class='fu'>pr_keep_only_alnum</span>(<span class='st'>"neuilly-en-thelle"</span>)</div><div class='output co'>#&gt; [1] "neuilly en thelle"</div></pre>
+  </div>
   <div class="col-md-3 hidden-xs hidden-sm" id="sidebar">
-    <div id="tocnav">
-      <h2>Contents</h2>
-      <ul class="nav nav-pills nav-stacked">
-        <li><a href="#proustr-0-4-0">0.4.0</a></li>
-        <li><a href="#proustr-0-2-2">0.2.2</a></li>
-        <li><a href="#proustr-0-2-1">0.2.1</a></li>
-        <li><a href="#proustr-0-2-0">0.2.0</a></li>
-      </ul>
-    </div>
-  </div>
+    <h2>Contents</h2>
+    <ul class="nav nav-pills nav-stacked">
+      <li><a href="#arguments">Arguments</a></li>
+      
+      <li><a href="#value">Value</a></li>
+      
+      <li><a href="#examples">Examples</a></li>
+    </ul>
 
+  </div>
 </div>
 
       <footer>
