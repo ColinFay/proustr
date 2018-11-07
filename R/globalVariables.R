@@ -9,8 +9,6 @@ globalVariables(
     "proust_char", 
     "books", 
     "sentence", 
-    "sentiments_polarity", 
-    "sentiment_score", 
     "stop_words_fr", 
     "full_list", 
     "vol", 

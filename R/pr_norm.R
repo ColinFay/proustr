@@ -36,15 +36,6 @@ clean_punc <- function(vec){
   vec <- str_replace_all(vec, pattern = pattern_apo, 
                          replacement ="'")
   str_replace_all(vec, pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
-  # vec %>%
-  #   # Quotation mark 
-  #   str_replace_all(pattern = pattern_quote, 
-  #                            replacement = '"') %>%
-  #   # Apostrophe
-  #   str_replace_all(pattern = pattern_apo, 
-  #                            replacement ="'") %>%
-  #   # dot dot dot 
-  #   str_replace_all(pattern = intToUtf8(8230), replacement = "\\.\\.\\.")
 }
 
 #' Remove accents
