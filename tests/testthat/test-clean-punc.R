@@ -27,3 +27,9 @@ test_that("alnum cleaning", {
   a <- pr_keep_only_alnum("neuilly-en-thelle")
   expect_equal(a, "neuilly en thelle")
 })
+test_that("unnacent cleaning", {
+  expect_equal(pr_unacent("du chêne"), "du chene")
+  expect_equal(pr_unacent("du chéne"), "du chene")
+  expect_equal(pr_unacent("du chàne"), "du chane")
+  expect_equal(pr_unacent("du chène"), "du chene")
+})

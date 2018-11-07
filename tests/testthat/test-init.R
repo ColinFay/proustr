@@ -20,6 +20,12 @@ test_that("characters tibble creation", {
   expect_true(inherits(pc_df, "tbl"))
 })
 
+test_that("message on sentiment", {
+  expect_message(proust_sentiments("polarity"))
+  expect_message(proust_sentiments("score"))
+})
+
+
 context("stopwords")
 
 test_that("stopwords tibble creation", {
@@ -29,18 +35,6 @@ test_that("stopwords tibble creation", {
   expect_true(inherits(prd_df, "data.frame"))
   expect_true(inherits(prd_df, "tbl_df"))
   expect_true(inherits(prd_df, "tbl"))
-})
-
-context("sentiment")
-
-test_that("sentiment tibble creation", {
-  prsent_df <- proust_sentiments()
-  expect_equal(nrow(prsent_df), 14127)
-  expect_equal(length(prsent_df), 2)
-  expect_true(inherits(prsent_df, "data.frame"))
-  expect_true(inherits(prsent_df, "tbl_df"))
-  expect_true(inherits(prsent_df, "tbl"))
-  expect_error(proust_sentiments(type = "plop"))
 })
 
 context("random")
