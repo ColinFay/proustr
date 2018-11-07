@@ -2,7 +2,7 @@ Package: proustr
 Title: Tools for Natural Language Processing in French
 Version: 0.4.0.9000
 Date: 2017-12-05
-Authors@R: person("Colin", "FAY", email = "contact@colinfay.me", role = c("aut", "cre"))
+Authors@R: person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7343-1846"))
 Description: Tools for Natural Language Processing in French and texts from Marcel Proust's collection 
   "A La Recherche Du Temps Perdu". The novels contained in this collection are 
   "Du cote de chez Swann ", "A l'ombre des jeunes filles en fleurs","Le Cote de Guermantes", 
@@ -12,12 +12,8 @@ BugReports: https://github.com/ColinFay/proustr/issues
 Depends: R (>= 2.10)
 License: MIT + file LICENSE
 Imports: 
-    crayon,
-    dplyr,
-    magrittr,
     stringr,
     rlang,
-    purrr,
     tidyr,
     tokenizers,
     SnowballC,
