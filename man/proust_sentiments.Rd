@@ -2,7 +2,9 @@
 % Please edit documentation in R/proust_sentiments.R
 \name{proust_sentiments}
 \alias{proust_sentiments}
-\title{Old sentiment lexicon}
+\title{Old sentiment lexicon
+This function has been deprecated, and will be in next proustr version.
+See the {rfeel} package now: http://github.com/ColinFay/rfeel}
 \usage{
 proust_sentiments(type = c("polarity", "score"))
 }
@@ -10,5 +12,7 @@ proust_sentiments(type = c("polarity", "score"))
 a tibble
 }
 \description{
-This function will be removed in next proustr version.
+Old sentiment lexicon
+This function has been deprecated, and will be in next proustr version.
+See the {rfeel} package now: http://github.com/ColinFay/rfeel
 }

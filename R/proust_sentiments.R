@@ -1,7 +1,8 @@
 #' Old sentiment lexicon
-#'
-#' This function will be removed in next proustr version.
-#'
+#
+#' This function has been deprecated, and will be in next proustr version.
+#' See the {rfeel} package now: http://github.com/ColinFay/rfeel
+#' @export
 #' @return a tibble
 
 proust_sentiments <- function(type = c("polarity", "score")) {
