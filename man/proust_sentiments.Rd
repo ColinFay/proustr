@@ -8,6 +8,9 @@ See the {rfeel} package now: http://github.com/ColinFay/rfeel}
 \usage{
 proust_sentiments(type = c("polarity", "score"))
 }
+\arguments{
+\item{type}{For backward compatibility}
+}
 \value{
 a tibble
 }

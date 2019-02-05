@@ -26,11 +26,8 @@ proust_characters()
 #  [[5]]
 #  [1] "Tout d’un coup, sur le sable de l’allée, tardive, alentie et luxuriante comme la plus belle fleur et qui ne s’ouvrirait qu’à midi, Mme Swann apparaissait, épanouissant autour d’elle une toilette toujours différente mais que je me rappelle surtout mauve ; puis elle hissait et déployait sur un long pédoncule, au moment de sa plus complète irradiation, le pavillon de soie d’une large ombrelle de la même nuance que l’effeuillaison des pétales de sa robe. Comment ? Derrière la barrière parfumée que lui faisait la beauté choisie, il était isolé au milieu d’un salon comme au milieu d’une salle de spectacle dans une loge et, quand on venait le saluer, au travers pour ainsi dire de la beauté de sa compagne, il était excusable de répondre fort brièvement et sans s’interrompre de parler à une femme. Elle et son mari furent, d’ailleurs, ainsi que le prince d’Agrigente, invités à ce dîner, que Mme Bontemps et Cottard eurent deux manières de raconter, selon les personnes à qui ils s’adressaient. Huit jours avant les Rogations !"
 
-## ----eval = FALSE--------------------------------------------------------
-#  proust_stopwords()
-
 ## ------------------------------------------------------------------------
-proust_sentiments()
+proust_stopwords()
 
 ## ------------------------------------------------------------------------
 a <- data.frame(text = c("C'était lundi 1er mars et mardi 2", "Et mercredi 3", "Il est revenu jeudi."))
@@ -43,6 +40,9 @@ pr_detect_months(a, text)
 a <- proust_books()[1,]
 a <- pr_detect_pro(a, text)
 dplyr::select(a, -text)
+
+## ------------------------------------------------------------------------
+pr_keep_only_alnum("neuilly-en-thelle")
 
 ## ------------------------------------------------------------------------
 a <- data.frame(text = "Il l՚a dit : « La ponctuation est chelou » !")
@@ -60,5 +60,5 @@ pr_stem_words(a, words)
 #  install.packages("proustr")
 
 ## ----eval = FALSE--------------------------------------------------------
-#  devtools::install_github("ColinFay/proustr")
+#  remotes::install_github("ColinFay/proustr")
 

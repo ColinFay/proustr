@@ -27,9 +27,9 @@ Here is a list of all the books contained in this pacakage :
 
 ## Find your way into {proustr}
 
-{proustr} is divided into two type of functions : 
+`{proustr}` is divided into two type of functions: 
 
-+ `proust_*()` functions return data objects (books, characters, stop words, random Proust extract...)
++ `proust_*()` functions return data objects (books, characters, words, random Proust extract...)
 
 + `pr_*()` functions perform actions on the data. `pr` is short for p(roust)r, pr(oust), p(rocessing f)r(ench), or anything you can think of :). This shortcode refers to functions like `pr_clean_punc()`.
 
@@ -82,19 +82,9 @@ purrr::map(1:5, proust_random)
 
 You can get a tibble of stopwords with: 
 
-```{r eval = FALSE}
+```{r}
 proust_stopwords()
 ```
-
-### `proust_sentiments()`
-
-Sentiment lexicon is launched with: 
-
-```{r}
-proust_sentiments()
-```
-
-You can chose between polarity (positive or negative, which is the default behavior), or a score on six sentiments (joy, fear, sadness, anger, surprise, disgust) with `type = "score"`.
 
 ## `pr_*()` functions
 
@@ -131,6 +121,14 @@ Detects the pronouns from a data.frame (in French). The shortcuts in the pronoun
 a <- proust_books()[1,]
 a <- pr_detect_pro(a, text)
 dplyr::select(a, -text)
+```
+
+### `pr_keep_only_alnum()`
+
+Removes non alpha numeric elements: 
+
+```{r}
+pr_keep_only_alnum("neuilly-en-thelle")
 ```
 
 
@@ -177,11 +175,5 @@ install.packages("proustr")
 From Github :
 
 ```{r eval = FALSE}
-devtools::install_github("ColinFay/proustr")
+remotes::install_github("ColinFay/proustr")
 ```
-
-### Contact
-
-Questions and feedbacks [welcome](mailto:contact@colinfay.me)!
-
-You want to contribute ? Open a [PR](https://github.com/ColinFay/proustr/pulls) :) If you encounter a bug or want to suggest an enhancement, please [open an issue](https://github.com/ColinFay/proustr/issues).
