@@ -12,3 +12,4 @@ index.Rmd
 ^_pkgdown\.yml$
 ^appveyor\.yml$
 ^cran-comments\.md$
+^CRAN-SUBMISSION$
