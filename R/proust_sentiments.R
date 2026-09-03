@@ -1,7 +1,7 @@
 #' Old sentiment lexicon
 #
 #' This function has been deprecated, and will be in next proustr version.
-#' See the {rfeel} package now: http://github.com/ColinFay/rfeel
+#' See the \code{rfeel} package now: \url{https://github.com/ColinFay/rfeel}
 #' 
 #' @param type For backward compatibility
 #' @export

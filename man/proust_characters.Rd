@@ -4,7 +4,7 @@
 \alias{proust_characters}
 \title{Characters from Proust Books}
 \source{
-\url{http://proust-personnages.fr/}
+\url{https://proust-personnages.fr/}
 }
 \usage{
 proust_characters()

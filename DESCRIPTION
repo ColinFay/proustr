@@ -1,7 +1,7 @@
 Package: proustr
 Title: Tools for Natural Language Processing in French
-Version: 0.4.0
-Date: 2019-02-05
+Version: 0.4.1
+Date: 2026-09-03
 Authors@R: person("Colin", "Fay", email = "contact@colinfay.me", role = c("aut", "cre"), comment = c(ORCID = "0000-0001-7343-1846"))
 Description: Tools for Natural Language Processing in French and texts from Marcel Proust's collection 
   "A La Recherche Du Temps Perdu". The novels contained in this collection are 
@@ -19,7 +19,6 @@ Imports:
     SnowballC,
     attempt
 LazyData: true
-RoxygenNote: 6.1.0
 Encoding: UTF-8
 Suggests: testthat,
     knitr,
@@ -27,3 +26,4 @@ Suggests: testthat,
     covr, 
     dplyr
 VignetteBuilder: knitr
+Config/roxygen2/version: 8.0.0

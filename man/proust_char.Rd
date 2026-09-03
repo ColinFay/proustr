@@ -4,9 +4,11 @@
 \name{proust_char}
 \alias{proust_char}
 \title{Characters from "À la recherche du temps perdu"}
-\format{A tibble with their name}
+\format{
+A tibble with their name
+}
 \source{
-\url{http://proust-personnages.fr/?page_id=10254}
+\url{https://proust-personnages.fr/}
 }
 \usage{
 proust_char

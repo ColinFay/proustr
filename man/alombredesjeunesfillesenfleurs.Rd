@@ -4,7 +4,9 @@
 \name{alombredesjeunesfillesenfleurs}
 \alias{alombredesjeunesfillesenfleurs}
 \title{Marcel Proust's novel "À l’ombre des jeunes filles en fleurs"}
-\format{A tibble with text, book, volume, and year}
+\format{
+A tibble with text, book, volume, and year
+}
 \source{
 <https://fr.wikisource.org/wiki/%C3%80_l%E2%80%99ombre_des_jeunes_filles_en_fleurs>
 }

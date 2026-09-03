@@ -4,7 +4,9 @@
 \name{albertinedisparue}
 \alias{albertinedisparue}
 \title{Marcel Proust's novel "Albertine disparue"}
-\format{A tibble with text, book, volume, and year}
+\format{
+A tibble with text, book, volume, and year
+}
 \source{
 <https://fr.wikisource.org/wiki/Albertine_disparue>
 }

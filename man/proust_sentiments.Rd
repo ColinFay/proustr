@@ -4,7 +4,7 @@
 \alias{proust_sentiments}
 \title{Old sentiment lexicon
 This function has been deprecated, and will be in next proustr version.
-See the {rfeel} package now: http://github.com/ColinFay/rfeel}
+See the \code{rfeel} package now: \url{https://github.com/ColinFay/rfeel}}
 \usage{
 proust_sentiments(type = c("polarity", "score"))
 }
@@ -17,5 +17,5 @@ a tibble
 \description{
 Old sentiment lexicon
 This function has been deprecated, and will be in next proustr version.
-See the {rfeel} package now: http://github.com/ColinFay/rfeel
+See the \code{rfeel} package now: \url{https://github.com/ColinFay/rfeel}
 }

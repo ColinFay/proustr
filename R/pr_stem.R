@@ -1,6 +1,6 @@
 #' Stem a dataframe containing a column with sentences
 #' 
-#' Implementation of the {SnowballC} stemmer. Note that punctuation and capital letters 
+#' Implementation of the \code{SnowballC} stemmer. Note that punctuation and capital letters 
 #' are removed when processing.
 #'
 #' @param df the data.frame containing the text
@@ -33,7 +33,7 @@ pr_stem_vec <- function(vec, language = "french"){
 
 #' Stem a dataframe containing a column with words
 #' 
-#' Implementation of the {SnowballC} stemmer. Note that punctuation and capitals letters 
+#' Implementation of the \code{SnowballC} stemmer. Note that punctuation and capitals letters 
 #' are also removed.
 #'
 #' @param df the data.frame containing the sentences

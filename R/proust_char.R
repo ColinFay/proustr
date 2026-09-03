@@ -4,7 +4,7 @@
 #' 
 #' @return A tibble 
 #' 
-#' @source \url{http://proust-personnages.fr/}
+#' @source \url{https://proust-personnages.fr/}
 #' 
 #' @examples 
 #' 

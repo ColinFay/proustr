@@ -17,7 +17,7 @@ pr_stem_sentences(df, col, language = "french")
 a tibble
 }
 \description{
-Implementation of the {SnowballC} stemmer. Note that punctuation and capital letters 
+Implementation of the \code{SnowballC} stemmer. Note that punctuation and capital letters 
 are removed when processing.
 }
 \examples{

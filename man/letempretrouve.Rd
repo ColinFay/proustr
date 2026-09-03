@@ -4,7 +4,9 @@
 \name{letempretrouve}
 \alias{letempretrouve}
 \title{Marcel Proust's novel "Le temps retrouvé"}
-\format{A tibble with text, book, volume, and year.}
+\format{
+A tibble with text, book, volume, and year.
+}
 \source{
 <https://fr.wikisource.org/wiki/Le_Temps_retrouv%C3%A9>
 }

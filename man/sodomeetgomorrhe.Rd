@@ -4,7 +4,9 @@
 \name{sodomeetgomorrhe}
 \alias{sodomeetgomorrhe}
 \title{Marcel Proust's novel "Sodome et Gomorrhe"}
-\format{A tibble with text, book, volume, and year}
+\format{
+A tibble with text, book, volume, and year
+}
 \source{
 <https://fr.wikisource.org/wiki/Sodome_et_Gomorrhe>
 }

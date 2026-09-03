@@ -4,7 +4,9 @@
 \name{stop_words}
 \alias{stop_words}
 \title{Stopwords}
-\format{A tibble}
+\format{
+A tibble
+}
 \source{
 \url{https://raw.githubusercontent.com/stopwords-iso/stopwords-iso/master/stopwords-iso.json}
 }

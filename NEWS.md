@@ -1,3 +1,8 @@
+# proustr 0.4.1
+
++ Fixed Rd documentation issues (lost braces) reported by CRAN checks.
++ Updated URLs to https.
+
 # proustr 0.4.0
 
 ## Breaking change 

@@ -4,7 +4,7 @@
 #' their frequency in each book. 
 #' This dataset has been downloaded from proust-personnages.
 #'
-#' @source \url{http://proust-personnages.fr/?page_id=10254}
+#' @source \url{https://proust-personnages.fr/}
 #'
 #' @format A tibble with their name
 "proust_char"
