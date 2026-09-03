@@ -11,3 +11,4 @@ proustr_hex.png
 index.Rmd
 ^_pkgdown\.yml$
 ^appveyor\.yml$
+^cran-comments\.md$
